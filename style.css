@@ -1,8 +1,13 @@
-
-/* Header*/
 body {
   margin: 0;
-  font-family: "Montserrat", sans-serif;
+
+    font-family: 'Montserrat', sans-serif; /* Для заголовков */
+}
+
+p {
+    font-family: 'Roboto', sans-serif; /* Для основного текста */
+
+
 }
 body {
   background-image: url('fon5.png'); /* Замените на путь к вашему изображению */
@@ -10,2174 +15,587 @@ body {
   background-repeat: no-repeat; /* Запрещает повторение изображения */
   background-attachment: fixed; /* Фон остается на месте при прокрутке страницы */
   background-position: center; /* Центрирует изображение по вертикали и горизонтали */
-
-}
-/* Header */
-.header {
-  width: 100%;
-  padding-top: 5px; /* Reduced padding-top */
-  position: absolute;
-
-  left: 0;
-  right: 0;
-  z-index: 1000;
- 
-  background-color: rgb(224, 224, 232);
- 
-  
-  
+  height: 100vh;
 }
 
-.header__inner {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
-}
-
-
-  .logo {
-    position: absolute;
-    top: 5px; /* Настройте это значение по вашему усмотрению */
-    left: 200px; /* Настройте это значение по вашему усмотрению */
-    z-index: 1000; /* Задаем высокий z-index */
-    font-size: 20px;
-
-
-}
-
-.header__logo {
- 
-
-    letter-spacing: 1px;
-    color: rgb(37, 17, 94);
-    -webkit-text-stroke: 1px #BDE1FF;
-    text-shadow: 3px 5px 4px rgba(0, 0, 0, 0.3);
-    font-weight: 700;
-
-
-}
-.header__logo {
-  position: absolute;
-  top: 15px; /* Настройте это значение по вашему усмотрению */
-  left: 70px; /* Настройте это значение по вашему усмотрению */
-  z-index: 1000; /* Задаем высокий z-index */
-  font-size: 24px;
-  font-style: italic;
-}
-
-.header__logo p {
-  margin-left: 15px;
-  margin-top: 10px;
-  image-resolution: 5px;
-  font-size: 20px; /* Reduced font-size */
-}
-/* Nav */
-.nav {
+.row {
+  text-align: center;
+  line-height: 50px; /*двигает слова внутри ячеек сверху вниз*/
   font-size: 16px; /* Уменьшенный размер шрифта */
   text-transform: uppercase;
   font-weight: 700; /* Уменьшенная толщина шрифта */
-  color: rgb(37, 17, 94);
-  margin-left: 500px;
-  letter-spacing: 2px; /* Регулировка расстояния между буквами */
+
+ letter-spacing: 1px; /* Регулировка расстояния между буквами */
   
-margin-bottom: 20px;
-}
 
-.nav a {
-  display: inline-block;
-  vertical-align: top;
-  margin: 0 27px; /* Уменьшенные отступы  между словами*/
-  color: rgb(37, 17, 94);
-  text-decoration: none;
-  transition: color 1s linear;
-  position: relative;
-  margin-top: 14px;
-
-}
-
-
-.nav a::after {
-  content: "";
-  display: block;
-  width: 100%;
-  height: 2px; /* Reduced height */
-  background-color: #8ec9f9;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  z-index: 1;
-  display: none;
-}
-
-.nav a:hover {
-  color: #8ec9f9;
-}
-
-.nav a:hover:after {
-  display: block;
-}
-
-
-h1{
-  color: rgb(37,	17,	94);
-  font-size: 50px;
-  font-weight: 600;
-  text-transform:uppercase ;
- margin: 0;
-  line-height: 2; /*увелечение между строками*/
-margin-top: 60px;
-font-style: italic;
-
-}
-
-.container{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  
-}
-
-
-/*woman*/
-.woman{
-    width: 100%;
-    height: 100vh;
-
-    background: url(woman2.png) center no-repeat;
-   
-    background-size: cover;
-    
-    flex-direction: column;
-    justify-content: center;
-    
-}
-.intro__inner{ /*это конейнер заголовка о психологическом консультирование*/
-  max-width: 100%;
-   display: flex; 
-   flex-direction: column;
-   align-items: center;
-   text-align: center;
-   position:relative;
-   display:inline-block;
-}
-.intro__title{ /*1это конейнер заголовка о психологическом консультирование*/
-    color: rgb(37,	17,	94);
-    font-family: "Kaushan Script", serif;
-    
-    font-weight: 1000;
-    text-transform:uppercase ;
-    font-size: 32px;
-   max-width: 100%;
-margin-top: 150px;
-font-style: italic;
-
-}
-.intro__suptitle{
-  max-width: 100%;
-  color: rgb(37, 17, 94);
-  font-family: "Kaushan Script", serif;
-  font-style: italic;
-  margin-top: 80px;
-  margin-right: -50px;
-  line-height: 1.6;
-  font-weight: 600;
-  font-size: 30px; /* Добавьте это, чтобы увеличить размер текста */
-}
- /*Услуги*/
- .uslugi {
-  
- position: relative;
-  text-align: center;
-
-  font-size: 36px;
-  font-weight: 300;
-
-  line-height: 50px;
-
-}
-
-
-
-.uslugi__suptitle {
-  font-size: 32px;
-  color: rgb(37, 17, 94);
-  font-family: "Kaushan Script", serif;
-  font-style: italic;
-  margin: 0;
-  font-weight: 700;
-}
-
-.navnew{
-  width: 55%;
- 
-}
-
-.navnew h4 {
-  color: rgb(37, 17, 94);
-  font-size: 15px;
-  font-weight: 700;
-  text-transform: uppercase;
-  line-height: 2; /* 1.2 означает 120% от размера шрифта */
-  display: inline-block;
-  margin-top: 10px;
-  margin-bottom: 10px;
- 
-  display: flex;
-margin-left: 20px;
-    text-decoration: none;
-    text-align: left;
- 
-  
-  
-}
-.navnew h3 {
-  color: rgb(37, 17, 94);
-  font-size: 15px;
-  font-weight: 900;
-  text-transform: uppercase;
-
-
-  margin-top: 20px;
- margin-left: 150px;
-
-  display: flex;
-
-    text-decoration: none;
-    letter-spacing: 2px; 
- 
-  
-}
-.uslugi video {
-  position: absolute;
-  top: 350px;
-  right: 10px;
- max-width: 43%;
-  max-height: 45%;
-  border: 10px solid rgb(37, 17, 94); /* Рамка вокруг видео */
-  box-sizing: content-box; /* Убираем внутренние отступы и делаем границу отдельной */
-  object-fit: cover; /* Масштабирование видео на весь плеер */
-  border: 10px solid rgb(37, 17, 94); /* Рамка вокруг видео */
-  box-sizing: content-box; /* Убираем внутренние отступы и делаем границу отдельной */
-  object-fit: cover; /* Масштабирование видео на весь плеер */
-  border-radius: 50%; /* Закругление углов видео */
-
-}
-
-/*informazija!*/
-.informazija{
-
-
-position: relative;
-  text-align: center;
-
-  font-size: 36px;
-  font-weight: 300;
-
-  line-height: 50px;
-
-}
-.informazija h1 {
-  font-size: 40px; /* Изменено с 50px на 30px */
-}
-
-.video1 {
-  position: absolute;
-  top: 150px;
- left: 20px;
-max-width: 34%;
-max-height: 52%;
-  border: 10px solid rgb(37, 17, 94); /* Рамка вокруг видео */
-  box-sizing: content-box; /* Убираем внутренние отступы и делаем границу отдельной */
-  object-fit: cover; /* Масштабирование видео на весь плеер */
-  border: 5px solid rgb(37, 17, 94); /* Рамка вокруг видео */
-  box-sizing: content-box; /* Убираем внутренние отступы и делаем границу отдельной */
-  object-fit: cover; /* Масштабирование видео на весь плеер */
-  border-radius: 50%; /* Закругление углов видео */
-  text-decoration: none;
-  text-align: left;
-}
-
-.info {
-  text-align: left;
-  flex: 1;
-  margin-left: 430px; /* Добавлено для отодвигания текста от видео */
-  line-height: 1;
-  margin-top: 20px;
-  margin-right: 10px;
-  
-position: relative;
-
-
-}
-
-
-
-.info .intro__info {
-  color: rgb(37, 17, 94);
-  font-family: "Kaushan Script", serif;
-  font-style: italic;
-
-  font-size: 22px;
-  text-decoration: none;
-
-  
-}
-/*Kontakty*/
-
-.kontakty {
- 
-  margin-top: 100px; 
-  position: relative;
-  text-align: center;
-  
-  background: linear-gradient(135deg, #dee1f0, #a4b1f1, #7a8ef3); /* Градиентный фон */
-
-    width: 100% auto;
-    height: 500px ;
-}
-
-
-
-.kontakty h1 {
-  font-size: 30px; /* Изменено с 50px на 30px */
- 
-}
-
-.text {
-flex: 1;
-line-height: 1.2;
-margin-right: 20px; /* Отодвигает текст от изображения */
-padding-left: 10px; /* Отодвигает текст от левого края */
-text-align: left;
-margin-top: -60px;
-margin-top: 20px;
-
-}
-.text .intro__kontakty {
+}.row a{
 color: rgb(37, 17, 94);
-font-family: "Kaushan Script", serif;
-font-style: italic;
-margin-top: 30px; /*otstup meshdu tekstom h5 h6*/
-font-size: 21px;
-
 }
-h5 {
-color: rgb(37, 17, 94);
-font-family: "Kaushan Script", serif;
-margin: 50px;
-font-size: 30px;
-letter-spacing: 2px;
-width: 70%;
-
-}
-h6 {
-color: rgb(37, 17, 94);
-font-family: "Kaushan Script", serif;
-width: 60%;
-margin-left: 50px; /* Уменьшено для ближнего размещения к картинке */
-font-size: 20px;
-letter-spacing: 2px;
-
-line-height: 1,5; /* Увеличено расстояние между строками */
-
-
-}
-.vstrechy  {
-    color: rgb(37, 17, 94);
-    font-family: "Kaushan Script", serif;
-    width: 60%;
-   
-    font-size: 25px;
-    letter-spacing: 2px;
-    margin-left: 250px;
-    line-height: 0.5; /* Увеличено расстояние между строками */
-    margin-top:-70px;
-font-weight: 700;
-    position: relative;
-    }
-
-    .whatsApp {
-        color: rgb(37, 17, 94);
-        font-family: "Kaushan Script", serif;
-        width: 60%;
-       
-        font-size: 25px;
-        letter-spacing: 2px;
-        margin-left: 450px;
-        line-height: 0.5; /* Увеличено расстояние между строками */
-        margin-top:20px;
-    font-weight: 700;
-    position: relative;
-        }
-.image2 {
- 
-width: 300px;
-height: 350px;
-margin-top: -330px; /* Добавлено для опускания изображения ниже */
-position: absolute;
-margin-left: 200px;
-}
-/* Diplom */
-.diplom {
-
-  position: relative;
-  text-align: center;
-  font-size: 36px;
-  font-weight: 300;
-  line-height: 50px;
+/* Стили для текста Psihilogy */
+.psihilogy-text {
+  font-size: 2rem; /* Размер текста */
+  font-weight: bold; /* Жирный текст */
+  background: linear-gradient(45deg, #ff6ec4, #7873f5); /* Градиент */
+  -webkit-background-clip: text; /* Обрезка фона для текста */
+  color: transparent; /* Прозрачный текст */
 }
 
-.diplom h1 {
-  font-size: 30px;
-  margin-bottom: 20px;
-}
-
-.image3 {
-  width: 55%;
-  height:600px;
-  margin-top: 60px;
-  position: absolute;
-  margin-left: 50px;
-  align-items: center; /* Центрируем содержимое */
-}
-/* FORMA */
-/* Стили для формы */
-
-.container1 {
-  display: flex;
-  flex-direction: column;
-  background: linear-gradient(135deg, #dee1f0, #a4b1f1, #7a8ef3);
-  width: 100%;
-  height: 700px;
-  background-repeat: no-repeat;
-  margin-bottom: 5px;
- 
-}
-
-.name {
-  width: 70%;
-}
-
-.mail, .phone {
-  width: 250px;
-}
-
-.text_area {
-  margin-top: 35px;
-  border: 1px solid #fff;
-  border-radius: 13px;
-  padding: 20px 25px;
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-}
-
-.message {
-  font-size: 1px;
-  color: gray;
-}
-
-textarea {
-  margin-top: 2px;
-  background: transparent;
-  border: none;
-  font-size: 14px;
-  color: #fff;
-  width: 100%;
-}
-
-textarea:focus::placeholder {
-  color: darkslategray;
-}
-
-textarea:focus {
-  outline: none;
-}
-
-.send {
-  width: 100%;
-}
-
-button {
-  padding: 15px 50px;
-  text-decoration: none;
-  text-transform: uppercase;
-  font-size: 18px;
-  color: aqua;
-  border-radius: 5px;
-  border: 1px solid aqua;
-  background: rgba(0, 0, 0, 0.3);
-}
-
-button:hover {
-  background: #0000008a;
-}
-
-button:active {
-  transform: translateY(2px);
-}
-
-.section-subtitle, .section-title {
-  text-align: right;
-  color: black;
-  font-weight: 600;
-  margin: 0;
-}
-
-.section-title {
-  margin-right: 80px;
-  color: rgb(37, 17, 94);
-  font-weight: 600;
-  font-size: 30px;
-  margin-bottom: 20px; /* Отступ снизу, чтобы заголовок не прилегал вплотную к форме */
-  margin-top: 70px; /* Увеличенный отступ сверху */
-}
-
-.section-subtitle {
-  font-size: 3.5rem;
-  color: dodgerblue;
-}
-
-.contact-form, .contact-group { /* dvigajytsa 3 kolonki formy */
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-  margin-top: 10px;
-}
-
-.contact-form > *, .contact-group > * {
-  flex-grow: 1;
-}
-
-.contact-form { /* dvigajytsa 4 kolonki formy */
-  max-width: 350px;
-  margin-top: 10px;
-  margin-left: 1000px;
-  z-index: 1;
-  transition: transform 0.3s ease-in-out; /* Add transition for smooth sliding */
-  transform: translateX(0); /* Initial position */
-}
-
-.contact-input {
-  padding: 1.5rem;
-  font-size: 1.5rem;
-  border-radius: 0.5rem;
-  background-color: #131735;
-  color: #fff;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
-}
-
-.contact-input::placeholder {
-  color: #fff;
-  font-size: 1.5rem;
-  opacity: 0.2;
-}
-
-.contact-form textarea {
-  height: 7rem;
-  resize: none;
-}
-
-.contact-messaged {
-  margin: 1rem 0;
-  font-size: 1rem;
-  color: #fff;
-  text-align: center;
-  white-space: nowrap;
-}
-
-.button {
-  display: inline-block;
-  width: 18rem;
-  margin: -1rem auto;
-  font-size: 1.6rem;
-  background-color: dodgerblue;
-  padding: 1.5rem;
-  border-radius: 0.5rem;
-  color: #fff;
-  font-weight: 500;
-  cursor: pointer;
-  transition: all 0.3s ease-in-out;
-}
-
-.button:hover {
-  box-shadow: 0 8px 25px rgb(38, 0, 49);
-}
-
-/*Footer*/
-footer{
- 
-  padding:1;
-  background-color:#F1F8FE;
-  letter-spacing:2px;
-  font-size:20px;
-  text-align: center;
-  color:#1C84D0;
-  -webkit-text-stroke: 1px #BDE1FF;
-  text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
-  font-weight: 700;
+/* Стили для анимации текста */
+.animated-text {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #00eaff;
+  animation: glow 1.5s infinite; /* Анимация glow */
 
 }
-
-@media (max-width: 1420px) {
-  .contact-form {
-    transform: translateX(-100px); /* Shift the form 100px to the left */
-  }
-}
-@media (max-width: 1300px) {
-  .contact-form {
-    transform: translateX(-150px); /* Shift the form 100px to the left */
-  }
-    .image3 {
-      width: 60%;
-      height:600px;
-      margin-top: 60px;
-    }
-      .section-title {
-        margin-right: 50px;
-        color: rgb(37, 17, 94);
-        font-weight: 600;
-        font-size: 30px;
-        margin-bottom: 20px; /* Отступ снизу, чтобы заголовок не прилегал вплотную к форме */
-        margin-top: 70px; /* Увеличенный отступ сверху */
- 
-   
-  }
-}
-/* Media query to shift the form smoothly */
-@media (max-width: 1250px) {
-  .contact-form {
-   
-    transform: translateX(-200px); /* Shift the form 300px to the left */
-    max-width: 270px;
-    margin-top: 10px;
-    margin-left: 800px;
-    z-index: 1;
-    transition: transform 0.3s ease-in-out; /* Add transition for smooth sliding */
-    transform: translateX(0); /* Initial position */
-  }
-    .image3 {
-      width: 55%;
-      height:600px;
-      margin-top: 60px;
-    }
-    .section-title {
-      margin-right: 50px;
-      color: rgb(37, 17, 94);
-      font-weight: 600;
-      font-size: 28px;
-      margin-bottom: 20px; /* Отступ снизу, чтобы заголовок не прилегал вплотную к форме */
-      margin-top: 70px; /* Увеличенный отступ сверху */
-    
-  }
-}
-
-@media (max-width:1130px) {
-
-  .contact-form {
-    transform: translateX(-200px); /* Shift the form 300px to the left */
-    max-width: 270px;
-    margin-top: 10px;
-    margin-left: 750px;
-    z-index: 1;
-    transition: transform 0.3s ease-in-out; /* Add transition for smooth sliding */
-    transform: translateX(0); /* Initial position */
-  }
-    .image3 {
-      width: 50%;
-      height:550px;
-      margin-top: 90px;
-   
-    }
-    .section-title {
-      margin-right: 50px;
-      color: rgb(37, 17, 94);
-      font-weight: 600;
-      font-size: 25px;
-      margin-bottom: 20px; /* Отступ снизу, чтобы заголовок не прилегал вплотную к форме */
-      margin-top: 70px; /* Увеличенный отступ сверху */
-    
-  }}
-@media (max-width: 1100px) {
-  .contact-form {
-    transform: translateX(-100px); /* Shift the form 300px to the left */
-    max-width: 250px;
-    margin-top: 10px;
-    margin-left: 680px;
-    z-index: 1;
-    transition: transform 0.3s ease-in-out; /* Add transition for smooth sliding */
-    transform: translateX(0); /* Initial position */
-  }
-    .section-title {
-      margin-right: 50px;
-      color: rgb(37, 17, 94);
-      font-weight: 600;
-      font-size: 25px;
-      margin-bottom: 20px; /* Отступ снизу, чтобы заголовок не прилегал вплотную к форме */
-      margin-top: 70px; /* Увеличенный отступ сверху */
-    
-  }
-}
-  @media (max-width: 1004px) {
-    .contact-form {
-      transform: translateX(-100px); /* Shift the form 300px to the left */
-      max-width: 240px;
-      margin-top: 10px;
-      margin-left: 630px;
-      z-index: 1;
-      transition: transform 0.3s ease-in-out; /* Add transition for smooth sliding */
-      transform: translateX(0); /* Initial position */
-    }
-      .section-title {
-        margin-right: 50px;
-        color: rgb(37, 17, 94);
-        font-weight: 600;
-        font-size: 25px;
-        margin-bottom: 20px; /* Отступ снизу, чтобы заголовок не прилегал вплотную к форме */
-        margin-top: 70px; /* Увеличенный отступ сверху */
-      
-    }
-}
-
-  
-
-/* Медиа-запрос для маленьких экранов */
-/* Медиа-запрос для маленьких экранов */
-@media (max-width: 1250px) {
-
-  .header__inner {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  margin-bottom: 17px;
-
-  }
-  .nav {
-      display: block; /* Скроем меню по умолчанию */
-      position: fixed;
-      top: 40px;
-      left: -500px;
-      width: 250px;
-      height: 50%;
-     
-  background-color: rgb(224, 224, 232);
-      flex-direction: column;
-    
-      padding-top: 30px;
-      font-size: 20px;
-      text-transform: uppercase;
-      font-weight: 900;
-  }
-
-  .nav a {
- 
-    display: block;
-    
-    margin: 0 15px; /*чтобы они к друг другу не прилипали*/
-    margin-right: 20px;
-  
-      
-    text-decoration: none;
-    transition: color 8s linear;
-    position: relative;
-  
-  }
-
-  .nav a:hover {
-    background-color: rgb(40, 230, 236);
-     
-  }
-
-  .header__inner {
-      flex-direction: column;
-  }
-
-  .header__logo {
-      position: absolute;
-      top: 15px; /* Настройте это значение по вашему усмотрению */
-      left: 70px; /* Настройте это значение по вашему усмотрению */
-      z-index: 1000; /* Задаем высокий z-index */
-      font-size: 24px;
-  }
-
-  .logo {
-      position: absolute;
-      top: 10px; /* Настройте это значение по вашему усмотрению */
-      left: 200px; /* Настройте это значение по вашему усмотрению */
-      z-index: 1000; /* Задаем высокий z-index */
-      font-size: 24px;
-  }
-
-  .header__logo {
-      letter-spacing: 1px;
-      color: rgb(37, 17, 94);
-      -webkit-text-stroke: 1px #BDE1FF;
-      text-shadow: 3px 5px 4px rgba(0, 0, 0, 0.3);
-      font-weight: 700;
-  }
-
-  .woman {
-    height: 100vh;
-    width: 100%;
-  }
-
-  /* Отобразим меню при наведении на область header__inner */
-  .header__inner:hover .nav {
-      display: flex;
-     
-  }
-
-.header__logo {
-  font-size: 24px;
-}
-
-.logo {
-  height: 40px;
-}
-
-.nav {
-  display: none;
-}
-
-.nav a {
-  color: white;
-  text-decoration: none;
-  padding: 10px;
-}
+ /*  МЕНЮ ТРИ ПОЛОСКИ Отобразим меню при наведении на область header__inner */
 
 .hamburger {
-  display: flex;
-  flex-direction: column;
-  
+display: flex;
+flex-direction: column;
 
- 
- 
+
+
+
 }
 
 .hamburger div { /* сами полосочки*/
-  width: 25px;
-  height: 5px;
-  background-color: rgb(95, 26, 26);
-  margin: 4px 5px;
+width: 25px;
+height: 5px;
+background-color: rgb(95, 26, 26);
+margin: 4px 5px;
 }
 
 /* Стили для отображения меню при активном состоянии */
 .nav.active {
 
-  flex-direction: column;
- 
+flex-direction: column;
+
 }
 
 .nav a {
-  padding: 15px;
-  text-align: center;
-  border-top: 1px solid #444;
+padding: 15px;
+text-align: center;
+border-top: 1px solid #444;
 
 }
 
 .nav a:first-child {
-  border-top: none;
-
-
-
+border-top: none;
 
 }
-/* tekst o psihologocheskom sostojanii*/
-
-.intro__title{ /*1это конейнер заголовка о психологическом консультирование*/
-    color: rgb(37,	17,	94);
-    font-family: "Kaushan Script", serif;
-    
-    font-weight: 1000;
-    text-transform:uppercase ;
-    font-size: 29px;
-   max-width: 100%;
-margin-top: 120px;
-font-style: italic;
-
-}
-.intro__suptitle{
-  max-width: 100%;
-  color: rgb(37, 17, 94);
-  font-family: "Kaushan Script", serif;
-  font-style: italic;
-  margin-top: 80px;
-  margin-right: 50px;
-  margin-left: 50px;
-  line-height: 1.5;
-  font-weight: 600;
-  font-size: 27px; /* Добавьте это, чтобы увеличить размер текста */
-text-align: center;
-}
-/*USLUGi*/
-.uslugi {
-  width: 100%;
-  height: 100%;
-   text-align: center;
-   font-size: 32px;
-   font-weight: 300;
- 
- 
- }
- .uslugi__suptitle {
-  font-size: 27px;
-  color: rgb(37, 17, 94);
-  font-family: "Kaushan Script", serif;
-  font-style: italic;
-  margin-right: 30px;
-  font-weight: 700;
-  line-height: 0.5; /* 1.2 означает 120% от размера шрифта */
+   /* Стиль для кнопки меню */
+   .blue-menu-btn {
+    background: linear-gradient(45deg, #E6E6FA, #8686f9); /* Градиент */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
-
-.navnew h4 {
-  color: rgb(37, 17, 94);
-  font-size: 15px;
-  font-weight: 700;
-  text-transform: uppercase;
-  line-height: 2; /* 1.2 означает 120% от размера шрифта */
-  display: inline-block;
-  margin-top: 20px;
-  margin-bottom: 10px;
- 
-  display: flex;
-
-    text-decoration: none;
-    text-align: left;
- 
-  
-  
-}
-.navnew h3 {
-  color: rgb(37, 17, 94);
-  font-size: 15px;
-  font-weight: 900;
-  text-transform: uppercase;
- margin-left: 10px;
- display: inline;
-
-    text-decoration: none;
-    letter-spacing: 2px; 
-
-}
- 
-.uslugi video {
-  position: absolute;
-  top: 350px;
-  right: 30px;
-  max-width: 40%;
-  max-height: 45%;
-  border: 10px solid rgb(37, 17, 94); /* Рамка вокруг видео */
-  box-sizing: content-box; /* Убираем внутренние отступы и делаем границу отдельной */
-  object-fit: cover; /* Масштабирование видео на весь плеер */
-  border-radius: 50%; /* Закругление углов видео */
-}
-/*informazija!*/
-/*informazija!*/
-
-  
-  .video1 {
-  max-width: 35%;
-  max-height: 57%;
-  }
-  .info {
-    margin-left: 450px; /* Добавлено для отодвигания текста от видео */
-    line-height: 0.9;
-  }
-  .info .intro__info {
-    font-size: 20px;
-  }
-  /*KONTAKTY*/
-  .text {
-    flex: 1;
-    line-height: 1.2;
-    margin-right: 20px; /* Отодвигает текст от изображения */
-    padding-left: 10px; /* Отодвигает текст от левого края */
-    text-align: left;
-    margin-top: -60px;
-    
-    }
-    .text .intro__kontakty {
-    
-    margin-top: 32px; /*otstup meshdu tekstom h5 h6*/
-    font-size: 21px;
-    
-    }
-    
-    
-        .vstrechy  {
-          color: rgb(37, 17, 94);
-          font-family: "Kaushan Script", serif;
-          width:60%;
-         
-          font-size: 23px;
-          letter-spacing: 2px;
-          margin-left: 150px;
-          line-height: 0.5; /* Увеличено расстояние между строками */
-          margin-top:-70px;
-      font-weight: 700;
-          position: relative;
-          }
-      
-          .whatsApp {
-              color: rgb(37, 17, 94);
-              font-family: "Kaushan Script", serif;
-              width: 60%;
-             
-              font-size: 23px;
-              letter-spacing: 2px;
-              margin-left: 300px;
-              line-height: 0.5; /* Увеличено расстояние между строками */
-              margin-top:20px;
-          font-weight: 700;
-          position: relative;
-              }
-      .image2 {
-       
-      width: 290px;
-      height: 310px;
-      margin-top: -300px; /* Добавлено для опускания изображения ниже */
-    
-      margin-left: 200px;
-      
-      }
-  
-}
-@media (max-width: 1100px) {
-
- 
-  .info {
- 
-    margin-left: 420px; /* Добавлено для отодвигания текста от видео */
-    line-height: 0.8;
-  }
-    /*KONTAKTY*/
-  
-  .text {
-    flex: 1;
-    line-height: 1.2;
-    margin-right: 20px; /* Отодвигает текст от изображения */
-    padding-left: 10px; /* Отодвигает текст от левого края */
-    text-align: left;
-    margin-top: -60px;
-    
-    }
-    .text .intro__kontakty {
-    
-    margin-top: 32px; /*otstup meshdu tekstom h5 h6*/
-    font-size: 19px;
-    
-    }
-    
-    
-        .vstrechy  {
-          color: rgb(37, 17, 94);
-          font-family: "Kaushan Script", serif;
-          width:60%;
-         
-          font-size: 23px;
-          letter-spacing: 2px;
-          margin-left: 150px;
-          line-height: 0.5; /* Увеличено расстояние между строками */
-          margin-top:-70px;
-      font-weight: 700;
-          position: relative;
-          }
-      
-          .whatsApp {
-              color: rgb(37, 17, 94);
-              font-family: "Kaushan Script", serif;
-              width: 60%;
-             
-              font-size: 23px;
-              letter-spacing: 2px;
-              margin-left: 300px;
-              line-height: 0.5; /* Увеличено расстояние между строками */
-              margin-top:20px;
-          font-weight: 700;
-          position: relative;
-              }
-      .image2 {
-       
-      width: 280px;
-      height: 300px;
-      margin-top: -300px; /* Добавлено для опускания изображения ниже */
-    
-      margin-left: 120px;
-      
-      
-  
-}}
-@media (max-width: 1040px) {
-
- 
-  .info {
-   
-    margin-left: 400px; /* Добавлено для отодвигания текста от видео */
-    line-height: 0.7;
-  }
- 
-
-  
-}
-@media (max-width: 960px) {
-
- 
-  .info {
-   
-    margin-left: 380px; /* Добавлено для отодвигания текста от видео */
-    line-height: 0.7;
-    
-  
-  
-  
-}}
-@media (max-width: 912px) {
-  .woman{
-    width: 100%;
-   height: 100vh;
-
-    background: url(woman2_small.png) center no-repeat;
-   
-    background-size: cover;
-    
-    flex-direction: column;
-    justify-content: center;
-
-}
-.intro__title{ /*1это конейнер заголовка о психологическом консультирование*/
-    color: rgb(37,	17,	94);
-    font-family: "Kaushan Script", serif;
-    
-    font-weight: 800;
-    text-transform:uppercase ;
-    font-size: 25px;
-   max-width: 100%;
-margin-top: 120px;
-font-style: italic;
-
-}
-.intro__suptitle{
-  max-width: 100%;
-  color: rgb(37, 17, 94);
-  font-family: "Kaushan Script", serif;
-  font-style: italic;
-  margin-top: 50px;
-  margin-right: 50px;
-  line-height: 1.5;
-  font-weight: 600;
-  font-size: 24px; /* Добавьте это, чтобы увеличить размер текста */
+.blue-menu-btn:hover {
+    background-color: #0056b3; /* Более тёмный синий при наведении */
 }
 
-
- /*Услуги*/
-
- .uslugi__suptitle {
-  font-size: 27px;
-  color: rgb(37, 17, 94);
-  font-family: "Kaushan Script", serif;
-  font-style: italic;
-  margin: 0;
-  font-weight: 700;
-  line-height: 0.5; /* 1.2 означает 120% от размера шрифта */
-}
- 
- .navnew{
-  
-  height: 100%;
-  width: 100%; 
-  margin-top: 620px;
+/* Общий стиль для боковой панели */
+.offcanvas {
+  background: linear-gradient(135deg, #E6E6FA, #8686f9); /* Градиент фона */
+  color: white; /* Белый текст */
+  border-radius: 10px; /* Сглаженные края */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); /* Приятная тень */
 }
 
-.navnew h4 {
-  color: rgb(37, 17, 94);
-  font-size: 15px;
-  font-weight: 700;
-  text-transform: uppercase;
-  line-height: 2; /* 1.2 означает 120% от размера шрифта */
-  display: inline-block;
-  margin-top: 20px;
-  margin-bottom: 10px;
- 
-  display: flex;
-
-    text-decoration: none;
-    text-align: left;
- 
-  
-  
-}
-.navnew h3 {
-  color: rgb(37, 17, 94);
-  font-size: 15px;
-  font-weight: 900;
-  text-transform: uppercase;
-
-
-
-  margin-left: 10px;
-  display: inline;
-    text-decoration: none;
-    letter-spacing: 2px; 
- 
-  
+/* Заголовок меню */
+.offcanvas-header {
+  background-color:#E6E6FA;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.2); /* Полупрозрачная линия */
+  padding: 15px;
+  border-radius: 15px 15px 0 0; /* Закругление верхних углов */
 }
 
-.uslugi video {
-  position: absolute;
-  top: 350px;
-  right: 30px;
-  max-width: 90%;
-  max-height: 45%;
-  border: 10px solid rgb(37, 17, 94); /* Рамка вокруг видео */
-  box-sizing: content-box; /* Убираем внутренние отступы и делаем границу отдельной */
-  object-fit: cover; /* Масштабирование видео на весь плеер */
-  border-radius: 50%; /* Закругление углов видео */
+.offcanvas-title {
+  font-family: 'Montserrat', sans-serif; /* Современный шрифт */
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-transform: uppercase; /* Заглавные буквы */
+  color:rgb(37, 17, 94); /* Боковое меню жёлтый акцент */
 }
-/*informazija*/
-.informazija{
 
-  margin-top: 20px;
-  }
-  
-  .video1 {
-    position: relative;
-  top: 10px;
-left:2px;
-  max-width: 90%;
-  max-height: 45%;
-  
+/* Кнопка закрытия */
+.btn-close {
+  background: linear-gradient(45deg, #ff6ec4, #7873f5); /* Градиентная кнопка */
+  border: none;
+  border-radius: 50%; /* Закруглённая форма */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Эффект анимации */
 }
-  
-  
-.info {
-  line-height: 1;
-  margin-left: 15px; 
-  margin-right: 15px;
+
+.btn-close:hover {
+  transform: scale(1.1); /* Увеличение при наведении */
+  box-shadow: 0 3px 10px rgba(255, 255, 255, 0.4); /* Тень при наведении */
 }
- .info .intro__info {
-    font-size: 22px;
-  
-  }
-   /*KONTAKTY*/
-.kontakty{
-  margin-top: 100px; 
-  position: relative;
+
+/* Элементы списка */
+.list-group {
+  margin-top: 10px;
+  border-radius: 10px; /* Сглаженные углы */
+  overflow: hidden; /* Для аккуратного вида */
+}
+
+.list-group-item {
+  background: rgba(255, 255, 255, 0.1); /* Полупрозрачный фон */
+  color: #fff; /* Белый текст */
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 500;
   text-align: center;
-  
-  background: linear-gradient(135deg, #dee1f0, #a4b1f1, #7a8ef3); /* Градиентный фон */
+  border: none; /* Убираем границы */
+  transition: background 0.3s ease, transform 0.2s ease; /* Эффект анимации */
+}
 
-    width: 100% auto;
-    height: 500px ;
+.list-group-item a {
+  text-decoration: none; /* Убираем подчеркивание */
+  color:rgb(37, 17, 94); /*  слова меню Яркий акцент */
+  transition: color 0.3s ease;
+}
+
+.list-group-item:hover {
+  background: rgba(255, 255, 255, 0.2); /* Более яркий фон при наведении */
+  transform: scale(1.05); /* Лёгкое увеличение */
+}
+
+.list-group-item a:hover {
+  color: #fff; /* Белый текст при наведении */
+}
+
+/*КОНЕЦ ШАПКИ  МЕНЮ И БОКОВОГО МЕНЮ*/
+
+/*ГЛАВНАЯ*/
+.glavnaja{
+background: url(woman2.png);
+background-size: cover; /* Убедитесь, что изображение покрывает всю страницу */
+background-repeat: no-repeat; /* Запрещает повторение изображения */
+width: 100%;
+background-position: center; /* Центрирует изображение по вертикали и горизонтали */
+height: 100vh;
 
 }
-  
-    .text .intro__kontakty {
-    
-    margin-top: 100px; /*otstup meshdu tekstom h5 h6*/
-    font-size: 15px;
-    
-    }
-    
-    
-        .vstrechy  {
-          color: rgb(37, 17, 94);
-          font-family: "Kaushan Script", serif;
-          width:60%;
-         
-          font-size: 20px;
-          letter-spacing: 1px;
-          margin-left: 150px;
-          line-height: 0.5; /* Увеличено расстояние между строками */
-          margin-top:-90px;
-      font-weight: 600;
-          position: relative;
-          }
-      
-          .whatsApp {
-              color: rgb(37, 17, 94);
-              font-family: "Kaushan Script", serif;
-              width: 90%;
-             
-              font-size: 20px;
-              letter-spacing: 1px;
-              margin-left: 200px;
-              line-height: 0.5; /* Увеличено расстояние между строками */
-              margin-top:30px;
-          font-weight: 600;
-          position: relative;
-              }
-              h5 {
-                color: rgb(37, 17, 94);
-                font-family: "Kaushan Script", serif;
-                margin: 50px;
-                font-size: 20px;
-                letter-spacing: 2px;
-                width: 70%;
-                
-                }
-                h6 {
-                color: rgb(37, 17, 94);
-                font-family: "Kaushan Script", serif;
-                width: 60%;
-                margin-left: 40px; /* Уменьшено для ближнего размещения к картинке */
-                font-size: 50px;
+.glavnaja-text{
+  text-align: center;
+  font-size: 37px;
+  font-weight: 700;
+  margin-bottom: 40px; /* Увеличивает расстояние под заголовком */
+  font-family: 'Roboto', sans-serif; /* Для основного текста */
+  color: rgb(37, 17, 94);
+  font-style: italic;
+}
+.glavnaja-text1{
+  text-align: center;
+  font-size: 27px; /* Размер шрифта в пикселях */
+  margin-top: 50px; /* Увеличивает расстояние над этим текстом */
+  font-weight: 600;
+  font-family: 'Roboto', sans-serif; /* Для основного текста */
+  line-height: 1.8; /* Расстояние между строками, где 1.8 - множитель */
+  margin: 20px;
+  color: rgb(37, 17, 94);
+  font-style: italic;
+}
 
-                letter-spacing: 2px;
-                
-                line-height: 1.3; /* Увеличено расстояние между строками */
-                
-                
-                }
-      .image2 {
-       
-      width: 220px;
-      height: 240px;
-      margin-top: -240px; /* Добавлено для опускания изображения ниже */
-    
-      margin-left: 90px;
+
+
+
+
+
+
+/*УСЛУГИ*/
+.container {
+  display: flex;
+  align-items: center; /* Выравнивание по центру */
+  gap: 20px; /* Расстояние между текстом и видео */
+}
+
+.text {
+  flex: 1; /* Текст занимает доступное пространство */
+}
+.text h1{
+  color: rgb(37, 17, 94);
+  font-size: 19px;
+  font-weight: 700;
+  text-transform: uppercase;
+
+  display: inline;
+  margin-top: 20px;
+ margin-left: 40px ;
+
+  display: flex;
+text-align: center;
+    text-decoration: none;
+    letter-spacing: 2px; 
+    white-space: nowrap;
+}
+.text h2{
  
-}
-/* Diplom */
-.diplom {
+  color: rgb(37, 17, 94);
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  line-height: 2; /* 1.2 означает 120% от размера шрифта */
 
-  width: 90%;
-  height: auto;
+    margin-top: 50px;
+   
+      
+
+}
+.video-container {
+  flex: 1; /* Видео занимает равное пространство */
 }
 
-
-.contact-form {
-  margin-left: 0;
-  align-items: center;
+.video-container video {
+  width: 90%; /* Видео заполняет контейнер */
+  height: auto; /* Сохраняем пропорции */
+  margin-top: 50px;
+  margin-left: 50px;
 }
-  .diplom {
-    width: 100%;
-    position: relative;
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column; /* На узких экранах текст и видео идут друг под другом */
     text-align: center;
   }
-  .diplom h1 {
-    font-size: 30px;
-    margin-bottom: 20px;
-  }
-  
-  .image3 {
-    width: 100%;
-    height:600px;
-  margin: 0;
-    align-items: center; /* Центрируем содержимое */
-  }
-  /* FORMA */
-  /* Стили для формы */
-  
-  .container1 {
-    display: flex;
-    flex-direction: column;
-    background: linear-gradient(135deg, #dee1f0, #a4b1f1, #7a8ef3);
-    width: 100%;
-    height: 1400px;
-    background-repeat: no-repeat;
-    margin-bottom: 5px;
-   
-  }
-  
-  .name {
-    width: 70%;
-  }
-  
-  .mail, .phone {
-    width: 250px;
-  }
-  
-  .text_area {
-    margin-top: 35px;
-    border: 1px solid #fff;
-    border-radius: 13px;
-    padding: 20px 25px;
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-  }
-  
-  .message {
-    font-size: 1px;
-    color: gray;
-  }
-  
-  textarea {
-    margin-top: 2px;
-    background: transparent;
-    border: none;
-    font-size: 14px;
-    color: #fff;
-    width: 100%;
-  }
-  
-  textarea:focus::placeholder {
-    color: darkslategray;
-  }
-  
-  textarea:focus {
-    outline: none;
-  }
-  
-  .send {
-    width: 100%;
-  }
-  
-  button {
-    padding: 15px 50px;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-size: 18px;
-    color: aqua;
-    border-radius: 5px;
-    border: 1px solid aqua;
-    background: rgba(0, 0, 0, 0.3);
-  }
-  
-  button:hover {
-    background: #0000008a;
-  }
-  
-  button:active {
-    transform: translateY(2px);
-  }
-  
-  .section-subtitle, .section-title {
-    text-align: right;
-    color: black;
-    font-weight: 600;
-    margin: 0;
-  }
-  
-  .section-title {
-    margin-right:400px;
+  text h1{
     color: rgb(37, 17, 94);
-    font-weight: 600;
-    font-size: 30px;
-    margin-bottom: 20px; /* Отступ снизу, чтобы заголовок не прилегал вплотную к форме */
-    margin-top: 700px; /* Увеличенный отступ сверху */
-  }
-  
-  .section-subtitle {
-    font-size: 3.5rem;
-    color: dodgerblue;
-  }
-  
-  .contact-form, .contact-group { /* dvigajytsa 3 kolonki formy */
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    margin-top: 10px;
-  }
-  
-  .contact-form > *, .contact-group > * {
-    flex-grow: 1;
-  }
-  
-  .contact-form { /* dvigajytsa 4 kolonki formy */
-    max-width: 350px;
-    margin-top: 10px;
-    margin-left: 120px;
-    z-index: 1;
-    transition: transform 0.3s ease-in-out; /* Add transition for smooth sliding */
-    transform: translateX(0); /* Initial position */
-  }
-  
-  .contact-input {
-    padding: 1.5rem;
-    font-size: 1.5rem;
-    border-radius: 0.5rem;
-    background-color: #131735;
-    color: #fff;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
-  }
-  
-  .contact-input::placeholder {
-    color: #fff;
-    font-size: 1.5rem;
-    opacity: 0.2;
-  }
-  
-  .contact-form textarea {
-    height: 7rem;
-    resize: none;
-  }
-  
-  .section-title {
-    width: 100%;
-    position: relative;
-    color: rgb(37, 17, 94);
-    font-weight: 600;
-    font-size: 30px;
-    margin-bottom: 50px; /* Отступ снизу, чтобы заголовок не прилегал вплотную к форме */
-    margin-top: 900px; /* Увеличенный отступ сверху */
-    display: flex;
-    justify-content: center; /* Выравнивание по центру по горизонтали */
-    align-items: center; /* Выравнивание по центру по вертикали */
-  
-  }
-  .image3 {
-    width: 100%;
-    height:400px;
-  margin: 0;
-    align-items: center; /* Центрируем содержимое */
-  }
-  
-}
-
-
-@media (max-width: 720px) {
-
-  /*KONTAKTY*/
-  .kontakty{
-    width: 95%;
-margin-left: 10px;
-margin-right: 10px;
-  }
-  .image2 {
-       
-    width: 200px;
-    height: 220px;
-    margin-top: -240px; /* Добавлено для опускания изображения ниже */
-  
-    margin-left: 90px;
-
-}
-/* Diplom Forma*/
-.section-title {
-  width: 80%;
-  position: relative;
-  color: rgb(37, 17, 94);
-  font-weight: 600;
-  font-size: 30px;
-  margin-bottom: 20px; /* Отступ снизу, чтобы заголовок не прилегал вплотную к форме */
-  margin-top: 700px; /* Увеличенный отступ сверху */
-  display: flex;
-  justify-content: center; /* Выравнивание по центру по горизонтали */
-  align-items: center; /* Выравнивание по центру по вертикали */
-
-}
-
-}
-@media (max-width: 660px) {
-  .woman{
-    width: 100%;
-    height: 100vh;
-
-    background: url(woman2_small.png) center no-repeat;
-   
-    background-size: cover;
-    
-    flex-direction: column;
-    justify-content: center;
-
-}
-.hamburger div { /* сами полосочки*/
-  width: 25px;
-  height: 5px;
-  background-color: rgb(95, 26, 26);
-  margin:2px ;
-  margin-right: 590px;
-
-}
-.intro__title{ /*1это конейнер заголовка о психологическом консультирование*/
-    color: rgb(37,	17,	94);
-    font-family: "Kaushan Script", serif;
-    
-    font-weight: 600;
-    text-transform:uppercase ;
-    font-size:22px;
-   max-width: 100%;
-margin-top: 100px;
-font-style: italic;
-
-}
-.intro__suptitle{
-  max-width: 100%;
-  color: rgb(37, 17, 94);
-  font-family: "Kaushan Script", serif;
-  font-style: italic;
-  margin-top: 40px;
-  margin-right: 20px;
-  line-height: 1.6;
-  font-weight: 600;
-  font-size: 25px; /* Добавьте это, чтобы увеличить размер текста */
-}
- /*Услуги*/
- 
-
-  /*Услуги*/
- 
-
-  .uslugi__suptitle {
-    font-size: 23px;
-    color: rgb(37, 17, 94);
-    font-family: "Kaushan Script", serif;
-    font-style: italic;
-    margin: 0;
-    font-weight: 700;
-    line-height: 0.5; /* 1.2 означает 120% от размера шрифта */
-  }
-   
-   
-   .navnew{
-    
-    height: 100%;
-    width: 100%; 
-    margin-top: 400px;
- 
-   }
-  .navnew h4 {
-    color: rgb(37, 17, 94);
-    font-size: 14px;
+    font-size: 19px;
     font-weight: 700;
     text-transform: uppercase;
-    line-height: 2; /* 1.2 означает 120% от размера шрифта */
-    display: inline-block;
+  
+    display: inline;
     margin-top: 20px;
-    margin-bottom: 10px;
-   
+   margin-left: 40px ;
+  
     display: flex;
-  
-      text-decoration: none;
-      text-align: left;
-   
-    
-    
-  }
-  .navnew h3 {
-    color: rgb(37, 17, 94);
-    font-size: 15px;
-    font-weight: 900;
-    text-transform: uppercase;
-  
+  text-align: center;
       text-decoration: none;
       letter-spacing: 2px; 
-   
-      
-  
-    margin-left: 10px;
- display: inline;
-     
+      white-space: nowrap;
   }
-  
-  .uslugi video {
-    position: absolute;
-    top: 320px;
-    right: 50px;
-    max-width: 80%;
-    max-height: 40%;
-    border: 10px solid rgb(37, 17, 94); /* Рамка вокруг видео */
-    box-sizing: content-box; /* Убираем внутренние отступы и делаем границу отдельной */
-    object-fit: cover; /* Масштабирование видео на весь плеер */
-    border-radius: 50%; /* Закругление углов видео */
-
-        
-  }
-   /*KONTAKTY*/
-
-
-
+  .text h2{
    
-    .kontakty {
-        width: 100% auto;
-        height: 560px ; /* Высота будет автоматически подстраиваться */
-
-      }
-    
-    .kontakty h1 {
-        font-size: 18px; /* Изменяем размер шрифта для маленьких экранов */
-
-        margin-left: 30px;
-    }
-    
-    .container {
-        flex-direction: column; /* Располагаем элементы в столбик */
-    }
-    
-    .text {
-      
-
-        text-align: center; /* Выравниваем текст по центру для маленьких экранов */
-        margin-top: -20px;
-
-        width: 82%; /* Делаем текст на всю ширину контейнера */
-     
-    
-    
-       
-      }
-      .text .intro__kontakty {
-        color: rgb(37, 17, 94);
-        font-family: "Kaushan Script", serif;
-        font-style: italic;
-        margin-top: 40px; /*otstup meshdu tekstom h5 h6*/
-        font-size: 18px; 
-        
-
-      }
-    .image2 {
-        width: 145px;
-        height: 155px;
-        margin-top: -30px; /* Уменьшаем отступ сверху */
-        margin-left: -50px; /* Центрируем изображение */
-    }
-  
-    .vstrechy {
-        width: 100%;
-        margin-left: 60px;
-       margin-top: -60px;
-       font-size: 18px;
-     
-       line-height: 0.1;
-    }
-    
-    .whatsApp {
-       
-        margin-left: 75px;
-        font-size: 18px;
-        line-height: 0.1;
-      
-    }
-    
-    h5 {
-        margin-right: 10px; /* Уменьшаем отступ справа */
-        width: 100%; /* Делаем элемент на всю ширину */
-       
-    }
-    
-    h6 {
-        width: 100%; /* Делаем элемент на всю ширину */
-        margin-left: 10px; /* Уменьшаем отступ слева */
-     
-    }
-    /* Diplom*/
-    .image3 {
-      width: 100%;
-      height:600px;
-    margin: 0;
-      align-items: center; /* Центрируем содержимое */
-    }
-    
-    .section-title {
-      width: 100%;
-      position: relative;
-      color: rgb(37, 17, 94);
-      font-weight: 600;
-      font-size: 30px;
-      margin-bottom: 20px; /* Отступ снизу, чтобы заголовок не прилегал вплотную к форме */
-      margin-top: 700px; /* Увеличенный отступ сверху */
-    
-   text-align: center;
-    }
-    
-}
-@media (max-width: 500px) {
-  .woman{
-    width: 100%;
-    height: 100vh;
-
-    background: url(woman2_small.png) center no-repeat;
-   
-    background-size: cover;
-    
-    flex-direction: column;
-    justify-content: center;
-
-}
-.intro__title{ /*1это конейнер заголовка о психологическом консультирование*/
-    color: rgb(37,	17,	94);
-    font-family: "Kaushan Script", serif;
-    
-    font-weight: 600;
-    text-transform:uppercase ;
-    font-size:20px;
-   max-width: 100%;
-margin-top: 100px;
-font-style: italic;
-
-}
-.intro__suptitle{
-  max-width: 100%;
-  color: rgb(37, 17, 94);
-  font-family: "Kaushan Script", serif;
-  font-style: italic;
-  margin-top: 50px;
-  margin-right: 10px;
-  line-height: 1,5;
-  font-weight: 700;
-  font-size: 25px; /* Добавьте это, чтобы увеличить размер текста */
-}
- /*Услуги*/
- 
-
- .uslugi__suptitle {
-  font-size: 23px;
-  color: rgb(37, 17, 94);
-  font-family: "Kaushan Script", serif;
-  font-style: italic;
-  margin: 0;
-  font-weight: 700;
-  line-height: 0.5; /* 1.2 означает 120% от размера шрифта */
-}
- 
- 
- .navnew{
-  
-  height: 100%;
-  width: 100%; 
-  margin-top: 400px;
-  
-}
-
-.navnew h4 {
-  color: rgb(37, 17, 94);
-  font-size: 15px;
-  font-weight: 700;
-  text-transform: uppercase;
-  line-height: 2; /* 1.2 означает 120% от размера шрифта */
-  display: inline-block;
-  margin-top: 20px;
-  margin-bottom: 10px;
- 
-  display: flex;
-
-    text-decoration: none;
-    text-align: left;
- 
-  
-  
-}
-.navnew h3 {
-  color: rgb(37, 17, 94);
-  font-size: 15px;
-  font-weight: 900;
-  text-transform: uppercase;
-
-    text-decoration: none;
-    letter-spacing: 2px; 
-  margin-left: 50px;
-  margin-left: 10px;
-  display: inline;
-      
-}
-.uslugi video {
-  position: absolute;
-  top: 350px;
-  right: 10px;
-  max-width: 90%;
-  max-height: 45%;
-  border: 10px solid rgb(37, 17, 94); /* Рамка вокруг видео */
-  box-sizing: content-box; /* Убираем внутренние отступы и делаем границу отдельной */
-  object-fit: cover; /* Масштабирование видео на весь плеер */
-  border-radius: 50%; /* Закругление углов видео */
-}
-/*Informazija*/
-
-.info {
-  margin-left: 10px; 
-  margin-right: 10px;
-  line-height: 0.8;
-}
-   /*KONTAKTY*/
-
-
-
-   
-   .kontakty {
-    width: 100% auto;
-    height: 650px ; /* Высота будет автоматически подстраиваться */
-}
-
-.kontakty h1 {
-    font-size: 18px; /* Изменяем размер шрифта для маленьких экранов */
-    margin-top: 20px;
-    margin-left: auto;
-}
-
-.container {
-    flex-direction: column; /* Располагаем элементы в столбик */
-
-  }
-
-.text {
-   margin-left: -40px;
-
-    text-align: center; /* Выравниваем текст по центру для маленьких экранов */
-    margin-top: -20px;
- 
-    width: 82%; /* Делаем текст на всю ширину контейнера */
- 
-      line-height: 1.5;
-
-   
-  }
-
-.image2 {
-    width: 150px;
-    height: 160px;
-    margin-top: -30px; /* Уменьшаем отступ сверху */
-    margin-left: -50px; /* Центрируем изображение */
-}
-
-.vstrechy {
-    width: 100%;
-    margin-left: 40px;
-   margin-top: -60px;
-   font-size: 15px;
-   letter-spacing: 0.1px;
-   line-height: 0.1px;
-}
-
-.whatsApp {
-   
-    margin-left: 55px;
-    font-size: 15px;
-    line-height: 0.1px;
-    letter-spacing: 0.1px;
-}
-
-h5 {
-    margin-right: 10px; /* Уменьшаем отступ справа */
-    width: 100%; /* Делаем элемент на всю ширину */
-}
-
-h6 {
-    width: 100%; /* Делаем элемент на всю ширину */
-    margin-left: 10px; /* Уменьшаем отступ слева */
-}
-    /* Diplom*/
-    .image3 {
-      width: 100%;
-      height:350px;
-    margin: 0;
-      align-items: center; /* Центрируем содержимое */
-    }
-
-  .section-title {
-  
-    position: relative;
     color: rgb(37, 17, 94);
+    font-size: 12px;
     font-weight: 600;
-    font-size: 20px;
-    margin-bottom: 20px; /* Отступ снизу, чтобы заголовок не прилегал вплотную к форме */
-    margin-top: 400px; /* Увеличенный отступ сверху */
+    text-transform: uppercase;
+    line-height: 2; /* 1.2 означает 120% от размера шрифта */
+  margin-left: -50px;
+      margin-top: 50px;
+     text-align: left;
+        
   
- text-align: center;
-  }
- 
-  .contact-form { /* dvigajytsa 4 kolonki formy */
-  
-  margin: 0;
-
-    transition: transform 0.3s ease-in-out; /* Add transition for smooth sliding */
-    transform: translateX(0); /* Initial position */
   }
 }
-@media (max-width: 360px) {
-  .woman{
-    width: 100%;
-    height: 100vh;
-
-    background: url(woman2_small.png) center no-repeat;
-   
-    background-size: cover;
     
-    flex-direction: column;
-    justify-content: center;
-
-}
-.intro__title{ /*1это конейнер заголовка о психологическом консультирование*/
-    color: rgb(37,	17,	94);
-    font-family: "Kaushan Script", serif;
     
-    font-weight: 600;
-    text-transform:uppercase ;
-    font-size:20px;
-   max-width: 100%;
-margin-top: 100px;
-font-style: italic;
+     @media (max-width: 768px) {
 
-}
-.intro__suptitle{
-  max-width: 100%;
-  color: rgb(37, 17, 94);
-  font-family: "Kaushan Script", serif;
-  font-style: italic;
-  margin-top: 50px;
-  margin-right: 10px;
-  line-height: 1,5;
-  font-weight: 700;
-  font-size: 19px; /* Добавьте это, чтобы увеличить размер текста */
-}
- /*Услуги*/
- 
- .uslugi {
- width: 100%;
- height: 100%;
-  text-align: center;
-  font-size: 32px;
-  font-weight: 300;
-
-}
-
-.uslugi__suptitle {
-  font-size: 20px;
-  color: rgb(37, 17, 94);
-  font-family: "Kaushan Script", serif;
-  font-style: italic;
-  margin: 0;
-  font-weight: 700;
-}
-
-.navnew {
-  width: 100%;
-
-  margin-top: 250px;
-  text-align: center; /* Центрируем текст по горизонтали */
-
-}
-
-.navnew h3 {
-  color: rgb(37, 17, 94);
-  font-size: 15px;
-  font-weight: 900;
-  text-transform: uppercase;
-  margin-top: 20px;
-  margin-bottom: 5px; /* Уменьшаем нижний отступ */
-  text-decoration: none;
-  letter-spacing: 2px;
-  text-align: center; /* Центрируем текст по горизонтали */
-}
-
-.navnew h4 {
-  color: rgb(37, 17, 94);
-  font-size: 12px;
-  font-weight: 700;
-  text-transform: uppercase;
-  line-height: 2; /* 1.2 означает 120% от размера шрифта */
-  display: inline-block;
-  margin-top: 5px; /* Уменьшаем верхний отступ */
-  margin-bottom: 10px;
-  text-align: left;
-}
-
-
-.uslugi video {
-  position: absolute;
-  top: 350px;
-  right: 10px;
-  max-width: 90%;
-  max-height: 45%;
-  border: 10px solid rgb(37, 17, 94); /* Рамка вокруг видео */
-  box-sizing: content-box; /* Убираем внутренние отступы и делаем границу отдельной */
-  object-fit: cover; /* Масштабирование видео на весь плеер */
-  border-radius: 50%; /* Закругление углов видео */
-}
-
-  /*KONTAKTY*/
-
-
-
-   
-  .kontakty {
-    width: 100% auto;
-    height: 660px ; /* Высота будет автоматически подстраиваться */
-}
-
-.kontakty h1 {
-    font-size: 18px; /* Изменяем размер шрифта для маленьких экранов */
-    margin-top: 20px;
-    margin-left: auto;
-}
-
-.container {
-    flex-direction: column; /* Располагаем элементы в столбик */
-
-  }
-
-.text {
-   margin-left: -40px;
-
-    text-align: center; /* Выравниваем текст по центру для маленьких экранов */
-    margin-top: -20px;
- 
-    width: 82%; /* Делаем текст на всю ширину контейнера */
- 
-      line-height: 1.5;
-
-   
-  }
-
-.image2 {
-    width: 150px;
-    height: 160px;
-    margin-top: -30px; /* Уменьшаем отступ сверху */
-    margin-left: -70px; /* Центрируем изображение */
-}
-
-.vstrechy {
-    width: 100%;
-    margin-left: 40px;
-   margin-top: -60px;
-   font-size: 15px;
-
-   line-height: 0.1px;
-}
-
-.whatsApp {
-   
-    margin-left: 30px;
-    font-size: 15px;
-    line-height: 0.1px;
-   
-}
-
-h5 {
-    margin-right: 10px; /* Уменьшаем отступ справа */
-    width: 100%; /* Делаем элемент на всю ширину */
-}
-
-h6 {
-    width: 100%; /* Делаем элемент на всю ширину */
-    margin-left: 10px; /* Уменьшаем отступ слева */
-}
-
-
-  
-  /* Diplom Forma */
-      /* Diplom*/
-      .image3 {
-        width: 100%;
-        height:200px;
-      margin: 0;
-        align-items: center; /* Центрируем содержимое */
+      
+      .row {
+          display: none !important;
       }
-    
-    
-    /* Diplom Forma */
-    .section-title {
-      width: 100%;
-      position: relative;
-      color: rgb(37, 17, 94);
-      font-weight: 600;
-      font-size: 20px;
-      margin-bottom: 20px; /* Отступ снизу, чтобы заголовок не прилегал вплотную к форме */
-      margin-top: 240px; /* Увеличенный отступ сверху */
-    
-   text-align: center;
     }
-    .contact-form { /* dvigajytsa 4 kolonki formy */
-    
-    margin: 0;
+    /* For screens up to 768px wide */
+@media (max-width: 768px) {
+  .row {
+    flex-direction: column; /* Stack items vertically */
+    font-size: 14px; /* Adjust font size */
+  }
 
-      transition: transform 0.3s ease-in-out; /* Add transition for smooth sliding */
-      transform: translateX(0); /* Initial position */
+  .psihilogy-text {
+    font-size: 1.5rem; /* Smaller heading text */
+  }
+}
+
+/* For screens up to 640px wide */
+@media (max-width: 640px) {
+  .row {
+    text-align: left; /* Align items to the left */
+    padding: 10px; /* Add padding for better readability */
+  }
+
+  .psihilogy-text {
+    font-size: 1.2rem; /* Further reduce size */
+  }
+}
+
+/* For screens up to 400px wide */
+@media (max-width: 400px) {
+  .row {
+    font-size: 12px; /* Smallest font size */
+  }
+
+  .psihilogy-text {
+    font-size: 1rem; /* Adapt heading size */
+  }
+
+  img.logo {
+    max-width: 100%; /* Make the logo responsive */
+    height: auto;
+  }
+}
+
+/*Главная For screens up to 768px wide */
+
+
+@media (max-width: 1250px) {
+  .glavnaja {
+    background-size: contain; /* Adjust background size for smaller screens */
+
+
+    background-size: cover; /* Убедитесь, что изображение покрывает всю страницу */
+    background-repeat: no-repeat; /* Запрещает повторение изображения */
+    width: 100%;
+    background-position: center; /* Центрирует изображение по вертикали и горизонтали */
+    height: 80vh;
+  }
+  .glavnaja-text {
+    font-size: 25px; /* Reduce font size */
+  }
+  .glavnaja-text1 {
+    font-size: 18px; /* Adjust secondary text size */
+    line-height: 1.5; /* Improve readability on smaller screens */
+  }
+        /* vash lichnii */  
+        .text h1{
+          color: rgb(37, 17, 94);
+          font-size: 16px;
+          font-weight: 700;
+          text-transform: uppercase;
+        
+          display: inline;
+          margin-top: 30px;
+         margin-left: 40px ;
+        
+          display: flex;
+        text-align: center;
+            text-decoration: none;
+            letter-spacing: 2px; 
+        }
+    .text h2{/* vash lichnii */  
+      color: rgb(37, 17, 94);
+      font-size: 13px;
+      font-weight: 600;
+      text-transform: uppercase;
+      line-height: 2; /* 1.2 означает 120% от размера шрифта */
+    
+        margin-top: 50px;
+        margin-left: 10px ;
+          
+    
     }
+}
+@media (max-width: 768px) {
+  .glavnaja {
+    background-size: contain; /* Adjust background size for smaller screens */
+
+
+    background-size: cover; /* Убедитесь, что изображение покрывает всю страницу */
+    background-repeat: no-repeat; /* Запрещает повторение изображения */
+    width: 100%;
+    background-position: center; /* Центрирует изображение по вертикали и горизонтали */
+    height: 80vh;
+ 
+  }
+  .glavnaja-text {
+    font-size: 25px; /* Reduce font size */
+
+  }
+  .glavnaja-text1 {
+    font-size: 18px; /* Adjust secondary text size */
+    line-height: 1.5; /* Improve readability on smaller screens */
+
+  
   }
   
+  .video-container video {
+    width: 100%; /* Видео заполняет контейнер */
+    height: auto; /* Сохраняем пропорции */
+    margin-top: 50px;
+    margin-left: 50px;
+  }
+}
 
+/* For screens up to 640px wide */
+
+@media (max-width: 640px) {
+  .glavnaja{
+    background: url(woman2.png);
+    background-size: cover; /* Убедитесь, что изображение покрывает всю страницу */
+    background-repeat: no-repeat; /* Запрещает повторение изображения */
+    width: 100%;
+    background-position: center; /* Центрирует изображение по вертикали и горизонтали */
+    height: 80vh;
+    
+    }
+  .glavnaja-text {
+    font-size: 24px; /* Further reduce font size for compact screens */
+    margin-bottom: 20px; /* Adjust spacing */
+  }
+  .glavnaja-text1 {
+    font-size: 18px; /* Smaller font size for smaller screens */
+  }
+  .container {
+    display: flex;
+    align-items: center; /* Выравнивание по центру */
+    gap: 20px; /* Расстояние между текстом и видео */
+  }
   
+  .text {
+    flex: 1; /* Текст занимает доступное пространство */
+  }
+  .text h1{
+    color: rgb(37, 17, 94);
+    font-size: 19px;
+    font-weight: 700;
+    text-transform: uppercase;
+  
+    display: inline;
+    margin-top: 20px;
+   margin-left: 40px ;
+  
+    display: flex;
+  text-align: center;
+      text-decoration: none;
+      letter-spacing: 2px; 
+      white-space: nowrap;
+  }
+  .text h2{
+   
+    color: rgb(37, 17, 94);
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    line-height: 2; /* 1.2 означает 120% от размера шрифта */
+  
+      margin-top: 50px;
+      margin-left: 10px ;
+        
+  
+  }
+  .video-container {
+    flex: 1; /* Видео занимает равное пространство */
+  }
+  
+  .video-container video {
+    width: 90%; /* Видео заполняет контейнер */
+    height: auto; /* Сохраняем пропорции */
+    margin-top: 50px;
+    margin-left: 35px;
+    
+  }
+}
+
+/* For screens up to 400px wide */
+@media (max-width: 540px) {
+  .glavnaja {
+    padding: 10px; /* Add padding for smaller screens */
+
+    background-size: cover; /* Убедитесь, что изображение покрывает всю страницу */
+    background-repeat: no-repeat; /* Запрещает повторение изображения */
+    width: 110%;
+    background-position: center; /* Центрирует изображение по вертикали и горизонтали */
+    height: 80vh;
+    
+  }
+  .glavnaja-text {
+    font-size: 18px; /* Compact font size */
+  }
+  .glavnaja-text1 {
+    font-size: 12x; /* Smaller size for better readability */
+    line-height: 1.3; /* Adjust line height */
+    margin-left: 5px;
+    margin-right: 5px;
+    font-weight: 500;
+  }
+      /* vash lichnii */  
+      .text h1{
+        color: rgb(37, 17, 94);
+        font-size: 14px;
+        font-weight: 700;
+        text-transform: uppercase;
+      
+        display: inline;
+        margin-top: 20px;
+       margin-left: 40px ;
+      
+        display: flex;
+      text-align: center;
+          text-decoration: none;
+          letter-spacing: 2px; 
+      }
+  .text h2{/* vash lichnii */  
+    color: rgb(37, 17, 94);
+    font-size: 10px;
+    font-weight: 600;
+    text-transform: uppercase;
+    line-height: 2; /* 1.2 означает 120% от размера шрифта */
+  
+      margin-top: 50px;
+      margin-left: 25px ;
+        
+  
+  }
+}
+  /* For screens up to 400px wide */
+@media (max-width: 412px) {
+  .glavnaja {
+  
+      background-size: contain; /* Adjust background size for smaller screens */
+  
+  
+      background-size: cover; /* Убедитесь, что изображение покрывает всю страницу */
+      background-repeat: no-repeat; /* Запрещает повторение изображения */
+      width: 100%;
+      background-position: center; /* Центрирует изображение по вертикали и горизонтали */
+      height: 80vh;
+    }
+    .glavnaja-text  h2{
+      font-size: 25px; /* Reduce font size */
+      margin-left: 500px;
+    }
+    .glavnaja-text1 {
+      font-size: 18px; /* Adjust secondary text size */
+      line-height: 1.5; /* Improve readability on smaller screens */
+    }
+
+    /* vash lichnii */  
+    .text h1{
+      color: rgb(37, 17, 94);
+      font-size: 14px;
+      font-weight: 700;
+      text-transform: uppercase;
+    
+      display: inline;
+      margin-top: 20px;
+     margin-left: 40px ;
+    
+      display: flex;
+    text-align: center;
+        text-decoration: none;
+        letter-spacing: 2px; 
+        white-space: nowrap;
+    }
+    .text h2{
+   
+      color: rgb(37, 17, 94);
+      font-size: 9px;
+      font-weight: 500;
+      text-transform: uppercase;
+      line-height: 2; /* 1.2 означает 120% от размера шрифта */
+    
+        margin-top: 50px;
+        margin-left: 20px ;
+          
+    
+    }
+  }
   
