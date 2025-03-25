@@ -257,6 +257,34 @@ text-align: center;
   height: auto; /* Сохраняем пропорции */
   margin-top: 50px;
   margin-left: 50px;
+  border: 5px solid #ceaaf7; /* Зеленая рамка */
+  border-radius: 15px; /* Закругленные края рамки */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Тень для рамки */
+}
+/*-Инфо-->*/
+.glavnaja-info{ /*tekst*/
+  text-align: center;
+  text-align: left;
+  font-size: 25px; /* Размер шрифта в пикселях */
+  margin-top: 50px; /* Увеличивает расстояние над этим текстом */
+  font-weight: 600;
+  font-family: 'Roboto', sans-serif; /* Для основного текста */
+  line-height: 1.8; /* Расстояние между строками, где 1.8 - множитель */
+  margin: 20px;
+  color: rgb(37, 17, 94);
+  font-style: italic;
+  margin-left: 50px;
+}
+.video-container-info video {
+  width: 100%; /* Видео заполняет контейнер */
+
+  height: 400px; /* Сохраняем пропорции */
+  margin-top: 50px;
+  margin-left: auto;
+  border: 5px solid #ceaaf7; /* Зеленая рамка */
+  background-color: #E6E6FA;
+  border-radius: 15px; /* Закругленные края рамки */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Тень для рамки */
 }
 
 @media (max-width: 768px) {
@@ -422,6 +450,31 @@ text-align: center;
     margin-top: 50px;
     margin-left: 50px;
   }
+      /*-Инфо-->*/
+.glavnaja-info{ /*tekst*/
+  text-align: center;
+  text-align: left;
+  font-size: 19px; /* Размер шрифта в пикселях */
+  margin-top: 50px; /* Увеличивает расстояние над этим текстом */
+  font-weight: 600;
+  font-family: 'Roboto', sans-serif; /* Для основного текста */
+  line-height: 1.8; /* Расстояние между строками, где 1.8 - множитель */
+  margin: 20px;
+  color: rgb(37, 17, 94);
+  font-style: italic;
+  margin-left: 50px;
+}
+.video-container-info video {
+  width: 100%; /* Видео заполняет контейнер */
+
+  height:auto; /* Сохраняем пропорции */
+  margin-top: 50px;
+  margin-left: auto;
+  border: 5px solid #ceaaf7; /* Зеленая рамка */
+  background-color: #E6E6FA;
+  border-radius: 15px; /* Закругленные края рамки */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Тень для рамки */
+}
 }
 
 /* For screens up to 640px wide */
@@ -492,6 +545,31 @@ text-align: center;
     margin-left: 35px;
     
   }
+      /*-Инфо-->*/
+.glavnaja-info{ /*tekst*/
+  text-align: center;
+  text-align: left;
+  font-size: 17px; /* Размер шрифта в пикселях */
+  margin-top: 50px; /* Увеличивает расстояние над этим текстом */
+  font-weight: 600;
+  font-family: 'Roboto', sans-serif; /* Для основного текста */
+  line-height: 1.8; /* Расстояние между строками, где 1.8 - множитель */
+  margin: 20px;
+  color: rgb(37, 17, 94);
+  font-style: italic;
+  margin-left: 50px;
+}
+.video-container-info video {
+  width: 100%; /* Видео заполняет контейнер */
+
+  height:auto; /* Сохраняем пропорции */
+  margin-top: 50px;
+  margin-left: auto;
+  border: 5px solid #ceaaf7; /* Зеленая рамка */
+  background-color: #E6E6FA;
+  border-radius: 15px; /* Закругленные края рамки */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Тень для рамки */
+}
 }
 
 /* For screens up to 400px wide */
@@ -544,6 +622,32 @@ text-align: center;
         
   
   }
+
+      /*-Инфо-->*/
+.glavnaja-info{ /*tekst*/
+  text-align: center;
+  text-align: left;
+  font-size: 15px; /* Размер шрифта в пикселях */
+  margin-top: 50px; /* Увеличивает расстояние над этим текстом */
+  font-weight: 600;
+  font-family: 'Roboto', sans-serif; /* Для основного текста */
+  line-height: 1.8; /* Расстояние между строками, где 1.8 - множитель */
+  margin: 20px;
+  color: rgb(37, 17, 94);
+  font-style: italic;
+  margin-left: 50px;
+}
+.video-container-info video {
+  width: 100%; /* Видео заполняет контейнер */
+
+  height:auto; /* Сохраняем пропорции */
+  margin-top: 50px;
+  margin-left: auto;
+  border: 5px solid #ceaaf7; /* Зеленая рамка */
+  background-color: #E6E6FA;
+  border-radius: 15px; /* Закругленные края рамки */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Тень для рамки */
+}
 }
   /* For screens up to 400px wide */
 @media (max-width: 412px) {
@@ -597,5 +701,31 @@ text-align: center;
           
     
     }
+    /*-Инфо-->*/
+.glavnaja-info{ /*tekst*/
+  text-align: center;
+  text-align: left;
+  font-size: 15px; /* Размер шрифта в пикселях */
+  margin-top: 50px; /* Увеличивает расстояние над этим текстом */
+  font-weight: 600;
+  font-family: 'Roboto', sans-serif; /* Для основного текста */
+  line-height: 1.8; /* Расстояние между строками, где 1.8 - множитель */
+  margin: 20px;
+  color: rgb(37, 17, 94);
+  font-style: italic;
+  margin-left: 50px;
+}
+.video-container-info video {
+  width: 100%; /* Видео заполняет контейнер */
+
+  height:auto; /* Сохраняем пропорции */
+  margin-top: 50px;
+  margin-left: auto;
+  border: 5px solid #ceaaf7; /* Зеленая рамка */
+  background-color: #E6E6FA;
+  border-radius: 15px; /* Закругленные края рамки */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Тень для рамки */
+}
+
   }
   
