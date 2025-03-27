@@ -211,6 +211,7 @@ height: 100vh;
 
 /*УСЛУГИ*/
 .container {
+
   display: flex;
   align-items: center; /* Выравнивание по центру */
   gap: 20px; /* Расстояние между текстом и видео */
@@ -219,7 +220,7 @@ height: 100vh;
 .text {
   flex: 1; /* Текст занимает доступное пространство */
 }
-.text h1{
+.text h2{
   color: rgb(37, 17, 94);
   font-size: 19px;
   font-weight: 700;
@@ -234,17 +235,16 @@ text-align: center;
     text-decoration: none;
     letter-spacing: 2px; 
     white-space: nowrap;
+    margin-bottom: 50px;
 }
-.text h2{
+.text p{
  
   color: rgb(37, 17, 94);
   font-size: 14px;
   font-weight: 600;
   text-transform: uppercase;
-  line-height: 2; /* 1.2 означает 120% от размера шрифта */
 
-    margin-top: 50px;
-   
+ 
       
 
 }
@@ -369,33 +369,35 @@ margin-left: 100px;
     line-height: 1.5; /* Improve readability on smaller screens */
   }
         /* vash lichnii */  
-        .text h1{
+        .text h2{
           color: rgb(37, 17, 94);
-          font-size: 16px;
+          font-size: 19px;
           font-weight: 700;
           text-transform: uppercase;
         
           display: inline;
-          margin-top: 30px;
+          margin-top: 20px;
          margin-left: 40px ;
         
           display: flex;
         text-align: center;
             text-decoration: none;
             letter-spacing: 2px; 
+            white-space: nowrap;
+            margin-bottom: 50px;
+        
         }
-    .text h2{/* vash lichnii */  
-      color: rgb(37, 17, 94);
-      font-size: 13px;
-      font-weight: 600;
-      text-transform: uppercase;
-      line-height: 2; /* 1.2 означает 120% от размера шрифта */
-    
-        margin-top: 50px;
-        margin-left: 10px ;
-          
-    
-    }
+        .text p{
+       
+          color: rgb(37, 17, 94);
+          font-size: 14px;
+          font-weight: 600;
+          text-transform: uppercase;
+        
+         
+              
+        
+        }
     /*<!--КОНТАКТЫ-->*/
 .kontakty{
   height: 100vh;
@@ -504,7 +506,7 @@ margin-left: -20px;
     flex-direction: column; /* На узких экранах текст и видео идут друг под другом */
     text-align: center;
   }
-  text h1{
+  text h2{
     color: rgb(37, 17, 94);
     font-size: 19px;
     font-weight: 700;
@@ -520,15 +522,15 @@ margin-left: -20px;
       letter-spacing: 2px; 
       white-space: nowrap;
   }
-  .text h2{
-   
+  .text p{
+    
     color: rgb(37, 17, 94);
     font-size: 12px;
     font-weight: 600;
     text-transform: uppercase;
     line-height: 2; /* 1.2 означает 120% от размера шрифта */
   margin-left: -50px;
-      margin-top: 50px;
+  
      text-align: left;
         
   
@@ -671,14 +673,14 @@ margin-left: -20px;
   .text {
     flex: 1; /* Текст занимает доступное пространство */
   }
-  .text h1{
+  .text h2{
     color: rgb(37, 17, 94);
     font-size: 19px;
     font-weight: 700;
     text-transform: uppercase;
   
     display: inline;
-    margin-top: 20px;
+
    margin-left: 40px ;
   
     display: flex;
@@ -687,15 +689,15 @@ margin-left: -20px;
       letter-spacing: 2px; 
       white-space: nowrap;
   }
-  .text h2{
+  .text p{
    
     color: rgb(37, 17, 94);
     font-size: 12px;
     font-weight: 600;
     text-transform: uppercase;
-    line-height: 2; /* 1.2 означает 120% от размера шрифта */
+   
   
-      margin-top: 50px;
+     
       margin-left: 10px ;
         
   
@@ -825,6 +827,8 @@ margin-left: -70px;
 
 /* For screens up to 400px wide */
 @media (max-width: 540px) {
+  
+
   .glavnaja {
     padding: 10px; /* Add padding for smaller screens */
 
@@ -846,7 +850,7 @@ margin-left: -70px;
     font-weight: 500;
   }
       /* vash lichnii */  
-      .text h1{
+      .text h2{
         color: rgb(37, 17, 94);
         font-size: 14px;
         font-weight: 700;
@@ -861,14 +865,14 @@ margin-left: -70px;
           text-decoration: none;
           letter-spacing: 2px; 
       }
-  .text h2{/* vash lichnii */  
+  .text p{/* vash lichnii */  
     color: rgb(37, 17, 94);
     font-size: 10px;
     font-weight: 600;
     text-transform: uppercase;
-    line-height: 2; /* 1.2 означает 120% от размера шрифта */
+   
   
-      margin-top: 50px;
+
       margin-left: 25px ;
         
   
@@ -899,13 +903,10 @@ margin-left: -70px;
   border-radius: 15px; /* Закругленные края рамки */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Тень для рамки */
 }
-}
 /*KONTAKTY*/
-@media (max-width: 461px) {
-
 
   .glavnaja-kontakty h5{
-    margin-left: 20px;
+    margin-left: 15px;
     color: rgb(37, 17, 94);
     font-size: 17px;
   
@@ -921,31 +922,36 @@ margin-left: -70px;
     font-weight: 400;
   
     line-height: 1.2; /* 1.2 означает 120% от размера шрифта */
-  margin-left: -70px;
-      margin-right: 180px;
+margin-top: 10px;
+      margin-right: 100px;
   
   }
   .image2 {
-    display: block; /* Делает изображение блочным элементом */
-    margin-left: auto; /* Отступ слева автоматический */
-    margin-right:10px; /* Изображение будет приближаться к правому краю */
-    height: 40vh;
-    margin-top: -160px;
-    margin-bottom: 100px;
+    display: block;
+    margin: 0 auto; /* Центровка изображения */
+    height: auto; /* Автоматическая высота */
+    max-width: 50%; /* Убедитесь, что изображение вписывается в экран */
   
   }
+  /* Красные линии для тестирования
+  * {
+    border: 1px solid red;
+  }*/
+  
   .glavnaja-kontakty-vstrechy{
     color: rgb(37, 17, 94);
-    font-size: 12px;
-    margin-left:50px;
-    margin-top: -100px;
-    font-weight: 500;
+    font-size: 10px;
+    margin-left:10px;
+    margin-top: 20px;
+    font-weight: 600;
   
   }
   .whatsApp{
-    margin-left: 50px;
-  }
-  }
+    margin-left: 10px;
+}
+  
+}
+
   /* For screens up to 400px wide */
 @media (max-width: 412px) {
   .glavnaja {
@@ -969,14 +975,14 @@ margin-left: -70px;
     }
 
     /* vash lichnii */  
-    .text h1{
+    .text h2{
       color: rgb(37, 17, 94);
       font-size: 14px;
       font-weight: 700;
       text-transform: uppercase;
     
       display: inline;
-      margin-top: 20px;
+   
      margin-left: 40px ;
     
       display: flex;
@@ -985,18 +991,17 @@ margin-left: -70px;
         letter-spacing: 2px; 
         white-space: nowrap;
     }
-    .text h2{
+    .text p{
    
       color: rgb(37, 17, 94);
       font-size: 9px;
       font-weight: 500;
       text-transform: uppercase;
-      line-height: 2; /* 1.2 означает 120% от размера шрифта */
     
-        margin-top: 50px;
-        margin-left: 20px ;
+    
+     margin-left: 20px ;
           
-    
+  
     }
     /*-Инфо-->*/
 .glavnaja-info{ /*tekst*/
@@ -1025,49 +1030,56 @@ margin-left: -70px;
 }
 }
 /*KONTAKTY*/
-@media (max-width: 371px) {
+@media (max-width: 300px) {
 
 
-  .glavnaja-kontakty h5{
-    margin-left: 15px;
-    color: rgb(37, 17, 94);
-    font-size: 17px;
-  
-  }
-  .glavnaja-kontakty1{
-    margin-left: 100px;
-  
-  }
-  .glavnaja-kontakty1 h6{
-  
-  
-    font-size: 12px;
-    font-weight: 400;
-  
-    line-height: 1.2; /* 1.2 означает 120% от размера шрифта */
+/*KONTAKTY*/
 
-      margin-right: 50px;
-  
-  }
-  .image2 {
-    display: block; /* Делает изображение блочным элементом */
-    margin-left: auto; /* Отступ слева автоматический */
-    margin-right:10px; /* Изображение будет приближаться к правому краю */
-    height: 30vh;
-    margin-top: 20px;
-    margin-bottom: 100px;
-  
-  }
-  .glavnaja-kontakty-vstrechy{
-    color: rgb(37, 17, 94);
-    font-size: 10px;
-    margin-left:10px;
-    margin-top: -120px;
-    font-weight: 600;
-  
-  }
-  .whatsApp{
-    margin-left: 10px;
+.glavnaja-kontakty h5{
+  margin-left: 15px;
+  color: rgb(37, 17, 94);
+  font-size: 17px;
+
 }
+.glavnaja-kontakty1{
+  margin-left: 100px;
+
+}
+.glavnaja-kontakty1 h6{
+
+
+  font-size: 12px;
+  font-weight: 400;
+
+  line-height: 1.2; /* 1.2 означает 120% от размера шрифта */
+margin-top: 10px;
+    margin-right: 100px;
+
+}
+.image2 {
+  display: block;
+  margin: 0 auto; /* Центровка изображения */
+  height: auto; /* Автоматическая высота */
+  max-width: 50%; /* Убедитесь, что изображение вписывается в экран */
+
+}
+/* Красные линии для тестирования
+* {
+  border: 1px solid red;
+}*/
+
+.glavnaja-kontakty-vstrechy{
+  color: rgb(37, 17, 94);
+  font-size: 10px;
+  margin-left:10px;
+  margin-top: 20px;
+  font-weight: 600;
+
+}
+.whatsApp{
+  margin-left: 10px;
+}
+
+
   
 }
