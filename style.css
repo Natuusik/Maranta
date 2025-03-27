@@ -210,6 +210,9 @@ height: 100vh;
 
 
 /*УСЛУГИ*/
+.wrapper{
+  margin-top: 50px;
+}
 .container {
 
   display: flex;
@@ -227,7 +230,7 @@ height: 100vh;
   text-transform: uppercase;
 
   display: inline;
-  margin-top: 20px;
+  margin-top: 50px;
  margin-left: 40px ;
 
   display: flex;
@@ -350,6 +353,11 @@ text-align: center;
 margin-left: 100px;
 }
 
+@media (max-width: 768px) {
+  .row > div {
+    display: block;
+  }
+}
 @media (max-width: 1250px) {
   .glavnaja {
     background-size: contain; /* Adjust background size for smaller screens */
@@ -538,13 +546,40 @@ margin-left: -20px;
 }
     
     
-     @media (max-width: 768px) {
 
-      
-      .row {
-          display: none !important;
-      }
-    }
+
+/* Скрыть боковую панель для больших экранов */
+@media (min-width: 992px) { /* 992px — стандартная точка для больших экранов */
+  .offcanvas {
+    display: none;
+  }
+}
+
+/* Отображать боковую панель для маленьких экранов */
+@media (max-width: 768px) {
+  .offcanvas {
+    display: block; /* Панель будет доступна на малых экранах */
+  }
+
+  .blue-menu-btn {
+    display: block; /* Отображать кнопку для маленьких экранов */
+  }
+}
+
+/* Скрыть кнопку открытия на больших экранах */
+@media (min-width: 768px) {
+  .blue-menu-btn {
+    display: none;
+  }
+}
+@media (max-width: 786px) {
+  .row {
+    display: none !important; /* Скрыть всю строку вместе с содержимым */
+  }
+}
+
+
+
     /* For screens up to 768px wide */
 @media (max-width: 768px) {
   .row {
