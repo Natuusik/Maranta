@@ -182,45 +182,70 @@ background-position: center; /* Центрирует изображение по
 height: 100vh;
 
 }
-.glavnaja-text{
-  text-align: center;
-  font-size: 37px;
- 
-  margin-bottom: 50px; /* Увеличивает расстояние под заголовком */
-  font-family: 'Roboto', sans-serif; /* Для основного текста */
-  color: rgb(37, 17, 94);
-  font-style: italic;
- 
-
-  white-space: nowrap;
-  overflow: hidden;
-
-  font-weight: 900;
-  margin-right: 50px;
-}
-.glavnaja-text1{
-  text-align: center;
-  font-size: 27px; /* Размер шрифта в пикселях */
-  margin-top: 50px; /* Увеличивает расстояние над этим текстом */
-  font-weight: 800;
-  font-family: 'Roboto', sans-serif; /* Для основного текста */
-  line-height: 2; /* Расстояние между строками, где 1.8 - множитель */
-  margin: 20px;
-  color: rgb(37, 17, 94);
-  font-style: italic;
-
-  margin-right: 50px;
-
-
-
+.glavnaja {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Вертикальное выравнивание */
+  align-items: center; /* Горизонтальное выравнивание */
+  height: 100vh; /* Чтобы занять всю высоту экрана */
+  width: 100%;
 }
 
+.glavnaja-text-opsih {
+  width: 100%;
+  text-align: center;
+  margin: 0;
+}
+
+  .container-fluid {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  
 
 
+  .glavnaja-text-opsih h1{
+    font-size: 35px; /* Further reduce font size for compact screens */
+    color: rgb(37, 17, 94);
 
-
-
-
+    font-weight: 800;
+margin-right: 50px;
+      margin-top: -150px; /* Уменьшает отступ сверху */
+      margin-bottom: 10px; /* Немного увеличьте нижний отступ для визуального пространства */
+    }
+    
+  
+  
+    .glavnaja-text-opsih1 h2 {
+      line-height: 1.8; /* Увеличение расстояния между строками */
+      font-size: 25px; 
+      font-weight: 700;
+      text-align: justify; /* Растягивает текст по всей ширине */
+      color: rgb(37, 17, 94);
+      margin-right:50px;
+      margin-left: 50px;
+      margin-top: 70px; /* Отступ сверху */
+    }
+/*ZAGOLOVKI*/
+    .glavnaja-text-zagolovok h1 {
+      font-size: 35px; /* Further reduce font size for compact screens */
+      margin-bottom: 50px; /* Adjust spacing */
+      white-space: nowrap;
+      overflow: hidden;
+      color: rgb(37, 17, 94);
+      font-weight: 900;
+      margin-right: 50px;
+      text-align: center;
+      text-decoration: underline; /* Добавляет подчеркивание текста */
+    }
+    .glavnaja-text1{
+      font-size: 23px; 
+      margin-right: 50px;
+      font-weight: 700;
+      line-height: 1.7;
+      color: rgb(37, 17, 94);
+    text-align: center;
+    }
 
 /*УСЛУГИ*/
 .wrapper{
@@ -320,15 +345,15 @@ text-align: center;
   pointer-events: none; /* Градиент не мешает кликам по видео */
 }
 /*<!--КОНТАКТЫ-->*/
-.kontakty{
-  height: 100vh;
 
-}
+
+
 .glavnaja-kontakty h5{
   margin-left: 50px;
   color: rgb(37, 17, 94);
   font-size: 27px;
   font-weight: 700;
+  margin-top: 50px;
 
 }
 .glavnaja-kontakty1{
@@ -337,11 +362,11 @@ text-align: center;
 }
 .glavnaja-kontakty1 h6{
 
-margin-top: 70px;
+margin-top: 80px;
   font-size: 22px;
   font-weight: 600;
 
-  line-height: 1.2; /* 1.2 означает 120% от размера шрифта */
+  line-height: 1.5; /* 1.2 означает 120% от размера шрифта */
 margin-left: -10px;
 margin-right: 50px;
 color: rgb(37, 17, 94);
@@ -356,12 +381,13 @@ color: rgb(37, 17, 94);
   margin-top: -200px;
   margin-bottom: 100px;
 
+
 }
 .glavnaja-kontakty-vstrechy{
   color: rgb(37, 17, 94);
   font-size: 22px;
   margin-left:400px;
-  margin-top: -70px;
+  margin-top: -100px;
   font-weight: 700;
 
 }
@@ -370,55 +396,141 @@ color: rgb(37, 17, 94);
 
 }
 
+  .kontakty {
+    margin-top: 500px;
+    height: 100vh;
+    width: 100%;
+    border: 4px solid transparent;
+  
+  border: 4px solid red; width: 200px; height: 200px;
+  
+}
+.kontakty_ramka {
+  background: linear-gradient(to bottom, rgba(106, 13, 173, 0.5), rgba(255, 255, 255, 0.3)); /* Прозрачный градиент */
+  border: 4px solid transparent;
+  border-image: linear-gradient(to right, #6a0dad, #a15ff7);
+  border-image-slice: 1;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(106, 13, 173, 0.5);
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+
+.kontakty_ramka h1 {
+  font-size: 32px;
+  color: #6a0dad;
+  font-weight: bold;
+}
+
+.kontakty_ramka p {
+  font-size: 18px;
+  line-height: 1.5; /* Удобочитаемое расстояние между строками */
+  color: #4a148c;
+}
+
+.kontakty_ramka button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #8e24aa;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 3px 10px rgba(142, 36, 170, 0.5);
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.kontakty_ramka button:hover {
+  background-color: #6a0dad;
+}
+
+
 
 @media (max-width: 768px) {
   .row > div {
     display: block;
   }
 }
+@media (max-width: 1335px) {
+.row {
+  text-align: center;
+  line-height: 50px; /*двигает слова внутри ячеек сверху вниз*/
+  font-size: 14px; /* Уменьшенный размер шрифта */
+  text-transform: uppercase;
+  font-weight: 700; /* Уменьшенная толщина шрифта */
+
+ letter-spacing: 0.2px; /* Регулировка расстояния между буквами */
+  
+
+}.row a{
+color: rgb(37, 17, 94);
+}
+/* Стили для текста Psihilogy */
+.psihilogy-text {
+  margin-left: 5px;
+  font-size: 1.3rem; /* Размер текста */
+  font-weight: bold; /* Жирный текст */
+  background: linear-gradient(45deg, #ff6ec4, #7873f5); /* Градиент */
+  -webkit-background-clip: text; /* Обрезка фона для текста */
+  color: transparent; /* Прозрачный текст */
+}
+
+/* Стили для анимации текста */
+.animated-text {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #00eaff;
+  animation: glow 1.5s infinite; /* Анимация glow */
+
+}
+}
 @media (max-width: 1250px) {
   .glavnaja {
-    background-size: contain; /* Adjust background size for smaller screens */
-
-
-    background-size: cover; /* Убедитесь, что изображение покрывает всю страницу */
-    background-repeat: no-repeat; /* Запрещает повторение изображения */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Вертикальное выравнивание */
+    align-items: center; /* Горизонтальное выравнивание */
+    height: 100vh; /* Чтобы занять всю высоту экрана */
     width: 100%;
-    background-position: center; /* Центрирует изображение по вертикали и горизонтали */
-    height: 100vh;
   }
-  .glavnaja-text{
+  
+  .glavnaja-text-opsih {
+    width: 100%;
     text-align: center;
-    font-size: 30px;
-   
-    margin-bottom: 50px; /* Увеличивает расстояние под заголовком */
-    font-family: 'Roboto', sans-serif; /* Для основного текста */
-    color: rgb(37, 17, 94);
-    font-style: italic;
-   
-  
-    white-space: nowrap;
-    overflow: hidden;
-  
-    font-weight: 900;
-    margin-right: 50px;
+    margin: 0;
   }
-  .glavnaja-text1{
-    text-align: center;
-    font-size: 27px; /* Размер шрифта в пикселях */
-    margin-top: 50px; /* Увеличивает расстояние над этим текстом */
-    font-weight: 800;
-    font-family: 'Roboto', sans-serif; /* Для основного текста */
-    line-height: 2; /* Расстояние между строками, где 1.8 - множитель */
-    margin: 20px;
-    color: rgb(37, 17, 94);
-    font-style: italic;
   
-    margin-right: 50px;
+    .container-fluid {
+      padding-left: 0;
+      padding-right: 0;
+    }
+    
   
-  
-  
-  }
+
+    .glavnaja-text-opsih h1{
+      font-size: 28px; /* Further reduce font size for compact screens */
+      color: rgb(37, 17, 94);
+
+      font-weight: 800;
+  margin-right: 50px;
+        margin-top: -200px; /* Уменьшает отступ сверху */
+        margin-bottom: 10px; /* Немного увеличьте нижний отступ для визуального пространства */
+      }
+      
+    
+    
+      .glavnaja-text-opsih1 h2 {
+        line-height: 1.8; /* Увеличение расстояния между строками */
+        font-size: 25px; 
+        font-weight: 600;
+        text-align: justify; /* Растягивает текст по всей ширине */
+        color: rgb(37, 17, 94);
+        margin-right: 50px;
+        margin-left: 50px;
+        margin-top: 70px; /* Отступ сверху */
+      }
+    
         /* vash lichnii */  
         .text h2{
           color: rgb(37, 17, 94);
@@ -531,48 +643,51 @@ height: 300px;
 @media (max-width: 993px) {
 
   
-.glavnaja{
-  background-size: contain; /* Adjust background size for smaller screens */
+  .glavnaja {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Вертикальное выравнивание */
+    align-items: center; /* Горизонтальное выравнивание */
+    height: 100vh; /* Чтобы занять всю высоту экрана */
+    width: 100%;
+  }
+  
+  .glavnaja-text-opsih {
+    width: 100%;
+    text-align: center;
+    margin: 0;
+  }
+  
+    .container-fluid {
+      padding-left: 0;
+      padding-right: 0;
+    }
+    
+  
 
+    .glavnaja-text-opsih h1{
+      font-size: 25px; /* Further reduce font size for compact screens */
+      color: rgb(37, 17, 94);
 
-  background-size: cover; /* Убедитесь, что изображение покрывает всю страницу */
-  background-repeat: no-repeat; /* Запрещает повторение изображения */
-  width: 100%;
-  background-position: center; /* Центрирует изображение по вертикали и горизонтали */
-  height: 100vh;
-}
-.glavnaja-text{
-  text-align: center;
-  font-size: 29px;
- 
-  margin-bottom: 50px; /* Увеличивает расстояние под заголовком */
-  font-family: 'Roboto', sans-serif; /* Для основного текста */
-  color: rgb(37, 17, 94);
-  font-style: italic;
- 
-
-  white-space: nowrap;
-  overflow: hidden;
-
-  font-weight: 900;
+      font-weight: 800;
   margin-right: 50px;
-}
-.glavnaja-text1{
-  text-align: center;
-  font-size: 27px; /* Размер шрифта в пикселях */
-  margin-top: 50px; /* Увеличивает расстояние над этим текстом */
-  font-weight: 800;
-  font-family: 'Roboto', sans-serif; /* Для основного текста */
-  line-height: 2; /* Расстояние между строками, где 1.8 - множитель */
-  margin: 20px;
-  color: rgb(37, 17, 94);
-  font-style: italic;
-
-  margin-right: 50px;
-
-
-
-}
+        margin-top: -20px; /* Уменьшает отступ сверху */
+        margin-bottom: 10px; /* Немного увеличьте нижний отступ для визуального пространства */
+      }
+      
+    
+    
+      .glavnaja-text-opsih1 h2 {
+        line-height: 1.5; /* Увеличение расстояния между строками */
+        font-size: 20px; 
+        font-weight: 600;
+        text-align: justify; /* Растягивает текст по всей ширине */
+        color: rgb(37, 17, 94);
+        margin-right: 20px;
+        margin-left: 20px;
+        margin-top: 50px; /* Отступ сверху */
+      }
+    
   /*KONTAKTY*/
 .kontakty{
   height: 100vh;
@@ -622,16 +737,51 @@ height: 300px;
 }
 /*с боку фото м заканчивается идет снизу*/
 @media (max-width: 768px) {
-  .glavnaja{
-    background: url(woman2.png);
-    background-size: cover; /* Убедитесь, что изображение покрывает всю страницу */
-    background-repeat: no-repeat; /* Запрещает повторение изображения */
+  .glavnaja {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Вертикальное выравнивание */
+    align-items: center; /* Горизонтальное выравнивание */
+    height: 100vh; /* Чтобы занять всю высоту экрана */
     width: 100%;
-    background-position: center; /* Центрирует изображение по вертикали и горизонтали */
-    height: 100vh;
-    
+  }
+  
+  .glavnaja-text-opsih {
+    width: 100%;
+    text-align: center;
+    margin: 0;
+  }
+  
+    .container-fluid {
+      padding-left: 0;
+      padding-right: 0;
     }
     
+ 
+
+  
+    .glavnaja-text-opsih h1{
+      font-size: 25px; /* Further reduce font size for compact screens */
+      color: rgb(37, 17, 94);
+
+      font-weight: 800;
+  margin-right: 50px;
+        margin-top: -20px; /* Уменьшает отступ сверху */
+        margin-bottom: 10px; /* Немного увеличьте нижний отступ для визуального пространства */
+      }
+      
+    
+    
+      .glavnaja-text-opsih1 h2 {
+        line-height: 1.5; /* Увеличение расстояния между строками */
+        font-size: 20px; 
+        font-weight: 600;
+        text-align: justify; /* Растягивает текст по всей ширине */
+        color: rgb(37, 17, 94);
+        margin-right: 20px;
+        margin-left: 20px;
+        margin-top: 50px; /* Отступ сверху */
+      }
   .container {
     flex-direction: column; /* На узких экранах текст и видео идут друг под другом */
     text-align: center;
@@ -665,7 +815,7 @@ height: 300px;
         
   }
 
-  .glavnaja-text {
+  .glavnaja-text-zagolovok {
     font-size: 25px; /* Further reduce font size for compact screens */
     margin-bottom: 50px; /* Adjust spacing */
     white-space: nowrap;
@@ -774,33 +924,52 @@ width: 50%; /* Убедитесь, что изображение вписыва�
 
 
 @media (max-width: 640px) {
-  .glavnaja{
-    background: url(woman2.png);
-    background-size: cover; /* Убедитесь, что изображение покрывает всю страницу */
-    background-repeat: no-repeat; /* Запрещает повторение изображения */
+  .glavnaja {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Вертикальное выравнивание */
+    align-items: center; /* Горизонтальное выравнивание */
+    height: 100vh; /* Чтобы занять всю высоту экрана */
     width: 100%;
-    background-position: center; /* Центрирует изображение по вертикали и горизонтали */
-    height: 80vh;
-    
+  }
+  
+  .glavnaja-text-opsih {
+    width: 100%;
+    text-align: center;
+    margin: 0;
+  }
+  
+    .container-fluid {
+      padding-left: 0;
+      padding-right: 0;
     }
-  
-  .glavnaja-text {
-    font-size: 19px; /* Further reduce font size for compact screens */
-    margin-bottom: 50px; /* Adjust spacing */
-    white-space: nowrap;
-    overflow: hidden;
+    
+ 
 
-    font-weight: 900;
-    margin-right: 50px;
-  
-  }
-  .glavnaja-text1{
-    font-size: 19px; 
-    margin-right: 50px;
-    font-weight: 700;
-    line-height: 1.7;
+    
+    .glavnaja-text-opsih h1{
+      font-size: 22px; /* Further reduce font size for compact screens */
+      color: rgb(37, 17, 94);
 
-  }
+      font-weight: 800;
+  margin-right: 50px;
+        margin-top: -20px; /* Уменьшает отступ сверху */
+        margin-bottom: 10px; /* Немного увеличьте нижний отступ для визуального пространства */
+      }
+      
+    
+    
+      .glavnaja-text-opsih1 h2 {
+        line-height: 1.5; /* Увеличение расстояния между строками */
+        font-size: 18px; 
+        font-weight: 600;
+        text-align: justify; /* Растягивает текст по всей ширине */
+        color: rgb(37, 17, 94);
+        margin-right: 20px;
+        margin-left: 20px;
+        margin-top: 50px; /* Отступ сверху */
+      }
+      
   .container {
     display: flex;
     align-items: center; /* Выравнивание по центру */
@@ -938,32 +1107,50 @@ width: 50%; /* Убедитесь, что изображение вписыва�
   
 
   .glavnaja {
-    padding: 10px; /* Add padding for smaller screens */
-
-    background-size: cover; /* Убедитесь, что изображение покрывает всю страницу */
-    background-repeat: no-repeat; /* Запрещает повторение изображения */
-    width: 110%;
-    background-position: center; /* Центрирует изображение по вертикали и горизонтали */
-    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Вертикальное выравнивание */
+    align-items: center; /* Горизонтальное выравнивание */
+    height: 100vh; /* Чтобы занять всю высоту экрана */
+    width: 100%;
+  }
+  
+  .glavnaja-text-opsih {
+    width: 100%;
+    text-align: center;
+    margin: 0;
+  }
+  
+    .container-fluid {
+      padding-left: 0;
+      padding-right: 0;
+    }
     
-  }
+      
+    .glavnaja-text-opsih h1{
+      font-size: 22px; /* Further reduce font size for compact screens */
+      color: rgb(37, 17, 94);
 
-  .glavnaja-text {
-    font-size: 19px; /* Further reduce font size for compact screens */
-    margin-bottom: 50px; /* Adjust spacing */
-    white-space: nowrap;
-    overflow: hidden;
-    margin-top: 10px;
-    font-weight: 900;
-    margin-right: 50px;
-  
-  }
-  .glavnaja-text1{
-    font-size: 19px; 
-    margin-right: 50px;
-    font-weight: 700;
-  
-  }
+      font-weight: 800;
+  margin-right: 10px;
+        margin-top: -20px; /* Уменьшает отступ сверху */
+        margin-bottom: 10px; /* Немного увеличьте нижний отступ для визуального пространства */
+      }
+      
+    
+    
+      .glavnaja-text-opsih1 h2 {
+        line-height: 1.3; /* Увеличение расстояния между строками */
+        font-size: 18px; 
+        font-weight: 600;
+        text-align: justify; /* Растягивает текст по всей ширине */
+        color: rgb(37, 17, 94);
+        margin-right: 20px;
+        margin-left: 20px;
+        margin-top: 50px; /* Отступ сверху */
+      }
+      
+      
       /* vash lichnii */  
       .text h2{
         color: rgb(37, 17, 94);
@@ -1068,30 +1255,53 @@ margin-top: 30px;
   
 }
 
-  /* For screens up to 400px wide */
-@media (max-width: 412px) {
+  /* 420 ДЛЯ ТЕЛЕФОНА МОЕГО */
+@media (max-width: 420px) {
+
   .glavnaja {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Вертикальное выравнивание */
+    align-items: center; /* Горизонтальное выравнивание */
+    height: 100vh; /* Чтобы занять всю высоту экрана */
+    width: 100%;
+  }
   
-      background-size: contain; /* Adjust background size for smaller screens */
+  .glavnaja-text-opsih {
+    width: 100%;
+    text-align: center;
+    margin: 0;
+  }
   
-  
-      background-size: cover; /* Убедитесь, что изображение покрывает всю страницу */
-      background-repeat: no-repeat; /* Запрещает повторение изображения */
-      width: 100%;
-      background-position: center; /* Центрирует изображение по вертикали и горизонтали */
-      height: 100vh;
+    .container-fluid {
+      padding-left: 0;
+      padding-right: 0;
     }
-  
-    .glavnaja-text {
-      font-size: 17px; /* Further reduce font size for compact screens */
-      margin-bottom: 30px; /* Adjust spacing */
-      white-space: nowrap;
-      overflow: hidden;
     
-    }
-    .glavnaja-text1{
-      font-size: 15px; /
-    }
+      
+    .glavnaja-text-opsih h1{
+      font-size: 22px; /* Further reduce font size for compact screens */
+      color: rgb(37, 17, 94);
+
+      font-weight: 800;
+  margin-right: 10px;
+        margin-top: 20px; /* Уменьшает отступ сверху */
+        margin-bottom: 10px; /* Немного увеличьте нижний отступ для визуального пространства */
+      }
+      
+    
+    
+      .glavnaja-text-opsih1 h2 {
+        line-height: 1.3; /* Увеличение расстояния между строками */
+        font-size: 18px; 
+        font-weight: 600;
+        text-align: justify; /* Растягивает текст по всей ширине */
+        color: rgb(37, 17, 94);
+        margin-right: 20px;
+        margin-left: 20px;
+        margin-top: 50px; /* Отступ сверху */
+      }
+      
 
     /* vash lichnii */  
     .text h2{
