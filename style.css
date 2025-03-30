@@ -817,7 +817,7 @@ height: 300px;
 
   .glavnaja-text-zagolovok {
     font-size: 25px; /* Further reduce font size for compact screens */
-    margin-bottom: 50px; /* Adjust spacing */
+    
     white-space: nowrap;
     overflow: hidden;
 
@@ -1301,10 +1301,10 @@ margin-top: 30px;
         margin-left: 20px;
         margin-top: 50px; /* Отступ сверху */
       }
-      /*ZAGOLOVKI*/
+      /*ZAGOLOVKI Uslugi*/
     .glavnaja-text-zagolovok h1 {
       font-size: 35px; /* Further reduce font size for compact screens */
-      margin-bottom: 10px; /* Adjust spacing */
+      margin-bottom:70px; /* Adjust spacing */
       white-space: nowrap;
       overflow: hidden;
       color: rgb(37, 17, 94);
@@ -1314,7 +1314,7 @@ margin-top: 30px;
       text-decoration: underline; /* Добавляет подчеркивание текста */
     }
     .glavnaja-text1{
-      font-size: 18px; 
+      font-size: 14px; 
       margin-right: auto;
       font-weight: 700;
       line-height: 1.7;
@@ -1327,7 +1327,7 @@ margin-top: 30px;
     /* vash lichnii */  
     .text h2{
       color: rgb(37, 17, 94);
-      font-size: 14px;
+      font-size: 15px;
       font-weight: 700;
       text-transform: uppercase;
     
@@ -1340,32 +1340,55 @@ margin-top: 30px;
         text-decoration: none;
         letter-spacing: 2px; 
         white-space: nowrap;
-    }
+        margin-bottom: 15px; /* Уменьшает расстояние под h2 */
+        border-bottom: 1px dotted rgb(90, 66, 155); /* Пунктирная линия под текстом */
+        display: inline; /* Делает подчеркивание только вокруг текста */
+      }
     .text p{
-   
+      margin-top: 15px; /* Убирает дополнительное расстояние над p */
       color: rgb(37, 17, 94);
-      font-size: 10px;
-      font-weight: 500;
+      font-size: 12px;
+      font-weight: 600;
       text-transform: uppercase;
+
     
-    
-     margin-left: 20px ;
-          
+     margin-left: 30px ;
+     margin-right: 30px;
+     text-align: justify; /* Выравнивает текст по ширине */
+     letter-spacing: 1px; /* Растягивает буквы */
+ 
   
     }
+    .video-container video {
+      width: 100%; /* Видео заполняет контейнер */
+    
+      height:auto; /* Сохраняем пропорции */
+      margin-top: 0;
+      margin-left: auto;
+      border: 5px solid #ceaaf7; /* Зеленая рамка */
+      background-color: #E6E6FA;
+      border-radius: 15px; /* Закругленные края рамки */
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Тень для рамки */
+    }
     /*-Инфо-->*/
+    
 .glavnaja-info{ /*tekst*/
+  margin: 5px 20px; /* Устанавливает верхний/нижний отступ в 5px и боковые в 20px */
   text-align: center;
   text-align: left;
   font-size: 15px; /* Размер шрифта в пикселях */
-  margin-top: 50px; /* Увеличивает расстояние над этим текстом */
+  margin:20px; /* Увеличивает расстояние над этим текстом */
   font-weight: 600;
   font-family: 'Roboto', sans-serif; /* Для основного текста */
   line-height: 1.8; /* Расстояние между строками, где 1.8 - множитель */
   margin: 20px;
   color: rgb(37, 17, 94);
   font-style: italic;
-  margin-left: 50px;
+  margin-left: 20px;
+  margin-right: 20px;
+  text-align: justify; /* Выравнивает текст по ширине */
+  letter-spacing: 1px; /* Растягивает буквы */
+
 }
 .video-container-info video {
   width: 100%; /* Видео заполняет контейнер */
@@ -1378,6 +1401,56 @@ margin-top: 30px;
   border-radius: 15px; /* Закругленные края рамки */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Тень для рамки */
 }
+/*KONTAKTY*/
+
+.glavnaja-kontakty h5{
+  margin-left:5px;
+  color: rgb(37, 17, 94);
+  font-size: 20px;
+  margin-top: 10px;
+
+}
+.glavnaja-kontakty1{
+  margin-left: 100px;
+
+}
+.glavnaja-kontakty1 h6{
+
+
+  font-size: 15px;
+  font-weight: 500;
+
+  line-height: 1.2; /* 1.2 означает 120% от размера шрифта */
+margin-top: 30px;
+    margin-right: 20px;
+    margin-left:-70px;
+    
+
+    text-align: justify; /* Выравнивает текст по ширине */
+    letter-spacing: 2px; /* Растягивает буквы */
+}
+.image2 {
+  display: block;
+  margin: 0 auto; /* Центровка изображения */
+  height: auto; /* Автоматическая высота */
+  max-width: 50%; /* Убедитесь, что изображение вписывается в экран */
+
+}
+/* Красные линии для тестирования
+* {
+  border: 1px solid red;
+}*/
+
+.glavnaja-kontakty-vstrechy{
+  color: rgb(37, 17, 94);
+  font-size: 14px;
+
+  margin-left:5px;
+  margin-top: 20px;
+  font-weight: 800;
+
+}
+
 }
 /*KONTAKTY*/
 @media (max-width: 300px) {
@@ -1389,6 +1462,7 @@ margin-top: 30px;
   margin-left: 15px;
   color: rgb(37, 17, 94);
   font-size: 17px;
+
 
 }
 .glavnaja-kontakty1{
