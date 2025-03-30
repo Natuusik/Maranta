@@ -1301,7 +1301,28 @@ margin-top: 30px;
         margin-left: 20px;
         margin-top: 50px; /* Отступ сверху */
       }
-      
+      /*ZAGOLOVKI*/
+    .glavnaja-text-zagolovok h1 {
+      font-size: 35px; /* Further reduce font size for compact screens */
+      margin-bottom: 10px; /* Adjust spacing */
+      white-space: nowrap;
+      overflow: hidden;
+      color: rgb(37, 17, 94);
+      font-weight: 900;
+      margin-right: -40px;
+      text-align: center;
+      text-decoration: underline; /* Добавляет подчеркивание текста */
+    }
+    .glavnaja-text1{
+      font-size: 18px; 
+      margin-right: auto;
+      font-weight: 700;
+      line-height: 1.7;
+      color: rgb(90, 66, 155);
+    text-align: center;
+    margin-top: -40px;
+    font-style: italic;
+    }
 
     /* vash lichnii */  
     .text h2{
@@ -1312,7 +1333,7 @@ margin-top: 30px;
     
       display: inline;
    
-     margin-left: 40px ;
+     margin-left: 30px ;
     
       display: flex;
     text-align: center;
@@ -1323,7 +1344,7 @@ margin-top: 30px;
     .text p{
    
       color: rgb(37, 17, 94);
-      font-size: 9px;
+      font-size: 10px;
       font-weight: 500;
       text-transform: uppercase;
     
