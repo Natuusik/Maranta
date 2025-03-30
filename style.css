@@ -238,16 +238,21 @@ margin-right: 50px;
       text-align: center;
       text-decoration: underline; /* Добавляет подчеркивание текста */
     }
-    .glavnaja-text1{
-      font-size: 23px; 
-      margin-right: 50px;
-      font-weight: 700;
-      line-height: 1.7;
-      color: rgb(37, 17, 94);
-    text-align: center;
-    }
+   
 
 /*УСЛУГИ*/
+.glavnaja-text1 {
+  font-size: 23px;
+  margin-right: 50px;
+  font-weight: 700;
+  line-height: 1.7;
+  color: rgb(37, 17, 94);
+  text-align: center;
+width: 100%;
+  background: linear-gradient(180deg, rgba(156,39,176,0.3) 0%, rgba(102,16,242,0.3) 50%, rgba(211,211,211,0.5) 100%); /* Градиентный фон */
+  padding: 20px; /* Внутренние отступы */
+  border-radius: 10px; /* Закругленные углы */
+}
 .wrapper{
   margin-top: 50px;
 }
@@ -632,6 +637,7 @@ height: 300px;
   .blue-menu-btn {
     display: none;
   }
+  
 }
 @media (max-width: 786px) {
   .row {
@@ -687,7 +693,14 @@ height: 300px;
         margin-left: 20px;
         margin-top: 50px; /* Отступ сверху */
       }
-    
+      /*USLUGI*/
+      .glavnaja-text1 {
+        font-size: 19px;
+     
+        font-weight: 700;
+        line-height: 1.7;
+      
+      }
   /*KONTAKTY*/
 .kontakty{
   height: 100vh;
@@ -737,6 +750,7 @@ height: 300px;
 }
 /*с боку фото м заканчивается идет снизу*/
 @media (max-width: 768px) {
+  
   .glavnaja {
     display: flex;
     flex-direction: column;
@@ -814,7 +828,7 @@ height: 300px;
      text-align: left;
         
   }
-
+   /*USLUGI*/
   .glavnaja-text-zagolovok {
     font-size: 25px; /* Further reduce font size for compact screens */
     
@@ -822,17 +836,17 @@ height: 300px;
     overflow: hidden;
 
     font-weight: 900;
-    margin-right: 50px;
+    margin-right:-20px;
   
   }
-  .glavnaja-text1{
-    font-size: 23px; 
-    margin-right: 50px;
-    font-weight: 700;
-    line-height: 1.7;
-
-  
-  }
+ 
+    .glavnaja-text1 {
+      font-size: 17px;
+   width: 100%;
+      font-weight: 700;
+      line-height: 1.5;
+    margin-left: 5px;
+    }
   
   .video-container video {
     width: 100%; /* Видео заполняет контейнер */
@@ -871,6 +885,7 @@ height: 300px;
   border-radius: 15px; /* Закругленные края рамки */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Тень для рамки */
 }
+
 /*KONTAKTY*/
 
 
@@ -1304,7 +1319,7 @@ margin-top: 30px;
       /*ZAGOLOVKI Uslugi*/
     .glavnaja-text-zagolovok h1 {
       font-size: 35px; /* Further reduce font size for compact screens */
-      margin-bottom:70px; /* Adjust spacing */
+      margin-bottom:20px; /* Adjust spacing */
       white-space: nowrap;
       overflow: hidden;
       color: rgb(37, 17, 94);
@@ -1313,16 +1328,26 @@ margin-top: 30px;
       text-align: center;
       text-decoration: underline; /* Добавляет подчеркивание текста */
     }
-    .glavnaja-text1{
-      font-size: 14px; 
-      margin-right: auto;
-      font-weight: 700;
-      line-height: 1.7;
-      color: rgb(90, 66, 155);
-    text-align: center;
-    margin-top: -40px;
-    font-style: italic;
+    .glavnaja-text-zagolovok {
+      font-size: 25px; /* Further reduce font size for compact screens */
+      
+      white-space: nowrap;
+      overflow: hidden;
+  
+      font-weight: 900;
+      margin-right:10px;
+   
+    
     }
+
+      .glavnaja-text1 {
+        font-size: 14px;
+     width: 100%;
+        font-weight: 700;
+        line-height: 1.5;
+      margin-left: 5px;
+      }
+    
 
     /* vash lichnii */  
     .text h2{
