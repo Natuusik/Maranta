@@ -1,991 +1,159 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Pangolin&display=swap');
+:root{
+  --black: rgb(37, 17, 94);
+  --white:rgb(231, 225, 225);
+  --hover:#cd28f7;
+  --border: .1rem solid rgba(0,0,0,.1);
+ --box-shadow:0 .5rem 1rem rgba(0,0,0,.5) ;
+}
+
+*{
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif; /* Для основного текста */
+    font-weight: 400;
+    font-style: normal;
+    border: none;
+    outline: none;
+    text-decoration: none;
+    text-transform: capitalize;
 
-    font-family: 'Montserrat', sans-serif; /* Для заголовков */
+}
+body{
+
+  width: 100%;
+  background: url(fon5.png) no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+html{
+  font-size: 62.5%;
+  overflow-x: hidden;
+
+}
+section{
+  padding: 1rem 10%;
+}
+.header{
+  background: var(--white);
+  display: flex;
+  justify-content: space-between; /*расположение логотипа и слов вместе*/
+  align-items: center;
+ box-shadow: var(--box-shadow);/* наша заготовка дает тень*/
+ position: fixed;
+ top: 0;
+ left: 0;
+ right: 0;
+ z-index: 100;
+ height: 70px;
+}
+.header .navbar a{
+  font-size: 2rem;
+  margin-left: 2rem;
+  color: var(--black);
+  transition: 0.5s;
+}
+.header .navbar a:hover{
+  color: var(--hover);
+}
+#menu{
+  font-size: 3.5rem; /* увелечение размера иконки*/
+  cursor: pointer;
+  display: none;
 }
 
-p {
-    font-family: 'Roboto', sans-serif; /* Для основного текста */
-
-
-}
-body {
-  background-image: url('fon5.png'); /* Замените на путь к вашему изображению */
-  background-size: cover; /* Убедитесь, что изображение покрывает всю страницу */
-  background-repeat: no-repeat; /* Запрещает повторение изображения */
-  background-attachment: fixed; /* Фон остается на месте при прокрутке страницы */
-  background-position: center; /* Центрирует изображение по вертикали и горизонтали */
-  height: 100vh;
-}
-
-.row {
-  text-align: center;
-  line-height: 50px; /*двигает слова внутри ячеек сверху вниз*/
-  font-size: 16px; /* Уменьшенный размер шрифта */
-  text-transform: uppercase;
-  font-weight: 700; /* Уменьшенная толщина шрифта */
-
- letter-spacing: 1px; /* Регулировка расстояния между буквами */
+/* Стили для текста Psihilogy */
+.logo {
+  font-size: 30px;
+  font-weight: bold;
+  background: linear-gradient(to right, #ce2af3, #7bfe86);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   
 
-}.row a{
-color: rgb(37, 17, 94);
-}
-/* Стили для текста Psihilogy */
-.psihilogy-text {
-  font-size: 2rem; /* Размер текста */
-  font-weight: bold; /* Жирный текст */
-  background: linear-gradient(45deg, #ff6ec4, #7873f5); /* Градиент */
-  -webkit-background-clip: text; /* Обрезка фона для текста */
-  color: transparent; /* Прозрачный текст */
+    color: #333;
+    text-shadow: 2px 2px 5px rgba(218, 27, 231, 0.3);
+ 
+  
 }
 
-/* Стили для анимации текста */
-.animated-text {
-  font-size: 2rem;
-  font-weight: bold;
-  color: #00eaff;
-  animation: glow 1.5s infinite; /* Анимация glow */
 
-}
- /*  МЕНЮ ТРИ ПОЛОСКИ Отобразим меню при наведении на область header__inner */
-
-.hamburger {
-display: flex;
-flex-direction: column;
-
-
-
-
-}
-
-.hamburger div { /* сами полосочки*/
-width: 25px;
-height: 5px;
-background-color: rgb(95, 26, 26);
-margin: 4px 5px;
-}
-
-/* Стили для отображения меню при активном состоянии */
-.nav.active {
-
-flex-direction: column;
-
-}
-
-.nav a {
-padding: 15px;
-text-align: center;
-border-top: 1px solid #444;
-
-}
-
-.nav a:first-child {
-border-top: none;
-
-}
-   /* Стиль для кнопки меню */
-   .blue-menu-btn {
-    background: linear-gradient(45deg, #E6E6FA, #8686f9); /* Градиент */
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.blue-menu-btn:hover {
-    background-color: #0056b3; /* Более тёмный синий при наведении */
-}
-
-/* Общий стиль для боковой панели */
-.offcanvas {
-  background: linear-gradient(135deg, #E6E6FA, #8686f9); /* Градиент фона */
-  color: white; /* Белый текст */
-  border-radius: 10px; /* Сглаженные края */
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); /* Приятная тень */
-}
-
-/* Заголовок меню */
-.offcanvas-header {
-  background-color:#E6E6FA;
-  border-bottom: 2px solid rgba(255, 255, 255, 0.2); /* Полупрозрачная линия */
-  padding: 15px;
-  border-radius: 15px 15px 0 0; /* Закругление верхних углов */
-}
-
-.offcanvas-title {
-  font-family: 'Montserrat', sans-serif; /* Современный шрифт */
-  font-size: 1.5rem;
-  font-weight: bold;
-  text-transform: uppercase; /* Заглавные буквы */
-  color:rgb(37, 17, 94); /* Боковое меню жёлтый акцент */
-}
-
-/* Кнопка закрытия */
-.btn-close {
-  background: linear-gradient(45deg, #ff6ec4, #7873f5); /* Градиентная кнопка */
-  border: none;
-  border-radius: 50%; /* Закруглённая форма */
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Эффект анимации */
-}
-
-.btn-close:hover {
-  transform: scale(1.1); /* Увеличение при наведении */
-  box-shadow: 0 3px 10px rgba(255, 255, 255, 0.4); /* Тень при наведении */
-}
-
-/* Элементы списка */
-.list-group {
-  margin-top: 10px;
-  border-radius: 10px; /* Сглаженные углы */
-  overflow: hidden; /* Для аккуратного вида */
-}
-
-.list-group-item {
-  background: rgba(255, 255, 255, 0.1); /* Полупрозрачный фон */
-  color: #fff; /* Белый текст */
-  font-family: 'Roboto', sans-serif;
-  font-size: 1.1rem;
-  font-weight: 500;
-  text-align: center;
-  border: none; /* Убираем границы */
-  transition: background 0.3s ease, transform 0.2s ease; /* Эффект анимации */
-}
-
-.list-group-item a {
-  text-decoration: none; /* Убираем подчеркивание */
-  color:rgb(37, 17, 94); /*  слова меню Яркий акцент */
-  transition: color 0.3s ease;
-}
-
-.list-group-item:hover {
-  background: rgba(255, 255, 255, 0.2); /* Более яркий фон при наведении */
-  transform: scale(1.05); /* Лёгкое увеличение */
-}
-
-.list-group-item a:hover {
-  color: #fff; /* Белый текст при наведении */
-}
-
-/*КОНЕЦ ШАПКИ  МЕНЮ И БОКОВОГО МЕНЮ*/
+/*КОНЕЦ ШАПКИ*/
 
 /*ГЛАВНАЯ*/
+
 .glavnaja{
-background: url(woman2.png);
-background-size: cover; /* Убедитесь, что изображение покрывает всю страницу */
-background-repeat: no-repeat; /* Запрещает повторение изображения */
-width: 100%;
-background-position: center; /* Центрирует изображение по вертикали и горизонтали */
-height: 100vh;
-
-}
-.glavnaja {
-  display: flex;
-  flex-direction: column;
-  justify-content: center; /* Вертикальное выравнивание */
-  align-items: center; /* Горизонтальное выравнивание */
-  height: 100vh; /* Чтобы занять всю высоту экрана */
+  background: url(woman2.png);
+  background-size: cover; /* Убедитесь, что изображение покрывает всю страницу */
+  background-repeat: no-repeat; /* Запрещает повторение изображения */
   width: 100%;
+  background-position: center; /* Центрирует изображение по вертикали и горизонтали */
+  height: 100vh;
+  margin-top: 75px;
 }
-
-.glavnaja-text-opsih {
-  width: 100%;
-  text-align: center;
-  margin: 0;
-}
-
-  .container-fluid {
-    padding-left: 0;
-    padding-right: 0;
-  }
-  
-
-
-  .glavnaja-text-opsih h1{
+  .glavnaja h1{
     font-size: 35px; /* Further reduce font size for compact screens */
     color: rgb(37, 17, 94);
-
+text-align: center;
+padding-top: 100px;
     font-weight: 800;
-margin-right: 50px;
-      margin-top: -150px; /* Уменьшает отступ сверху */
-      margin-bottom: 10px; /* Немного увеличьте нижний отступ для визуального пространства */
+
     }
     
-  
-  
-    .glavnaja-text-opsih1 h2 {
+    .glavnaja h2 {
       line-height: 1.8; /* Увеличение расстояния между строками */
       font-size: 25px; 
       font-weight: 700;
       text-align: justify; /* Растягивает текст по всей ширине */
-      color: rgb(37, 17, 94);
-      margin-right:50px;
-      margin-left: 50px;
-      margin-top: 70px; /* Отступ сверху */
-    }
-/*ZAGOLOVKI*/
-    .glavnaja-text-zagolovok h1 {
-      font-size: 35px; /* Further reduce font size for compact screens */
-      margin-bottom: 50px; /* Adjust spacing */
-      white-space: nowrap;
-      overflow: hidden;
-      color: rgb(37, 17, 94);
-      font-weight: 900;
-      margin-right: 50px;
       text-align: center;
-      text-decoration: underline; /* Добавляет подчеркивание текста */
+      padding-top: 100px;
+          font-weight: 800;
+          color: rgb(37, 17, 94);
+          margin: 20px 40px;
     }
+    html {
+      scroll-behavior: smooth; /* Плавный скролл */
+    }
+  /*ZAGOLOVKI*/
+
+  #uslugi {
+    font-size: 35px; /* Further reduce font size for compact screens */
    
-
-/*УСЛУГИ*/
-.glavnaja-text1 {
-  font-size: 23px;
-  margin-right: 50px;
-  font-weight: 700;
-  line-height: 1.7;
-  color: rgb(37, 17, 94);
-  text-align: center;
-width: 100%;
-  background: linear-gradient(180deg, rgba(156,39,176,0.3) 0%, rgba(102,16,242,0.3) 50%, rgba(211,211,211,0.5) 100%); /* Градиентный фон */
-  padding: 20px; /* Внутренние отступы */
-  border-radius: 10px; /* Закругленные углы */
-}
-.wrapper{
-  margin-top: 50px;
-}
-.container {
-
-  display: flex;
-  align-items: center; /* Выравнивание по центру */
-  gap: 20px; /* Расстояние между текстом и видео */
-}
-
-.text {
-  flex: 1; /* Текст занимает доступное пространство */
-}
-.text h2{
-  color: rgb(37, 17, 94);
-  font-size: 19px;
-  font-weight: 700;
-  text-transform: uppercase;
-
-  display: inline;
-  margin-top: 50px;
- margin-left: 40px ;
-
-  display: flex;
-text-align: center;
-    text-decoration: none;
-    letter-spacing: 2px; 
-    white-space: nowrap;
-    margin-bottom: 50px;
-}
-.text p{
- 
-  color: rgb(37, 17, 94);
-  font-size: 14px;
-  font-weight: 600;
-  text-transform: uppercase;
-
- 
-      
-
-}
-.video-container {
-  flex: 1; /* Видео занимает равное пространство */
-}
-
-.video-container video {
-  width: 90%; /* Видео заполняет контейнер */
-  height: auto; /* Сохраняем пропорции */
-  margin-top: 50px;
-  margin-left: 50px;
-  border: 5px solid #ceaaf7; /* Зеленая рамка */
-  border-radius: 15px; /* Закругленные края рамки */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Тень для рамки */
-}
-
-
-/*-Инфо-->*/
-.glavnaja-info{ /*tekst*/
-  text-align: center;
-  text-align: left;
-  font-size: 25px; /* Размер шрифта в пикселях */
-  margin-top: 50px; /* Увеличивает расстояние над этим текстом */
-  font-weight: 600;
-  font-family: 'Roboto', sans-serif; /* Для основного текста */
-  line-height: 1.8; /* Расстояние между строками, где 1.8 - множитель */
-  margin: 20px;
-  color: rgb(37, 17, 94);
-  font-style: italic;
-  margin-left: 50px;
-}
-.video-container-info {
-  position: relative; /* Создаем контейнер для наложения */
-}
-
-.video-container-info video {
-  width: 100%; /* Видео заполняет контейнер */
-  height: 400px; /* Фиксируем высоту */
-  margin-top: 50px;
-  margin-left: auto;
-  border: 5px solid #ceaaf7; /* Рамка */
-  background-color: #E6E6FA;
-  border-radius: 15px; /* Закругленные края */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Тень */
-}
-
-.video-container-info::after {
-  content: ''; /* Псевдоэлемент для градиента */
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 30%; /* Высота градиента */
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0)); /* Прозрачный черный градиент */
-  border-radius: 0 0 15px 15px; /* Совпадение закругленных углов */
-  pointer-events: none; /* Градиент не мешает кликам по видео */
-}
-/*<!--КОНТАКТЫ-->*/
-
-
-
-.glavnaja-kontakty h5{
-  margin-left: 50px;
-  color: rgb(37, 17, 94);
-  font-size: 27px;
-  font-weight: 700;
-  margin-top: 50px;
-
-}
-.glavnaja-kontakty1{
-  margin-left: 100px;
-
-}
-.glavnaja-kontakty1 h6{
-
-margin-top: 80px;
-  font-size: 22px;
-  font-weight: 600;
-
-  line-height: 1.5; /* 1.2 означает 120% от размера шрифта */
-margin-left: -10px;
-margin-right: 50px;
-color: rgb(37, 17, 94);
-
-}
-.image2 {
-  display: block; /* Делает изображение блочным элементом */
-  margin-left: auto; /* Отступ слева автоматический */
-  margin-right:50px; /* Изображение будет приближаться к правому краю */
-  height: 200px;
-  height: 40%;
-  margin-top: -200px;
-  margin-bottom: 100px;
-
-
-}
-.glavnaja-kontakty-vstrechy{
-  color: rgb(37, 17, 94);
-  font-size: 22px;
-  margin-left:400px;
-  margin-top: -100px;
-  font-weight: 700;
-
-}
-.whatsApp{
-  margin-left: 200px;
-
-}
-
-  .kontakty {
-    margin-top: 500px;
-    height: 100vh;
-    width: 100%;
-    border: 4px solid transparent;
-  
-  border: 4px solid red; width: 200px; height: 200px;
-  
-}
-.kontakty_ramka {
-  background: linear-gradient(to bottom, rgba(106, 13, 173, 0.5), rgba(255, 255, 255, 0.3)); /* Прозрачный градиент */
-  border: 4px solid transparent;
-  border-image: linear-gradient(to right, #6a0dad, #a15ff7);
-  border-image-slice: 1;
-  border-radius: 15px;
-  box-shadow: 0 4px 15px rgba(106, 13, 173, 0.5);
-  padding: 20px;
-  box-sizing: border-box;
-}
-
-
-.kontakty_ramka h1 {
-  font-size: 32px;
-  color: #6a0dad;
-  font-weight: bold;
-}
-
-.kontakty_ramka p {
-  font-size: 18px;
-  line-height: 1.5; /* Удобочитаемое расстояние между строками */
-  color: #4a148c;
-}
-
-.kontakty_ramka button {
-  margin-top: 20px;
-  padding: 10px 20px;
-  background-color: #8e24aa;
-  color: white;
-  border: none;
-  border-radius: 8px;
-  box-shadow: 0 3px 10px rgba(142, 36, 170, 0.5);
-  cursor: pointer;
-  font-size: 16px;
-}
-
-.kontakty_ramka button:hover {
-  background-color: #6a0dad;
-}
-
-
-
-@media (max-width: 768px) {
-  .row > div {
-    display: block;
-  }
-}
-@media (max-width: 1335px) {
-.row {
-  text-align: center;
-  line-height: 50px; /*двигает слова внутри ячеек сверху вниз*/
-  font-size: 14px; /* Уменьшенный размер шрифта */
-  text-transform: uppercase;
-  font-weight: 700; /* Уменьшенная толщина шрифта */
-
- letter-spacing: 0.2px; /* Регулировка расстояния между буквами */
-  
-
-}.row a{
-color: rgb(37, 17, 94);
-}
-/* Стили для текста Psihilogy */
-.psihilogy-text {
-  margin-left: 5px;
-  font-size: 1.3rem; /* Размер текста */
-  font-weight: bold; /* Жирный текст */
-  background: linear-gradient(45deg, #ff6ec4, #7873f5); /* Градиент */
-  -webkit-background-clip: text; /* Обрезка фона для текста */
-  color: transparent; /* Прозрачный текст */
-}
-
-/* Стили для анимации текста */
-.animated-text {
-  font-size: 2rem;
-  font-weight: bold;
-  color: #00eaff;
-  animation: glow 1.5s infinite; /* Анимация glow */
-
-}
-}
-@media (max-width: 1250px) {
-  .glavnaja {
-    display: flex;
-    flex-direction: column;
-    justify-content: center; /* Вертикальное выравнивание */
-    align-items: center; /* Горизонтальное выравнивание */
-    height: 100vh; /* Чтобы занять всю высоту экрана */
-    width: 100%;
-  }
-  
-  .glavnaja-text-opsih {
-    width: 100%;
-    text-align: center;
-    margin: 0;
-  }
-  
-    .container-fluid {
-      padding-left: 0;
-      padding-right: 0;
-    }
-    
-  
-
-    .glavnaja-text-opsih h1{
-      font-size: 28px; /* Further reduce font size for compact screens */
-      color: rgb(37, 17, 94);
-
-      font-weight: 800;
-  margin-right: 50px;
-        margin-top: -200px; /* Уменьшает отступ сверху */
-        margin-bottom: 10px; /* Немного увеличьте нижний отступ для визуального пространства */
-      }
-      
-    
-    
-      .glavnaja-text-opsih1 h2 {
-        line-height: 1.8; /* Увеличение расстояния между строками */
-        font-size: 25px; 
-        font-weight: 600;
-        text-align: justify; /* Растягивает текст по всей ширине */
-        color: rgb(37, 17, 94);
-        margin-right: 50px;
-        margin-left: 50px;
-        margin-top: 70px; /* Отступ сверху */
-      }
-    
-        /* vash lichnii */  
-        .text h2{
-          color: rgb(37, 17, 94);
-          font-size: 19px;
-          font-weight: 700;
-          text-transform: uppercase;
-        
-          display: inline;
-          margin-top: 20px;
-         margin-left: 40px ;
-        
-          display: flex;
-        text-align: center;
-            text-decoration: none;
-            letter-spacing: 2px; 
-            white-space: nowrap;
-            margin-bottom: 50px;
-        
-        }
-        .text p{
-       
-          color: rgb(37, 17, 94);
-          font-size: 14px;
-          font-weight: 600;
-          text-transform: uppercase;
-        
-         
-              
-        
-        }
-    /*<!--КОНТАКТЫ-->*/
- /*KONTAKTY*/
- .kontakty{
-  height: 100vh;
-
-}
-.glavnaja-kontakty h5{
-  margin-left: 10px;
-  color: rgb(37, 17, 94);
-  font-size: 25px;
-
-}
-.glavnaja-kontakty1{
-  margin-left: 100px;
-
-}
-.glavnaja-kontakty1 h6{
-
-margin-top: 50px;
-  font-size: 19px;
-  font-weight: 600;
-
-  line-height: 1.2; /* 1.2 означает 120% от размера шрифта */
-margin-left: -75px;
-margin-right: 50px;
-    
-
-}
-.image2 {
-  display: block; /* Делает изображение блочным элементом */
- 
-  margin-right:50px; /* Изображение будет приближаться к правому краю */
-width: 30%;
-height: 300px;
-
-  margin-top: -200px;
-  margin-bottom: 100px;
-
-}
-.glavnaja-kontakty-vstrechy{
-  color: rgb(37, 17, 94);
-  font-size: 20px;
-  margin-left:50px;
-  margin-top: -70px;
-  font-weight: 700;
-
-}
-}
-/* Скрыть боковую панель для больших экранов */
-@media (min-width: 992px) { /* 992px — стандартная точка для больших экранов */
-  .offcanvas {
-    display: none;
-  }
-}
-
-/* Отображать боковую панель для маленьких экранов */
-@media (max-width: 992px) {
-  .offcanvas {
-    display: block; /* Панель будет доступна на малых экранах */
-  }
-
-  .blue-menu-btn {
-    display: block; /* Отображать кнопку для маленьких экранов */
-  }
-}
-
-/* Скрыть кнопку открытия на больших экранах  переход из большого меню в маленький*/
-@media (min-width:786px) {
-  .blue-menu-btn {
-    display: none;
-  }
-  
-}
-@media (max-width: 786px) {
-  .row {
-    display: none !important; /* Скрыть всю строку вместе с содержимым */
-  }
-}
-
-
-@media (max-width: 993px) {
-
-  
-  .glavnaja {
-    display: flex;
-    flex-direction: column;
-    justify-content: center; /* Вертикальное выравнивание */
-    align-items: center; /* Горизонтальное выравнивание */
-    height: 100vh; /* Чтобы занять всю высоту экрана */
-    width: 100%;
-  }
-  
-  .glavnaja-text-opsih {
-    width: 100%;
-    text-align: center;
-    margin: 0;
-  }
-  
-    .container-fluid {
-      padding-left: 0;
-      padding-right: 0;
-    }
-    
-  
-
-    .glavnaja-text-opsih h1{
-      font-size: 25px; /* Further reduce font size for compact screens */
-      color: rgb(37, 17, 94);
-
-      font-weight: 800;
-  margin-right: 50px;
-        margin-top: -20px; /* Уменьшает отступ сверху */
-        margin-bottom: 10px; /* Немного увеличьте нижний отступ для визуального пространства */
-      }
-      
-    
-    
-      .glavnaja-text-opsih1 h2 {
-        line-height: 1.5; /* Увеличение расстояния между строками */
-        font-size: 20px; 
-        font-weight: 600;
-        text-align: justify; /* Растягивает текст по всей ширине */
-        color: rgb(37, 17, 94);
-        margin-right: 20px;
-        margin-left: 20px;
-        margin-top: 50px; /* Отступ сверху */
-      }
-      /*USLUGI*/
-      .glavnaja-text1 {
-        font-size: 19px;
-     
-        font-weight: 700;
-        line-height: 1.7;
-      
-      }
-  /*KONTAKTY*/
-.kontakty{
-  height: 100vh;
-
-}
-.glavnaja-kontakty h5{
-  margin-left: 10px;
-  color: rgb(37, 17, 94);
-  font-size: 25px;
-
-}
-.glavnaja-kontakty1{
-  margin-left: 100px;
-
-}
-.glavnaja-kontakty1 h6{
-
-margin-top: 50px;
-  font-size: 19px;
-  font-weight: 600;
-
-  line-height: 1.2; /* 1.2 означает 120% от размера шрифта */
-margin-left: -75px;
-margin-right: 50px;
-    
-
-}
-.image2 {
-  display: block; /* Делает изображение блочным элементом */
- 
-  margin-right:50px; /* Изображение будет приближаться к правому краю */
-width: 30%;
-height: 300px;
-
-  margin-top: -200px;
-  margin-bottom: 100px;
-
-}
-.glavnaja-kontakty-vstrechy{
-  color: rgb(37, 17, 94);
-  font-size: 20px;
-  margin-left:50px;
-  margin-top: -70px;
-  font-weight: 700;
-
-}
-}
-/*с боку фото м заканчивается идет снизу*/
-@media (max-width: 768px) {
-  
-  .glavnaja {
-    display: flex;
-    flex-direction: column;
-    justify-content: center; /* Вертикальное выравнивание */
-    align-items: center; /* Горизонтальное выравнивание */
-    height: 100vh; /* Чтобы занять всю высоту экрана */
-    width: 100%;
-  }
-  
-  .glavnaja-text-opsih {
-    width: 100%;
-    text-align: center;
-    margin: 0;
-  }
-  
-    .container-fluid {
-      padding-left: 0;
-      padding-right: 0;
-    }
-    
- 
-
-  
-    .glavnaja-text-opsih h1{
-      font-size: 25px; /* Further reduce font size for compact screens */
-      color: rgb(37, 17, 94);
-
-      font-weight: 800;
-  margin-right: 50px;
-        margin-top: -20px; /* Уменьшает отступ сверху */
-        margin-bottom: 10px; /* Немного увеличьте нижний отступ для визуального пространства */
-      }
-      
-    
-    
-      .glavnaja-text-opsih1 h2 {
-        line-height: 1.5; /* Увеличение расстояния между строками */
-        font-size: 20px; 
-        font-weight: 600;
-        text-align: justify; /* Растягивает текст по всей ширине */
-        color: rgb(37, 17, 94);
-        margin-right: 20px;
-        margin-left: 20px;
-        margin-top: 50px; /* Отступ сверху */
-      }
-  .container {
-    flex-direction: column; /* На узких экранах текст и видео идут друг под другом */
-    text-align: center;
-  }
-  text h2{
-    color: rgb(37, 17, 94);
-    font-size: 19px;
-    font-weight: 700;
-    text-transform: uppercase;
-  
-    display: inline;
-    margin-top: 20px;
-   margin-left: 40px ;
-  
-    display: flex;
-  text-align: center;
-      text-decoration: none;
-      letter-spacing: 2px; 
-      white-space: nowrap;
-  }
-  .text p{
-    
-    color: rgb(37, 17, 94);
-    font-size: 12px;
-    font-weight: 600;
-    text-transform: uppercase;
-    line-height: 2; /* 1.2 означает 120% от размера шрифта */
-  margin-left: -50px;
-  
-     text-align: left;
-        
-  }
-   /*USLUGI*/
-  .glavnaja-text-zagolovok {
-    font-size: 25px; /* Further reduce font size for compact screens */
-    
     white-space: nowrap;
     overflow: hidden;
-
+    color: rgb(37, 17, 94);
     font-weight: 900;
-    margin-right:-20px;
-  
-  }
- 
-    .glavnaja-text1 {
-      font-size: 17px;
-   width: 100%;
-      font-weight: 700;
-      line-height: 1.5;
-    margin-left: 5px;
-    }
-  
-  .video-container video {
-    width: 100%; /* Видео заполняет контейнер */
-
-  height:auto; /* Сохраняем пропорции */
-  margin-top: 50px;
-  margin-left: auto;
-  border: 5px solid #ceaaf7; /* Зеленая рамка */
-  background-color: #E6E6FA;
-  border-radius: 15px; /* Закругленные края рамки */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Тень для рамки */
-}
-  
-      /*-Инфо-->*/
-.glavnaja-info{ /*tekst*/
-  text-align: center;
-  text-align: left;
-  font-size: 19px; /* Размер шрифта в пикселях */
-  margin-top: 50px; /* Увеличивает расстояние над этим текстом */
-  font-weight: 600;
-  font-family: 'Roboto', sans-serif; /* Для основного текста */
-  line-height: 1.8; /* Расстояние между строками, где 1.8 - множитель */
-  margin: 20px;
-  color: rgb(37, 17, 94);
-  font-style: italic;
-  margin-left: 50px;
-}
-.video-container-info video {
-  width: 100%; /* Видео заполняет контейнер */
-
-  height:auto; /* Сохраняем пропорции */
-  margin-top: 50px;
-  margin-left: auto;
-  border: 5px solid #ceaaf7; /* Зеленая рамка */
-  background-color: #E6E6FA;
-  border-radius: 15px; /* Закругленные края рамки */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Тень для рамки */
-}
-
-/*KONTAKTY*/
-
-
-.glavnaja-kontakty h5{
-  margin-left: 25px;
-  color: rgb(37, 17, 94);
-  font-size: 25px;
-
-}
-.glavnaja-kontakty1{
-  margin-left: 100px;
-
-
-}
-.glavnaja-kontakty1 h6{
-
-
-  font-size: 18px;
-  font-weight: 600;
-
-  line-height: 1.2; /* 1.2 означает 120% от размера шрифта */
-margin-top: 20px;
-    margin-right: 100px;
-
-}
-.image2 {  /*фото м снизу мосле большого с боку*/
-  display: block;
-  margin: 0 auto; /* Центровка изображения */
-margin-top: 50px;
-width: 50%; /* Убедитесь, что изображение вписывается в экран */
-
-}
-/* Красные линии для тестирования
-* {
-  border: 1px solid red;
-}*/
-
-.glavnaja-kontakty-vstrechy{
-  color: rgb(37, 17, 94);
-  font-size: 20px;
-  margin-left:10px;
-  margin-top: 20px;
-  font-weight: 600;
-
-}
-.whatsApp{
-  margin-left: 100px;
-}
-}
-
-
-
-@media (max-width: 640px) {
-  .glavnaja {
-    display: flex;
-    flex-direction: column;
-    justify-content: center; /* Вертикальное выравнивание */
-    align-items: center; /* Горизонтальное выравнивание */
-    height: 100vh; /* Чтобы занять всю высоту экрана */
-    width: 100%;
-  }
-  
-  .glavnaja-text-opsih {
-    width: 100%;
+    margin-right: 50px;
     text-align: center;
-    margin: 0;
-  }
+    text-decoration: underline; /* Добавляет подчеркивание текста */
+    margin-top: 70px;
+    font-size: 35px;
+    margin-right: 50px;
+    font-weight: 700;
+    line-height: 1.7;
+    color: rgb(37, 17, 94);
+    text-align: center;
   
-    .container-fluid {
-      padding-left: 0;
-      padding-right: 0;
-    }
-    
+  }
+
  
-
-    
-    .glavnaja-text-opsih h1{
-      font-size: 22px; /* Further reduce font size for compact screens */
-      color: rgb(37, 17, 94);
-
-      font-weight: 800;
-  margin-right: 50px;
-        margin-top: -20px; /* Уменьшает отступ сверху */
-        margin-bottom: 10px; /* Немного увеличьте нижний отступ для визуального пространства */
-      }
-      
-    
-    
-      .glavnaja-text-opsih1 h2 {
-        line-height: 1.5; /* Увеличение расстояния между строками */
-        font-size: 18px; 
-        font-weight: 600;
-        text-align: justify; /* Растягивает текст по всей ширине */
-        color: rgb(37, 17, 94);
-        margin-right: 20px;
-        margin-left: 20px;
-        margin-top: 50px; /* Отступ сверху */
-      }
-      
+  
+  .glavnaja-text1 h3{
+    font-size: 23px;
+    margin-right: 50px;
+    font-weight: 700;
+    line-height: 1.7;
+    color: rgb(37, 17, 94);
+    text-align: center;
+    width: 100%;
+    background: linear-gradient(180deg,rgb(231, 225, 225) 0%, rgba(151, 99, 236, 0.3) 50%, rgb(231, 225, 225)  100%); /* Градиентный фон */
+    padding: 20px; /* Внутренние отступы */
+    border-radius: 10px; /* Закругленные углы */
+    margin-top: 40px;
+  }
   .container {
+
     display: flex;
     align-items: center; /* Выравнивание по центру */
     gap: 20px; /* Расстояние между текстом и видео */
@@ -1001,26 +169,25 @@ width: 50%; /* Убедитесь, что изображение вписыва�
     text-transform: uppercase;
   
     display: inline;
-
-   margin-left: 40px ;
+    margin-top: 50px;
+   margin-left: 70px ;
   
     display: flex;
   text-align: center;
       text-decoration: none;
       letter-spacing: 2px; 
       white-space: nowrap;
+      margin-bottom: 50px;
   }
   .text p{
    
     color: rgb(37, 17, 94);
-    font-size: 12px;
+    font-size: 14px;
     font-weight: 600;
     text-transform: uppercase;
-   
-  
-     
-      margin-left: 10px ;
-        
+margin-left: 50px;
+         
+      line-height: 2.0; /* Расстояние между строками (1.7 раза больше размера шрифта) */
   
   }
   .video-container {
@@ -1028,411 +195,528 @@ width: 50%; /* Убедитесь, что изображение вписыва�
   }
   
   .video-container video {
-    width: 90%; /* Видео заполняет контейнер */
+    width: 80%; /* Видео заполняет контейнер */
     height: auto; /* Сохраняем пропорции */
     margin-top: 50px;
-    margin-left: 35px;
+    margin-left: 50px;
+    margin-right: 200px;
+    border: 5px solid #ceaaf7; /* Зеленая рамка */
+    border-radius: 15px; /* Закругленные края рамки */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Тень для рамки */
+ 
+      line-height: 2.7; /* Расстояние между строками (1.7 раза больше размера шрифта) */
+  
     
   }
-      /*-Инфо-->*/
-.glavnaja-info{ /*tekst*/
+  /*Инфо*/
+  #inform {
+    font-size: 35px; /* Further reduce font size for compact screens */
+   
+    white-space: nowrap;
+    overflow: hidden;
+
+    font-weight: 900;
+    margin-right: 50px;
+
+    text-decoration: underline; /* Добавляет подчеркивание текста */
+    margin-top: 70px;
+    font-size: 35px;
+
+
+    line-height: 1.7;
+    color: rgb(37, 17, 94);
+    text-align: center;
+  
+  }
+
+
+  .glavnaja-text2 p{
+    text-align: center;
+    text-align: left;
+    font-size: 25px; /* Размер шрифта в пикселях */
+    margin-top: 50px; /* Увеличивает расстояние над этим текстом */
+    font-weight: 600;
+    font-family: 'Roboto', sans-serif; /* Для основного текста */
+    line-height: 1.8; /* Расстояние между строками, где 1.8 - множитель */
+    margin: 20px;
+    color: rgb(37, 17, 94);
+    font-style: italic;
+    margin-left: 50px;
+  }
+  .video-container-info {
+    position: relative; /* Создаем контейнер для наложения */
+  }
+  
+  .video-container-info video {
+    width: 100%; /* Видео заполняет контейнер */
+    height: 400px; /* Фиксируем высоту */
+    margin-top: 50px;
+    margin-left: auto;
+    border: 5px solid #ceaaf7; /* Рамка */
+    background-color: var(--white);
+    border-radius: 15px; /* Закругленные края */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Тень */
+  }
+  
+  .video-container-info::after {
+    content: ''; /* Псевдоэлемент для градиента */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 30%; /* Высота градиента */
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0)); /* Прозрачный черный градиент */
+    border-radius: 0 0 15px 15px; /* Совпадение закругленных углов */
+    pointer-events: none; /* Градиент не мешает кликам по видео */
+  }
+  /*<!--КОНТАКТЫ-->*/
+ #kontakty {
+  font-size: 35px; /* Further reduce font size for compact screens */
+ 
+  white-space: nowrap;
+  overflow: hidden;
+
+  font-weight: 900;
+  margin-right: 50px;
+
+  text-decoration: underline; /* Добавляет подчеркивание текста */
+  margin-top: 70px;
+  font-size: 35px;
+
+
+  line-height: 1.7;
+  color: rgb(37, 17, 94);
   text-align: center;
-  text-align: left;
-  font-size: 17px; /* Размер шрифта в пикселях */
-  margin-top: 50px; /* Увеличивает расстояние над этим текстом */
-  font-weight: 600;
-  font-family: 'Roboto', sans-serif; /* Для основного текста */
-  line-height: 1.8; /* Расстояние между строками, где 1.8 - множитель */
-  margin: 20px;
-  color: rgb(37, 17, 94);
-  font-style: italic;
-  margin-left: 50px;
-}
-.video-container-info video {
-  width: 100%; /* Видео заполняет контейнер */
-
-  height:auto; /* Сохраняем пропорции */
-  margin-top: 50px;
-  margin-left: auto;
-  border: 5px solid #ceaaf7; /* Зеленая рамка */
-  background-color: #E6E6FA;
-  border-radius: 15px; /* Закругленные края рамки */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Тень для рамки */
-}
-
 
 }
-/*KONTAKTY*/
-@media (max-width: 577px) {
-
-
-/*KONTAKTY*/
-
-
 .glavnaja-kontakty h5{
-  margin-left: 25px;
+  margin-left: 50px;
   color: rgb(37, 17, 94);
-  font-size: 25px;
+  font-size: 27px;
+  font-weight: 700;
+  margin-top: 50px;
 
 }
 .glavnaja-kontakty1{
   margin-left: 100px;
 
-
 }
 .glavnaja-kontakty1 h6{
-
-
-  font-size: 18px;
+  width: 50%;
+  text-align: justify; /* Растягивает текст по всей ширине */
+margin-top: 80px;
+  font-size: 22px;
   font-weight: 600;
 
-  line-height: 1.2; /* 1.2 означает 120% от размера шрифта */
-margin-top: 20px;
-    margin-right: 100px;
+  line-height: 1.5; /* 1.2 означает 120% от размера шрифта */
+margin-left: -20px;
+margin-right: 50px;
+color: rgb(37, 17, 94);
 
 }
 .image2 {
-  display: block;
-  margin: 0 auto; /* Центровка изображения */
-margin-top: 50px;
-width: 50%; /* Убедитесь, что изображение вписывается в экран */
+  display: block; /* Делает изображение блочным элементом */
+  margin-left: auto; /* Отступ слева автоматический */
+  margin-right:50px; /* Изображение будет приближаться к правому краю */
+  height: auto;
+width: 30%;
+  margin-top: -280px;
+  margin-bottom: 130px;
+}
+
+.vstrechy{
+  color: rgb(37, 17, 94);
+  font-size: 25px;
+  margin-left:450px;
+  margin-top: -60px;
+  font-weight: 700;
 
 }
-/* Красные линии для тестирования
-* {
-  border: 1px solid red;
-}*/
-
-.glavnaja-kontakty-vstrechy{
+.whatsApp {
   color: rgb(37, 17, 94);
-  font-size: 20px;
-  margin-left:10px;
+  font-size: 25px;
+  margin-left: 150px;
   margin-top: 20px;
-  font-weight: 600;
-
-}
-.whatsApp{
-  margin-left: 100px;
-}
+  font-weight: 900;
 }
 
 
-/* это самы маленький экран на компе*/
-@media (max-width: 540px) {
-  
 
-  .glavnaja {
-    display: flex;
-    flex-direction: column;
-    justify-content: center; /* Вертикальное выравнивание */
-    align-items: center; /* Горизонтальное выравнивание */
-    height: 100vh; /* Чтобы занять всю высоту экрана */
-    width: 100%;
+.kontakty_ramka {
+  background: linear-gradient(to bottom, rgb(231, 225, 225, 0.8),  rgb(106, 13, 173, 0.4)); /* Прозрачный градиент */
+  border: 4px solid transparent;
+  border-image: linear-gradient(to right, #6a0dad, #a15ff7);
+  border-image-slice: 1;
+
+  padding: 40px;
+  box-sizing: border-box;
+}
+
+
+
+
+
+
+
+
+      /*НАЧАЛО ШАПКИ*/
+@media (max-width:1200px){
+  section{
+    padding: 3rem 5%;
   }
-  
-  .glavnaja-text-opsih {
-    width: 100%;
-    text-align: center;
-    margin: 0;
-  }
-  
-    .container-fluid {
-      padding-left: 0;
-      padding-right: 0;
-    }
-    
-      
-    .glavnaja-text-opsih h1{
-      font-size: 22px; /* Further reduce font size for compact screens */
-      color: rgb(37, 17, 94);
-
-      font-weight: 800;
-  margin-right: 10px;
-        margin-top: -20px; /* Уменьшает отступ сверху */
-        margin-bottom: 10px; /* Немного увеличьте нижний отступ для визуального пространства */
-      }
-      
-    
-    
-      .glavnaja-text-opsih1 h2 {
-        line-height: 1.3; /* Увеличение расстояния между строками */
-        font-size: 18px; 
-        font-weight: 600;
-        text-align: justify; /* Растягивает текст по всей ширине */
-        color: rgb(37, 17, 94);
-        margin-right: 20px;
-        margin-left: 20px;
-        margin-top: 50px; /* Отступ сверху */
-      }
-      
-      
-      /* vash lichnii */  
-      .text h2{
-        color: rgb(37, 17, 94);
-        font-size: 14px;
-        font-weight: 700;
-        text-transform: uppercase;
-      
-        display: inline;
-        margin-top: 20px;
-       margin-left: 40px ;
-      
-        display: flex;
-      text-align: center;
-          text-decoration: none;
-          letter-spacing: 2px; 
-      }
-  .text p{/* vash lichnii */  
+  .vstrechy{
     color: rgb(37, 17, 94);
-    font-size: 10px;
-    font-weight: 600;
-    text-transform: uppercase;
-   
-  
-
-      margin-left: 25px ;
-        
-  
-  }
-
-      /*-Инфо-->*/
-.glavnaja-info{ /*tekst*/
-  text-align: center;
-  text-align: left;
-  font-size: 15px; /* Размер шрифта в пикселях */
-  margin-top: 50px; /* Увеличивает расстояние над этим текстом */
-  font-weight: 600;
-  font-family: 'Roboto', sans-serif; /* Для основного текста */
-  line-height: 1.8; /* Расстояние между строками, где 1.8 - множитель */
-  margin: 20px;
-  color: rgb(37, 17, 94);
-  font-style: italic;
-  margin-left: 50px;
-}
-.video-container-info video {
-  width: 100%; /* Видео заполняет контейнер */
-
-  height:auto; /* Сохраняем пропорции */
-  margin-top: 50px;
-  margin-left: auto;
-  border: 5px solid #ceaaf7; /* Зеленая рамка */
-  background-color: #E6E6FA;
-  border-radius: 15px; /* Закругленные края рамки */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Тень для рамки */
-}
-/*KONTAKTY*/
-
-  .glavnaja-kontakty h5{
-    margin-left: 25px;
-    color: rgb(37, 17, 94);
-    font-size: 20px;
-  
-  }
-  .glavnaja-kontakty1{
-    margin-left: 100px;
-  
-  }
-  .glavnaja-kontakty1 h6{
-  
-  
-    font-size: 15px;
-    font-weight: 500;
-  
-    line-height: 1.2; /* 1.2 означает 120% от размера шрифта */
-margin-top: 30px;
-      margin-right: 100px;
-      margin-left: -50px;
-  
-  }
-  .image2 {
-    display: block;
-    margin: 0 auto; /* Центровка изображения */
-    height: auto; /* Автоматическая высота */
-    max-width: 50%; /* Убедитесь, что изображение вписывается в экран */
-  
-  }
-  /* Красные линии для тестирования
-  * {
-    border: 1px solid red;
-  }*/
-  
-  .glavnaja-kontakty-vstrechy{
-    color: rgb(37, 17, 94);
-    font-size: 19px;
-    margin-left:10px;
-    margin-top: 20px;
+    font-size: 25px;
+    margin-left:350px;
+    margin-top: -60px;
     font-weight: 700;
   
   }
-  .whatsApp{
-    margin-left: 20px;
-}
-  
-}
-
-  /* 420 ДЛЯ ТЕЛЕФОНА МОЕГО */
-@media (max-width: 420px) {
-
-  .glavnaja {
-    display: flex;
-    flex-direction: column;
-    justify-content: center; /* Вертикальное выравнивание */
-    align-items: center; /* Горизонтальное выравнивание */
-    height: 100vh; /* Чтобы занять всю высоту экрана */
-    width: 100%;
+  .whatsApp {
+    color: rgb(37, 17, 94);
+    font-size: 22px;
+    margin-left: 50px;
+    margin-top: 20px;
+    font-weight: 900;
   }
   
-  .glavnaja-text-opsih {
-    width: 100%;
-    text-align: center;
-    margin: 0;
+  
+  
+  .kontakty_ramka {
+    background: linear-gradient(to bottom, rgb(231, 225, 225, 0.8),  rgb(106, 13, 173, 0.3)); /* Прозрачный градиент */
+    border: 4px solid transparent;
+    border-image: linear-gradient(to right, #6a0dad, #a15ff7);
+    border-image-slice: 1;
+  
+    padding: 40px;
+    box-sizing: border-box;
   }
   
-    .container-fluid {
-      padding-left: 0;
-      padding-right: 0;
-    }
-    
-      
-    .glavnaja-text-opsih h1{
-      font-size: 22px; /* Further reduce font size for compact screens */
-      color: rgb(37, 17, 94);
-
-      font-weight: 800;
-  margin-right: 10px;
-        margin-top: 20px; /* Уменьшает отступ сверху */
-        margin-bottom: 10px; /* Немного увеличьте нижний отступ для визуального пространства */
-      }
-      
-    
-    
-      .glavnaja-text-opsih1 h2 {
-        line-height: 1.3; /* Увеличение расстояния между строками */
-        font-size: 18px; 
-        font-weight: 600;
-        text-align: justify; /* Растягивает текст по всей ширине */
-        color: rgb(37, 17, 94);
-        margin-right: 20px;
-        margin-left: 20px;
-        margin-top: 50px; /* Отступ сверху */
-      }
-      /*ZAGOLOVKI Uslugi*/
-    .glavnaja-text-zagolovok h1 {
-      font-size: 35px; /* Further reduce font size for compact screens */
-      margin-bottom:20px; /* Adjust spacing */
-      white-space: nowrap;
-      overflow: hidden;
-      color: rgb(37, 17, 94);
-      font-weight: 900;
-      margin-right: -40px;
-      text-align: center;
-      text-decoration: underline; /* Добавляет подчеркивание текста */
-    }
-    .glavnaja-text-zagolovok {
-      font-size: 25px; /* Further reduce font size for compact screens */
-      
-      white-space: nowrap;
-      overflow: hidden;
+}
+@media (max-width:991px){
+  section{
+    padding: 3rem 2rem;
+  }
+  html{
+    font-size: 55%;
+  }
+  /* Стили для текста Psihilogy */
+.logo {
+  font-size: 22px;
+  font-weight: bold;
+  background: linear-gradient(to right, #ce2af3, #7bfe86);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   
-      font-weight: 900;
-      margin-right:10px;
-   
-    
-    }
-
-      .glavnaja-text1 {
-        font-size: 14px;
-     width: 100%;
-        font-weight: 700;
-        line-height: 1.5;
-      margin-left: 5px;
-      }
-    
-
-    /* vash lichnii */  
-    .text h2{
-      color: rgb(37, 17, 94);
-      font-size: 15px;
-      font-weight: 700;
-      text-transform: uppercase;
-    
-      display: inline;
-   
-     margin-left: 30px ;
-    
-      display: flex;
-    text-align: center;
-        text-decoration: none;
-        letter-spacing: 2px; 
-        white-space: nowrap;
-        margin-bottom: 15px; /* Уменьшает расстояние под h2 */
-        border-bottom: 1px dotted rgb(90, 66, 155); /* Пунктирная линия под текстом */
-        display: inline; /* Делает подчеркивание только вокруг текста */
-      }
-    .text p{
-      margin-top: 15px; /* Убирает дополнительное расстояние над p */
-      color: rgb(37, 17, 94);
-      font-size: 12px;
-      font-weight: 600;
-      text-transform: uppercase;
-
-    
-     margin-left: 30px ;
-     margin-right: 30px;
-     text-align: justify; /* Выравнивает текст по ширине */
-     letter-spacing: 1px; /* Растягивает буквы */
+ 
+    color: #333;
+    text-shadow: 2px 2px 5px rgba(218, 27, 231, 0.3);
  
   
-    }
+}
+}
+@media (max-width:991px){
+   /*Uslugi*/
+  .container {
+
+    display: flex;
+    align-items: center; /* Выравнивание по центру */
+    gap: 20px; /* Расстояние между текстом и видео */
+  }
+  
+  
+  .video-container{
+  width: 100%;
+  position: absolute;
+  }
     .video-container video {
-      width: 100%; /* Видео заполняет контейнер */
-    
+  
+  
       height:auto; /* Сохраняем пропорции */
-      margin-top: 0;
-      margin-left: auto;
+      margin-top: 1100px;
+  margin-right: 50px;
       border: 5px solid #ceaaf7; /* Зеленая рамка */
       background-color: #E6E6FA;
       border-radius: 15px; /* Закругленные края рамки */
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Тень для рамки */
-    }
-    /*-Инфо-->*/
-    
-.glavnaja-info{ /*tekst*/
-  margin: 5px 20px; /* Устанавливает верхний/нижний отступ в 5px и боковые в 20px */
-  text-align: center;
-  text-align: left;
-  font-size: 15px; /* Размер шрифта в пикселях */
-  margin:20px; /* Увеличивает расстояние над этим текстом */
+    }  
+  /*Инфо*/
+#inform {
+ 
+  margin-top: 500px;
+
+}
+
+
+.glavnaja-text2 p{
+
+  margin-left: 50px;
+  margin-right: 50px;
+  font-size: 20px; /* Размер шрифта в пикселях */
+  margin-top: 50px; /* Увеличивает расстояние над этим текстом */
   font-weight: 600;
-  font-family: 'Roboto', sans-serif; /* Для основного текста */
-  line-height: 1.8; /* Расстояние между строками, где 1.8 - множитель */
-  margin: 20px;
-  color: rgb(37, 17, 94);
-  font-style: italic;
-  margin-left: 20px;
-  margin-right: 20px;
-  text-align: justify; /* Выравнивает текст по ширине */
-  letter-spacing: 1px; /* Растягивает буквы */
-
+  text-align: justify; /* Растягивает текст по всей ширине */
 }
+
+.video-container-info {
+
+    width: 100%;
+    position: relative;
+   margin-left: 50px;
+    }
+
 .video-container-info video {
-  width: 100%; /* Видео заполняет контейнер */
-
   height:auto; /* Сохраняем пропорции */
-  margin-top: 50px;
-  margin-left: auto;
-  border: 5px solid #ceaaf7; /* Зеленая рамка */
-  background-color: #E6E6FA;
-  border-radius: 15px; /* Закругленные края рамки */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Тень для рамки */
+    margin-top: 50px;
+margin-right: 50px;
+    border: 5px solid #ceaaf7; /* Зеленая рамка */
+    background-color: #E6E6FA;
+    border-radius: 15px; /* Закругленные края рамки */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Тень для рамки */
+width: 85%;
+
 }
-/*KONTAKTY*/
+/*<!--КОНТАКТЫ-->*/
 
 .glavnaja-kontakty h5{
-  margin-left:5px;
+  margin-left: 40px;
+  color: rgb(37, 17, 94);
+  font-size: 25px;
+  font-weight: 700;
+  margin-top: 50px;
+
+}
+.glavnaja-kontakty1{
+  margin-left: 100px;
+
+}
+.glavnaja-kontakty1 h6{
+  width: 50%;
+  text-align: justify; /* Растягивает текст по всей ширине */
+margin-top: 20px;
+  font-size: 19px;
+  font-weight: 600;
+
+  line-height: 1.5; /* 1.2 означает 120% от размера шрифта */
+margin-left: -20px;
+margin-right: 50px;
+color: rgb(37, 17, 94);
+
+}
+.image2 {
+  display: block; /* Делает изображение блочным элементом */
+  margin-left: auto; /* Отступ слева автоматический */
+  margin-right:50px; /* Изображение будет приближаться к правому краю */
+  height: auto;
+width: 35%;
+  margin-top: -280px;
+  margin-bottom: 130px;
+}
+
+.vstrechy{
+  color: rgb(37, 17, 94);
+  font-size: 19px;
+  margin-left:150px;
+  margin-top: -70px;
+  font-weight: 700;
+
+}
+.whatsApp {
+  color: rgb(37, 17, 94);
+  font-size: 19px;
+  margin-left: 70px;
+  margin-top: 5px;
+  font-weight: 700;
+}
+
+
+
+.kontakty_ramka {
+  background: linear-gradient(to bottom, rgb(231, 225, 225, 0.8),  rgb(106, 13, 173, 0.4)); /* Прозрачный градиент */
+  border: 4px solid transparent;
+  border-image: linear-gradient(to right, #6a0dad, #a15ff7);
+  border-image-slice: 1;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(106, 13, 173, 0.9);
+  padding: 20px;
+  box-sizing: border-box;
+  margin: 0;
+}
+
+
+
+
+}
+@media (max-width:768px){
+  section{
+    padding: 3rem 5%;
+
+  }
+  .header .navbar{
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    padding: 0 2rem;
+    background-color: var(--white);
+    border-top:var(--border) ;
+    box-shadow: var(--box-shadow);
+    clip-path: polygon(0 1%, 100% 0, 100% 0, 0 1%);
+transition: 0.5s;
+  }
+  .header .navbar a{
+    display: block;
+    margin: 2rem 0;
+  }
+  #menu{
+display: block;
+  
+}
+.header .navbar.active{
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
+}
+/*КОНЕЦ ШАПКИ*/
+@media (max-width:768px){
+
+  .glavnaja h1{
+    font-size: 30px; /* Further reduce font size for compact screens */
+    color: rgb(37, 17, 94);
+text-align: center;
+padding-top: 70px;
+    font-weight: 800;
+    margin: 20px 20px;
+    line-height: 1.7; /* Увеличение расстояния между строками */
+   
+    }
+    
+    .glavnaja h2 {
+      line-height: 1.7; /* Увеличение расстояния между строками */
+      font-size: 23px; 
+      font-weight: 600;
+      text-align: justify; /* Растягивает текст по всей ширине */
+      color: rgb(37, 17, 94);
+      margin-right:50px;
+      margin-left: 50px;
+      margin-top: -70px;
+    
+
+    }
+ 
+  /*Uslugi*/
+
+  .glavnaja-text1 h3{
+    
+    font-size: 20px;
+    margin-right: 50px;
+    font-weight: 500;
+    line-height: 1.7;
+    color: rgb(37, 17, 94);
+    text-align: center;
+    width: 100%;
+    background: linear-gradient(180deg,rgb(231, 225, 225) 0%, rgba(151, 99, 236, 0.3) 50%, rgb(231, 225, 225)  100%); /* Градиентный фон */
+    padding: 20px; /* Внутренние отступы */
+    border-radius: 10px; /* Закругленные углы */
+    margin-top: 40px;
+  }
+
+  .text h2{
+    color: rgb(37, 17, 94);
+    font-size: 19px;
+    font-weight: 700;
+    text-transform: uppercase;
+   
+    display: inline;
+    margin-top: 50px;
+   margin-left: 60px ;
+  
+    display: flex;
+  text-align: center;
+      text-decoration: none;
+      letter-spacing: 2px; 
+      white-space: nowrap;
+      margin-bottom: 50px;
+  }
+  .text p{
+    text-align: justify; /* Растягивает текст по всей ширине */
+    color: rgb(37, 17, 94);
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+margin-left: 50px;
+margin-right: 50px;
+         
+      line-height: 2.0; /* Расстояние между строками (1.7 раза больше размера шрифта) */
+  
+  }
+
+.container {
+
+  display: flex;
+  align-items: center; /* Выравнивание по центру */
+  gap: 20px; /* Расстояние между текстом и видео */
+}
+
+
+.video-container{
+width: 100%;
+position: absolute;
+}
+  .video-container video {
+
+
+    height:auto; /* Сохраняем пропорции */
+    margin-top: 1100px;
+margin-right: 50px;
+    border: 5px solid #ceaaf7; /* Зеленая рамка */
+    background-color: #E6E6FA;
+    border-radius: 15px; /* Закругленные края рамки */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Тень для рамки */
+
+}/*Инфо*/
+#inform {
+ 
+  margin-top: 500px;
+
+}
+
+
+.glavnaja-text2 p{
+
+  margin-left: 50px;
+  margin-right: 50px;
+  font-size: 20px; /* Размер шрифта в пикселях */
+  margin-top: 50px; /* Увеличивает расстояние над этим текстом */
+  font-weight: 600;
+  text-align: justify; /* Растягивает текст по всей ширине */
+}
+
+.video-container-info {
+
+    width: 100%;
+    position: relative;
+   margin-left: 50px;
+    }
+
+.video-container-info video {
+  height:auto; /* Сохраняем пропорции */
+    margin-top: 50px;
+margin-right: 50px;
+    border: 5px solid #ceaaf7; /* Зеленая рамка */
+    background-color: #E6E6FA;
+    border-radius: 15px; /* Закругленные края рамки */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Тень для рамки */
+width: 85%;
+
+}
+/*<!--КОНТАКТЫ-->*/
+
+.glavnaja-kontakty h5{
+  margin-left: 10px;
   color: rgb(37, 17, 94);
   font-size: 20px;
-  margin-top: 10px;
+  font-weight: 700;
+  margin-top: 50px;
 
 }
 .glavnaja-kontakty1{
@@ -1440,95 +724,99 @@ margin-top: 30px;
 
 }
 .glavnaja-kontakty1 h6{
-
-
-  font-size: 15px;
-  font-weight: 500;
-
-  line-height: 1.2; /* 1.2 означает 120% от размера шрифта */
-margin-top: 30px;
-    margin-right: 20px;
-    margin-left:-70px;
-    
-
-    text-align: justify; /* Выравнивает текст по ширине */
-    letter-spacing: 2px; /* Растягивает буквы */
-}
-.image2 {
-  display: block;
-  margin: 0 auto; /* Центровка изображения */
-  height: auto; /* Автоматическая высота */
-  max-width: 50%; /* Убедитесь, что изображение вписывается в экран */
-
-}
-/* Красные линии для тестирования
-* {
-  border: 1px solid red;
-}*/
-
-.glavnaja-kontakty-vstrechy{
-  color: rgb(37, 17, 94);
-  font-size: 14px;
-
-  margin-left:5px;
-  margin-top: 20px;
-  font-weight: 800;
-
-}
-
-}
-/*KONTAKTY*/
-@media (max-width: 300px) {
-
-
-/*KONTAKTY*/
-
-.glavnaja-kontakty h5{
-  margin-left: 15px;
-  color: rgb(37, 17, 94);
-  font-size: 17px;
-
-
-}
-.glavnaja-kontakty1{
-  margin-left: 100px;
-
-}
-.glavnaja-kontakty1 h6{
-
-
-  font-size: 12px;
-  font-weight: 400;
-
-  line-height: 1.2; /* 1.2 означает 120% от размера шрифта */
-margin-top: 10px;
-    margin-right: 100px;
-
-}
-.image2 {
-  display: block;
-  margin: 0 auto; /* Центровка изображения */
-  height: auto; /* Автоматическая высота */
-  max-width: 50%; /* Убедитесь, что изображение вписывается в экран */
-
-}
-/* Красные линии для тестирования
-* {
-  border: 1px solid red;
-}*/
-
-.glavnaja-kontakty-vstrechy{
-  color: rgb(37, 17, 94);
-  font-size: 10px;
-  margin-left:10px;
-  margin-top: 20px;
+  width: 60%;
+  text-align: justify; /* Растягивает текст по всей ширине */
+margin-top: 50px;
+  font-size: 16px;
   font-weight: 600;
 
+  line-height: 1.5; /* 1.2 означает 120% от размера шрифта */
+margin-left: -70px;
+margin-right: 50px;
+color: rgb(37, 17, 94);
+
 }
-.whatsApp{
+.image2 {
+  display: block; /* Делает изображение блочным элементом */
+  margin-left: auto; /* Центрирует изображение по горизонтали */
+  margin-right: 20px; /* Отступ справа */
+  width: 35%;
+  height: auto;
+  margin-top: -200px; /* Положительное значение переместит изображение вниз */
+  margin-bottom: 80px;
+}
+
+
+.vstrechy{
+  color: rgb(37, 17, 94);
+  font-size: 17px;
+  margin-left:90px;
+  margin-top: 10px;
+  font-weight: 700;
+
+}
+.whatsApp {
+  color: rgb(37, 17, 94);
+  font-size: 17px;
+  margin-left: 40px;
+  margin-top: 5px;
+  font-weight: 700;
+
+}
+
+}
+@media (max-width:540px){
+  /*<!--КОНТАКТЫ-->*/
+
+.glavnaja-kontakty h5{
   margin-left: 10px;
+  color: rgb(37, 17, 94);
+  font-size: 20px;
+  font-weight: 700;
+  margin-top: 50px;
+
+}
+.glavnaja-kontakty1{
+  margin-left: 100px;
+
+}
+.glavnaja-kontakty1 h6{
+  width: 100%;
+  text-align: justify; /* Растягивает текст по всей ширине */
+margin-top: 50px;
+  font-size: 16px;
+  font-weight: 600;
+margin-left: -70px;
+margin-right: 50px;
+
+
+}
+.image2 {
+  display: block; /* Делает изображение блочным элементом */
+  margin-left: 1%; /* Центрирует изображение по горизонтали */
+ margin-right: 10px;
+  width: 70%;
+  height: auto;
+  margin-top: 20px; /* Положительное значение переместит изображение вниз */
+
 }
 
 
-  
+.vstrechy{
+  color: rgb(37, 17, 94);
+  font-size: 17px;
+  margin-left:90px;
+  margin-top: 10px;
+  font-weight: 700;
+
+}
+.whatsApp {
+  color: rgb(37, 17, 94);
+  font-size: 17px;
+  margin-left: 40px;
+  margin-top: 5px;
+  font-weight: 700;
+
+}
+
 }
