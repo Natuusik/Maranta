@@ -1023,7 +1023,7 @@ color: rgb(37, 17, 94);
 @media (max-width:540px){
    /* Главная */
  header{
-  width: 108%;
+  width: 115%;
   background: url(fon5.png) no-repeat;
   background-size: cover;
 
@@ -1041,7 +1041,7 @@ margin-top: 70px;
 
 
  .glavnaja h1 {
-  font-size: 25px;
+  font-size: 22px;
   color: rgb(37, 17, 94);
   text-align: center;
 
@@ -1059,9 +1059,117 @@ margin-top: 70px;
   padding-top: 70px;
   color: rgb(37, 17, 94);
   margin-left: 30px;
-  margin-right: 100px;
+  margin-right: 70px;
 
   text-align: justify; /* Растягивает текст по ширине */
+}
+ /*Uslugi*/
+
+ .glavnaja-text1 h3{
+    
+  font-size: 20px;
+  margin-right: 50px;
+  font-weight: 500;
+  line-height: 1.7;
+  color: rgb(37, 17, 94);
+  text-align: center;
+  width: 114%;
+  background: linear-gradient(180deg,rgb(231, 225, 225) 0%, rgba(151, 99, 236, 0.3) 50%, rgb(231, 225, 225)  100%); /* Градиентный фон */
+  padding: 20px; /* Внутренние отступы */
+  border-radius: 10px; /* Закругленные углы */
+  margin-top: 40px;
+}
+
+.text h2{
+  color: rgb(37, 17, 94);
+  font-size: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+
+  display: inline;
+  margin-top: 50px;
+ margin-left: 60px ;
+
+  display: flex;
+text-align: center;
+    text-decoration: none;
+    letter-spacing: 2px; 
+    white-space: nowrap;
+    margin-bottom: 50px;
+}
+.text p{
+  text-align: justify; /* Растягивает текст по всей ширине */
+  color: rgb(37, 17, 94);
+  font-size: 16px;
+  font-weight: 550;
+  text-transform: uppercase;
+margin-left: 50px;
+margin-right: 50px;
+       width: 90%;
+    line-height: 2.0; /* Расстояние между строками (1.7 раза больше размера шрифта) */
+
+}
+
+.container {
+
+display: flex;
+align-items: center; /* Выравнивание по центру */
+
+}
+
+
+.video-container{
+width: 100%;
+position: absolute;
+}
+.video-container video {
+
+
+  height:auto; /* Сохраняем пропорции */
+  margin-top: 1200px;
+  margin-left: 60px;
+margin-right: 60px;
+  border: 5px solid #ceaaf7; /* Зеленая рамка */
+  background-color: #E6E6FA;
+  border-radius: 15px; /* Закругленные края рамки */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Тень для рамки */
+ 
+}
+/*Инфо*/
+#inform {
+
+  margin-top: 450px;
+
+}
+
+
+.glavnaja-text2 p{
+
+  margin-left: 70px;
+  margin-right: 50px;
+  font-size: 20px; /* Размер шрифта в пикселях */
+  margin-top: 20px; /* Увеличивает расстояние над этим текстом */
+  font-weight: 600;
+  text-align: justify; /* Растягивает текст по всей ширине */
+}
+
+.video-container-info {
+
+    width: 100%;
+    position: relative;
+   margin-left: 50px;
+    }
+
+.video-container-info video {
+  height:auto; /* Сохраняем пропорции */
+    margin-top: 50px;
+margin-right: 50px;
+    border: 5px solid #ceaaf7; /* Зеленая рамка */
+    background-color: #E6E6FA;
+    border-radius: 15px; /* Закругленные края рамки */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Тень для рамки */
+width: 85%;
+
 }
   /*<!--КОНТАКТЫ-->*/
 
