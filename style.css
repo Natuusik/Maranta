@@ -20,7 +20,7 @@
 
 body {
   width: 100%;
-  background: url(fon5.png) no-repeat;
+  background: rgb(231, 225, 225);
   background-size: cover;
   background-position: center;
 }
