@@ -17,20 +17,22 @@
       <a href="#uslugi"> услуги </a>
       <a href="#inform"> информация</a>
       <a href="#kontakty"> контакты </a>
-      <a href="#"> обратная связь </a>
+      <a href="#svjaz"> обратная связь </a>
     </nav>
  <div id="menu"><i class="fas fa-bars" onclick="changeIcon(this)"></i></div>
 </section>
 
  <!--главная-->
- <article>
+ <header>
+
   <div class="glavnaja" id="glavnaja">
       <h1>О психологическом консультировании!</h1> 
       <h2> Важно понимать, что психология — это не волшебная таблетка, которая поможет решить все проблемы, это процесс изменений, который требует больших усилий и участия от клиента.
         В итоге, совершая небольшие шаги к самому себе, постепенно преодолевая уныние, страх и боль, можно полностью изменить свою жизнь.
       </h2>
     </div>
- </article>
+  </div>
+ </header>
 
  <!-- УСЛУГИ -->
  <article>
@@ -115,6 +117,51 @@
       </div>
       </div>
 </article>
+
+<!-- diplom-->
+<div class="glavnaja-text4">
+  <h1 id="svjaz">Обратная связь</h1>
+   
+  </div>
+
+
+
+ 
+     <!-- forma-->
+
+  <div class="container1">
+      
+    <img src="image3.png".jpg>
+    
+     
+        <h4 class="section-title">  Хочешь спросить, спроси!
+      
+         
+            <form action="#" class="contact-form" id="contact-form">
+            <div class=" contact-group">
+                <input type="text" class="contact-input" name="user_name"
+                placeholder="Enter your name" required autocomplete="off">
+                <input type="email" class="contact-input" name="user_email"
+                placeholder="Enter your email" required autocomplete="off">
+            </div>
+       <textarea name="message" class="contact-input" placeholder="Enter your
+      message" required></textarea>
+      <p class="contact-messaged" id="contact-messaged"></p>
+      
+      <button type="submit" class="button">Отправить</button>
+    
+      </form>
+     
+        </div>
+      </div>
+        </section>
+  </article>
+
+  <script
+  type="text/javascript"
+  src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+  </script>
+  <script src="script.js"></script>
 <script>
   let navbar = document.querySelector('.header .navbar');
   let menu = document.querySelector('#menu');
