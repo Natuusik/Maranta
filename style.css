@@ -1153,12 +1153,6 @@ margin-right: 60px;
   text-align: justify; /* Растягивает текст по всей ширине */
 }
 
-.video-container-info {
-
-    width: 100%;
-    position: relative;
-   margin-left: 50px;
-    }
 
 .video-container-info video {
   height:auto; /* Сохраняем пропорции */
@@ -1227,15 +1221,44 @@ margin-right: 50px;
 }
 
 @media (max-width:405px){
-  /* Главная */
+
+     section{
+    padding: 3rem 10%;
+  
+
+  }
+  .header .navbar{
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    padding: 0 2rem;
+    background-color: var(--white);
+    border-top:var(--border) ;
+    box-shadow: var(--box-shadow);
+    clip-path: polygon(0 1%, 100% 0, 100% 0, 0 1%);
+transition: 0.5s;
+  }
+  .header .navbar a{
+    display: block;
+    margin: 2rem 0;
+  }
+  #menu{
+display: block;
+  
+}
+.header .navbar.active{
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
+
 header{
- width: 150%;
- background: url(fon5.png) no-repeat;
- background-size: cover;
+  width: 170vh;
+  background: url(fon5.png) no-repeat;
+  background-size: cover;
 
 }
+
 .glavnaja {
- width: 100%;
 
 background-size: cover;
 background-repeat: no-repeat;
@@ -1247,24 +1270,24 @@ margin-top: 70px;
 
 
 .glavnaja h1 {
- font-size: 22px;
+ font-size: 23px;
  color: rgb(37, 17, 94);
  text-align: center;
 
  font-weight: 800;
  margin-left: 0;
  margin-right: 50px;
-
+ margin-bottom: 70px;
 }
 
 .glavnaja h2 {
- line-height: 1.4;
- font-size: 17px;
+ line-height: 1.5;
+ font-size: 20px;
  font-weight: 700;
  text-align: center;
- padding-top: 30px;
+ padding-top: 70px;
  color: rgb(37, 17, 94);
- margin-left: 30px;
+ margin-left: 70px;
  margin-right: 70px;
 
  text-align: justify; /* Растягивает текст по ширине */
@@ -1273,7 +1296,8 @@ margin-top: 70px;
 /*Uslugi*/
 #uslugi{
   margin-top: 50px;
- margin-left: 100px;
+text-align: center;
+ width: 170vh;
 }
 .glavnaja-text1 h3{
    
@@ -1283,16 +1307,19 @@ margin-top: 70px;
  line-height: 1.7;
  color: rgb(37, 17, 94);
  text-align: center;
- width: 150%;
+ width: 170vh;
  background: linear-gradient(180deg,rgb(231, 225, 225) 0%, rgba(151, 99, 236, 0.3) 50%, rgb(231, 225, 225)  100%); /* Градиентный фон */
  padding: 20px; /* Внутренние отступы */
  border-radius: 10px; /* Закругленные углы */
 
 }
+.container{
+  width: 170vh;
 
+}
 .text h2{
  color: rgb(37, 17, 94);
- font-size: 19px;
+ font-size: 22px;
  font-weight: 700;
  text-transform: uppercase;
 
@@ -1300,22 +1327,23 @@ margin-top: 70px;
  margin-top: 30px;
 
  display: flex;
-margin-left: 70px;
-   text-decoration: none;
+margin-left: 300px;
+
    letter-spacing: 1px; 
-   white-space: nowrap;
+  
    margin-bottom: 20px;
+
   
 }
 .text p{
  text-align: justify; /* Растягивает текст по всей ширине */
  color: rgb(37, 17, 94);
- font-size: 15px;
+ font-size: 17px;
  font-weight: 550;
  text-transform: uppercase;
-margin-left: 50px;
-margin-right: 20px;
-      width: 100%;
+margin-left: 100px;
+
+      width: 155vh;
    line-height: 2.0; /* Расстояние между строками (1.7 раза больше размера шрифта) */
 
 }
@@ -1326,24 +1354,19 @@ margin-right: 20px;
     font-size: 30px; /* Размер точки */
     
   }
-.container {
 
-display: flex;
-align-items: center; /* Выравнивание по центру */
-
-}
 
 
 .video-container{
-width: 100%;
+width: 155vh;
 position: absolute;
 }
 .video-container video {
 
-width: 100%;
+width: 90vh ;
  height:auto; /* Сохраняем пропорции */
- margin-bottom: 10px;
- margin-left: 100px;
+ margin-bottom: 100px;
+ margin-left: 200px;
 margin-right: 50px;
  border: 5px solid #ceaaf7; /* Зеленая рамка */
  background-color: #E6E6FA;
@@ -1353,15 +1376,15 @@ margin-right: 50px;
 }
 /*Инфо*/
 #inform {
-width: 100%;
- margin-top: 250px;
- margin-left: 70px;
+width: 170vh;
+ margin-top: 450px;
+text-align: center;
 }
 
 
 .glavnaja-text2 p{
 width: 140vh;
-margin-left: 30px;
+margin-left: 70px;
  margin-right: 20px;
  font-size: 20px; /* Размер шрифта в пикселях */
  margin-top: 10px; /* Увеличивает расстояние над этим текстом */
@@ -1369,36 +1392,36 @@ margin-left: 30px;
  text-align: justify; /* Растягивает текст по всей ширине */
 }
 
-.video-container-info {
 
-   width: 100%;
-   position: relative;
-  margin-left: 50px;
-   }
+.video-container-info {
+  position: relative; /* Создаем контейнер для наложения */
+  width: 100vh; 
+  margin-left:200px;
+}
 
 .video-container-info video {
- height:auto; /* Сохраняем пропорции */
-   margin-top: 30px;
-margin-left: 60px;
-   border: 5px solid #ceaaf7; /* Зеленая рамка */
-   background-color: #E6E6FA;
-   border-radius: 15px; /* Закругленные края рамки */
-width: 100%;
-
-
+  width: 100vh; /* Видео заполняет контейнер */
+  height: 400px; /* Фиксируем высоту */
+  margin-top: 50px;
+  margin-left:0;
+  border: 5px solid #ceaaf7; /* Рамка */
+  background-color: var(--white);
+  border-radius: 15px; /* Закругленные края */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Тень */
 }
  /*<!--КОНТАКТЫ-->*/
  #kontakty {
-  width: 100%;
-   margin-top: 50px;
-   margin-left: 70px;
+  width: 170vh;
+   margin-top: 70px;
+ text-align: center;
+ margin-bottom: 50px;
   }
 .glavnaja-kontakty h5{
- margin-left: 10px;
+ margin-left: 30px;
  color: rgb(37, 17, 94);
- font-size: 20px;
+ font-size: 40px;
  font-weight: 700;
- margin-top: 50px;
+
 
 }
 .glavnaja-kontakty1{
@@ -1406,21 +1429,21 @@ width: 100%;
 
 }
 .glavnaja-kontakty1 h6{
- width: 100%;
+ width: 90%;
  text-align: justify; /* Растягивает текст по всей ширине */
 margin-top: 50px;
- font-size: 16px;
+ font-size: 25px;
  font-weight: 600;
-margin-left: -70px;
+margin-left: 10px;
 margin-right: 50px;
 
 
 }
 .image2 {
  display: block; /* Делает изображение блочным элементом */
- margin-left: 10%; /* Центрирует изображение по горизонтали */
-margin-right: 10px;
- width: 70%;
+ margin-left: 20%; /* Центрирует изображение по горизонтали */
+
+ width: 56%;
  height: auto;
  margin-top: 20px; /* Положительное значение переместит изображение вниз */
 
@@ -1429,18 +1452,18 @@ margin-right: 10px;
 
 .vstrechy{
  color: rgb(37, 17, 94);
- font-size: 17px;
- margin-left:30px;
+ font-size: 25px;
+ margin-left:70px;
  margin-top: 10px;
- font-weight: 700;
+ font-weight: 800;
 
 }
 .whatsApp {
  color: rgb(37, 17, 94);
- font-size: 17px;
- margin-left: 30px;
+ font-size:25px;
+ margin-left: 70px;
  margin-top: 5px;
- font-weight: 700;
+ font-weight: 800;
 
 }
 
@@ -1455,24 +1478,15 @@ margin-right: 10px;
   padding: 20px;
   box-sizing: border-box;
   margin-left: 10px;
-width: 151vh;
+width: 166vh;
 
  
   
 }
 /* Основной стиль для раздела "обратная связь" */
 #svjaz {
-  font-size: 35px;
-  white-space: nowrap;
-  overflow: hidden;
-  font-weight: 900;
-  margin-right: 50px;
-  text-decoration: underline;
-  margin-top: 70px;
-  line-height: 1.7;
-  color: rgb(37, 17, 94);
-margin-left: 90px;
-  width: 100%;
+ text-align: center;
+  width: 170vh;
 }
 
 .container1 {
@@ -1487,7 +1501,7 @@ margin-left: 90px;
   box-sizing: border-box;
   margin-left: 115px;
 
-width: 100%;
+width:170vh;
   display: flex;
   flex-direction: column;
  
@@ -1495,11 +1509,7 @@ width: 100%;
 
   background-size: cover; /* Масштабирование фона */
 }
-.container {
-  font-size: 1rem;
-  cursor: pointer;
 
-}
 
 /* Форма обратной связи */
 .container .data_block {
@@ -1658,6 +1668,9 @@ button:active {
 
 .button:hover {
   box-shadow: 0 8px 25px rgb(38, 0, 49);
+}
+:root {
+  --scale-factor: 1.5; /* Коэффициент увеличения */
 }
 
 }
