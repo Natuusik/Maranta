@@ -475,6 +475,7 @@ footer {
   color: #b014be;
   text-align: center;
   padding: 20px 0;
+  width: 100%;
 }
 
 .footer-content ul.socials {
@@ -1128,19 +1129,21 @@ margin-left: -20px;
 .contact-form {
   position: relative;
   width: 100%;
+  margin-right: 0;
+
 }
 .section-title {
   color: rgb(37, 17, 94);
   margin-top: 18px; 
   font-size: 20px;
 
-margin-left: 10px;
+
 }
 .section-title h4{
   margin-top: 12px; 
   font-size: 15px;
-margin-left: 30px;
-  width: 100%;
+
+ 
   font-weight: 800;
   white-space: nowrap; 
 }
