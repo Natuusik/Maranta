@@ -490,7 +490,7 @@ footer {
 }
 
 .footer-content ul.socials a {
-  color: #d17ed8;
+  color: #b014be;
   font-size: 18px;
   text-decoration: none;
 }
@@ -499,6 +499,7 @@ footer {
   margin-top: 15px;
   font-size: 14px;
 }
+
 
      /*НАЧАЛО ШАПКИ*/
 @media (max-width:1200px){
@@ -963,6 +964,7 @@ margin-top: 20px;
 }
 /* Форма обратной связи */
 
+
 .contact-form {
   position: relative;
   width: 95%;
@@ -988,6 +990,7 @@ margin-left: 60px;
 
 @media (max-width:470px){
 /* Форма обратной связи */
+
 #svjaz {
   font-size: 30px;
   margin-right: 10px;
@@ -1111,8 +1114,6 @@ margin-left: -20px;
 }
 /* Форма обратной связи */
 
-
-
 .glavnaja-text4 img{
   width: 100%;
   margin: 0;
@@ -1131,7 +1132,9 @@ margin-left: -20px;
 .section-title {
   color: rgb(37, 17, 94);
   margin-top: 18px; 
-margin-left: 0;
+  font-size: 20px;
+
+margin-left: 10px;
 }
 .section-title h4{
   margin-top: 12px; 
