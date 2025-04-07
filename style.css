@@ -19,11 +19,16 @@
 }
 
 body {
-  background-image: url('fon5.png'); /* Замените на путь к вашему изображению */
+  background-image: url('fon5.webp'); /* Замените на путь к вашему изображению */
   background-size: cover; /* Убедитесь, что изображение покрывает всю страницу */
   background-repeat: no-repeat; /* Запрещает повторение изображения */
   background-attachment: fixed; /* Фон остается на месте при прокрутке страницы */
   background-position: center; /* Центрирует изображение по вертикали и горизонтали */
+/* Добавляем полупрозрачный наложенный слой */
+background-color:rgb(231, 225, 225, 0.6); /* Белый цвет с прозрачностью 50% */
+background-blend-mode: lighten; /* Смешивание для прозрачности */
+    
+
 }
 
 html {
@@ -83,15 +88,12 @@ section {
   /* Главная */
 header {
     width: 100%;
-    background: url(fon5.png) no-repeat;
+    background: url(fon5.webp) no-repeat;
     background-size: cover;
-
-  
-
   }
 .glavnaja {
 
-  background: url(woman2.png);
+  background: url(woman2.webp);
   background-size: cover;
   background-repeat: no-repeat;
   width: 100%;
@@ -119,11 +121,11 @@ header {
   color: rgb(37, 17, 94);
   margin-left: 100px;
   margin-right: 100px;
-  text-align: justify; /* Растягивает текст по ширине */
+  text-align: justify; 
 }
 
 html {
-  scroll-behavior: smooth; /* Плавный скролл */
+  scroll-behavior: smooth; 
 }
 /*Услуги*/
 
@@ -181,10 +183,10 @@ line-height: 1.5;
 }
 
 .video-container {
-  display: flex; /* Enables flexbox */
-  justify-content: center; /* Centers content horizontally */
-  align-items: center; /* Centers content vertically */
-  height: 100vh; /* Sets the container height to cover the viewport */
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+  height: 100vh; 
 }
 
 .video-container video {
@@ -198,18 +200,18 @@ line-height: 1.5;
 
 .styled-text::before {
   content: "• ";
-  color: black; /* Задает цвет точки */
-  font-size: 30px; /* Размер точки */
+  color: black; 
+  font-size: 30px; 
   
 }
 /*Инфо*/
 #inform {
-  font-size: 35px; /* Further reduce font size for compact screens */
+  font-size: 35px; 
   white-space: nowrap;
   overflow: hidden;
   font-weight: 900;
   margin-right: 50px;
-  text-decoration: underline; /* Добавляет подчеркивание текста */
+  text-decoration: underline; 
   margin-top: -200px;
   font-size: 35px;
   line-height: 1.7;
@@ -220,11 +222,11 @@ line-height: 1.5;
 .glavnaja-text2 p{
   text-align: center;
   text-align: left;
-  font-size: 25px; /* Размер шрифта в пикселях */
-  margin-top: 50px; /* Увеличивает расстояние над этим текстом */
+  font-size: 25px; 
+  margin-top: 50px; 
   font-weight: 600;
-  font-family: 'Roboto', sans-serif; /* Для основного текста */
-  line-height: 1.8; /* Расстояние между строками, где 1.8 - множитель */
+  font-family: 'Roboto', sans-serif; 
+  line-height: 1.8; 
   margin: 20px;
   color: rgb(37, 17, 94);
   font-style: italic;
@@ -232,10 +234,10 @@ line-height: 1.5;
   text-align:justify;
 }
 .video-container-info {
-  display: flex; /* Enables flexbox */
-  justify-content: center; /* Centers content horizontally */
-  align-items: center; /* Centers content vertically */
-  height: 100vh; /* Sets the container height to cover the viewport */
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+  height: 100vh;
 }
 
 .video-container-info video {
@@ -318,9 +320,6 @@ line-height: 1.5;
     border-image-slice: 1;
     box-sizing: border-box;
   }
- 
- /*<обратная связь->*/
- 
 /* Основной стиль для раздела "обратная связь" */
 #svjaz {
   font-size: 35px;
@@ -334,62 +333,43 @@ line-height: 1.5;
   color: rgb(37, 17, 94);
   text-align: center;
 }
-
-
-/* Форма обратной связи */
-
-
-
 .glavnaja-text4 img {
-  width: 45%; /* Adjusts the image width for a balanced layout */
+  width: 45%; 
   margin-top: 50px;
 }
 
 .container1 {
   margin-top: 50px;
-  width: 100%; /* Ensures the form takes up half of the container */
- 
+  width: 100%; 
   background: linear-gradient(to bottom, rgba(231, 225, 225, 0.8), rgba(106, 13, 173, 0.4)); 
   border: 4px solid transparent;
   border-image: linear-gradient(to right, #6a0dad, #a15ff7);
   border-image-slice: 1;
-  padding: 50px; /* Adds padding for visual appeal */
-  box-sizing: border-box; /* Ensures padding doesn't affect width */
-
-    display: flex; /* Enables flexbox layout */
-    align-items: flex-start; /* Aligns items at the top */
-    justify-content: space-between; /* Adds space between image and form */
-  
+  padding: 50px; 
+  box-sizing: border-box; 
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between; 
 }
-
 .contact-form {
   position: relative;
   width: 70%;
-  max-width: 350px; /* Максимальная ширина */
+  max-width: 350px; 
   margin-right: 300px;
-
- 
 }
-
 .section-title {
-
   color: rgb(37, 17, 94);
-  margin-top: 60px; /* Добавляет пространство сверху для опускания формы */
+  margin-top: 60px; 
   font-weight: 600;
   font-size: 25px;
-
 }
-
-
 .name {
   width: 70%;
 }
-
 .mail,
 .phone {
   width: 250px;
 }
-
 .text_area {
   margin-top: 35px;
   border: 1px solid #fff;
@@ -399,12 +379,10 @@ line-height: 1.5;
   flex-direction: column;
   width: 100%;
 }
-
 .message {
   font-size: 1px;
   color: gray;
 }
-
 textarea {
   margin-top: 2px;
   background: transparent;
@@ -413,19 +391,15 @@ textarea {
   color: #fff;
   width: 100%;
 }
-
 textarea:focus::placeholder {
   color: darkslategray;
 }
-
 textarea:focus {
   outline: none;
 }
-
 .send {
   width: 100%;
 }
-
 button {
   padding: 15px 50px;
   text-decoration: none;
@@ -437,22 +411,16 @@ button {
   background: rgba(0, 0, 0, 0.3);
   transition: transform 0.2s; /* Плавный переход для эффекта нажатия */
 }
-
 button:hover {
   background: #0000008a;
 }
-
 button:active {
   transform: translateY(2px);
 }
-
-
-
 .section-subtitle {
   font-size:1rem;
   color: dodgerblue;
 }
-
 .contact-form,
 .contact-group {
   display: flex;
@@ -460,9 +428,6 @@ button:active {
   gap: 2rem;
   margin-top: 20px;
 }
-
-
-
 .contact-input {
   padding: 1.5rem;
   font-size: 1.5rem;
@@ -471,18 +436,15 @@ button:active {
   color: #fff;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
 }
-
 .contact-input::placeholder {
   color: #fff;
   font-size: 1.5rem;
   opacity: 0.2;
 }
-
 .contact-form textarea {
-  height: 7rem; /* Увеличена высота */
+  height: 7rem; 
   resize: none;
 }
-
 .contact-messaged {
   margin: 1rem 0;
   font-size: 1rem;
@@ -490,7 +452,6 @@ button:active {
   text-align: center;
   white-space: nowrap;
 }
-
 .button {
   display: inline-block;
   width: 18rem;
@@ -502,15 +463,44 @@ button:active {
   color: #fff;
   font-weight: 500;
   cursor: pointer;
-  transition: 0.3s; /* Уменьшено время перехода */
+  transition: 0.3s; 
 }
 
 .button:hover {
   box-shadow: 0 8px 25px rgb(38, 0, 49);
 }
+/*FOOter*/
+footer {
+  background-color: var(--white);
+  color: #b014be;
+  text-align: center;
+  padding: 20px 0;
+}
 
+.footer-content ul.socials {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  margin: 10px 0;
+}
 
-      /*НАЧАЛО ШАПКИ*/
+.footer-content ul.socials li {
+  margin: 0 10px;
+}
+
+.footer-content ul.socials a {
+  color: #d17ed8;
+  font-size: 18px;
+  text-decoration: none;
+}
+
+.footer-bottom {
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+     /*НАЧАЛО ШАПКИ*/
 @media (max-width:1200px){
   section{
     padding: 3rem 5%;
@@ -519,12 +509,12 @@ button:active {
 .contact-form {
   position: relative;
   width: 70%;
-  max-width: 350px; /* Максимальная ширина */
+  max-width: 350px; 
   margin-right: 190px;
 }
 .section-title {
   color: rgb(37, 17, 94);
-  margin-top: 60px; /* Добавляет пространство сверху для опускания формы */
+  margin-top: 60px; 
   font-size: 22px;
 }
 }
@@ -580,17 +570,17 @@ margin-top: 50px;
 /* Форма обратной связи */
 .container1 {
   margin-top: 50px;
-  width: 100%; /* Ensures the form takes up half of the container */
+  width: 100%; 
 }
 .contact-form {
   position: relative;
   width: 70%;
-  max-width: 350px; /* Максимальная ширина */
+  max-width: 350px; 
   margin-right: 150px;
 }
 .section-title {
   color: rgb(37, 17, 94);
-  margin-top: 20px; /* Добавляет пространство сверху для опускания формы */
+  margin-top: 20px; 
   font-size: 20px;
 }
 }
@@ -625,17 +615,13 @@ margin: 0 50px;
   .video-container video {
     width: 60%;
     margin-top: -300px;
-  
   }
   .glavnaja-text2 p{
-  
-    font-size: 22px; /* Размер шрифта в пикселях */
-    margin-top: 50px; /* Увеличивает расстояние над этим текстом */
-    line-height: 1.6; /* Расстояние между строками, где 1.8 - множитель */
+    font-size: 22px; 
+    margin-top: 50px; 
+    line-height: 1.6;
     margin: 20px;
-  
   }
- 
   .video-container-info video {
     width: 50%;
     height: auto;
@@ -650,8 +636,8 @@ margin: 0 50px;
 
 }
 .glavnaja-text2 p{
-  font-size: 22px; /* Размер шрифта в пикселях */
-  line-height: 1.6; /* Расстояние между строками, где 1.8 - множитель */
+  font-size: 22px; 
+  line-height: 1.6; 
   text-align:justify;
 }
 .video-container-info video {
@@ -689,20 +675,20 @@ margin-top: 30px;
 /* Форма обратной связи */
 .container1 {
   margin-top: 50px;
-  width: 100%; /* Ensures the form takes up half of the container */
+  width: 100%; 
 
 }
 .contact-form {
   position: relative;
   width: 70%;
-  max-width: 350px; /* Максимальная ширина */
+  max-width: 350px;
   margin-right: 100px;
 
 
 }
 .section-title {
   color: rgb(37, 17, 94);
-  margin-top: 18px; /* Добавляет пространство сверху для опускания формы */
+  margin-top: 18px; 
   font-size: 20px;
 
 }
@@ -784,8 +770,8 @@ margin: 0 30px;
   
   }
   .glavnaja-text2 p{
-    font-size: 20px; /* Размер шрифта в пикселях */
-    line-height: 1.5; /* Расстояние между строками, где 1.8 - множитель */
+    font-size: 20px; 
+    line-height: 1.5; 
     text-align:justify;
   }
 
@@ -830,32 +816,30 @@ margin-top: 30px;
 
 .container1 {
   margin-top: 50px;
-  width: 100%; /* Ensures the form takes up half of the container */
-  display: flex; /* Включает flex-режим */
-  flex-direction: column; /* Располагает элементы вертикально */
-  gap: 50px; /* Расстояние между дочерними элементами, включая картинку и форму */
-
+  width: 100%; 
+  display: flex; 
+  flex-direction: column; 
+  gap: 50px;
 }
 .contact-form {
   position: relative;
   width: 90%;
- 
+
 }
 .section-title {
   color: rgb(37, 17, 94);
-  margin-top: 18px; /* Добавляет пространство сверху для опускания формы */
-  font-size: 20px;
+  margin-top: 18px; 
 margin-left: 160px;
 
 
 }
 .section-title h4{
-  margin-top: 18px; /* Добавляет пространство сверху для опускания формы */
+  margin-top: 18px;
   font-size: 20px;
  margin-left: -10px;
   width: 100%;
   font-weight: 800;
-  white-space: nowrap; /* Запрещает перенос текста на новую строку */
+  white-space: nowrap; 
 }
 }
 
@@ -868,11 +852,10 @@ margin-left: 160px;
 
 .container1 {
   margin-top: 50px;
-  width: 100%; /* Ensures the form takes up half of the container */
-  display: flex; /* Включает flex-режим */
-  flex-direction: column; /* Располагает элементы вертикально */
-  gap: 50px; /* Расстояние между дочерними элементами, включая картинку и форму */
-
+  width: 100%; 
+  display: flex; 
+  flex-direction: column; 
+  gap: 50px; 
 }
 .contact-form {
   position: relative;
@@ -881,19 +864,19 @@ margin-left: 160px;
 }
 .section-title {
   color: rgb(37, 17, 94);
-  margin-top: 18px; /* Добавляет пространство сверху для опускания формы */
+  margin-top: 18px; 
   font-size: 20px;
 margin-left:80px;
 
 
 }
 .section-title h4{
-  margin-top: 18px; /* Добавляет пространство сверху для опускания формы */
+  margin-top: 18px; 
   font-size: 20px;
  margin-left: 10px;
   width: 100%;
   font-weight: 800;
-  white-space: nowrap; /* Запрещает перенос текста на новую строку */
+  white-space: nowrap; 
 }
 }
 @media (max-width:540px){
@@ -979,6 +962,32 @@ margin-left: 5px;
 margin-top: 20px;
 }
 /* Форма обратной связи */
+
+.contact-form {
+  position: relative;
+  width: 95%;
+ 
+}
+.section-title {
+  color: rgb(37, 17, 94);
+  margin-top: 18px; 
+  font-size: 20px;
+
+margin-left: 60px;
+
+}
+.section-title h4{
+  margin-top: 18px; 
+  font-size: 20px;
+ margin-left: 10px;
+  width: 100%;
+  font-weight: 800;
+  white-space: nowrap; 
+}
+}
+
+@media (max-width:470px){
+/* Форма обратной связи */
 #svjaz {
   font-size: 30px;
   margin-right: 10px;
@@ -991,35 +1000,36 @@ margin-top: 20px;
 
 .container1 {
   margin-top: 50px;
-  width: 100%; /* Ensures the form takes up half of the container */
-  display: flex; /* Включает flex-режим */
-  flex-direction: column; /* Располагает элементы вертикально */
-  gap: 50px; /* Расстояние между дочерними элементами, включая картинку и форму */
+  width: 100%; 
+  display: flex;
+  flex-direction: column; 
+  gap: 50px; 
 
 }
 .contact-form {
   position: relative;
-  width: 100%;
+  width: 95%;
  
 }
 .section-title {
   color: rgb(37, 17, 94);
-  margin-top: 18px; /* Добавляет пространство сверху для опускания формы */
+  margin-top: 18px; 
   font-size: 20px;
-margin-inline-start: auto;
 
+margin-left: 30px;
 
 }
 .section-title h4{
-  margin-top: 18px; /* Добавляет пространство сверху для опускания формы */
+  margin-top: 18px; 
   font-size: 20px;
- margin-left: 10px;
+ margin-left: 0;
   width: 100%;
   font-weight: 800;
-  white-space: nowrap; /* Запрещает перенос текста на новую строку */
+  white-space: nowrap; 
 }
 }
-@media (max-width:405px){
+
+@media (max-width:430px){
 
 /*ГЛАВНАЯ*/
 .glavnaja h1 {
@@ -1068,8 +1078,8 @@ margin-inline-start: auto;
     
     }
     .glavnaja-text2 p{
-      font-size: 17px; /* Размер шрифта в пикселях */
-      line-height: 1.5; /* Расстояние между строками, где 1.8 - множитель */
+      font-size: 17px; 
+      line-height: 1.5;
       text-align:justify;
     }
   
@@ -1100,44 +1110,35 @@ margin-left: -20px;
 
 }
 /* Форма обратной связи */
-#svjaz {
-  font-size: 27px;
-  margin-right: 10px;
-}
+
+
 
 .glavnaja-text4 img{
   width: 100%;
-  margin:0;
+  margin: 0;
 }
 .container1 {
   margin-top: 50px;
-  width: 100%; /* Ensures the form takes up half of the container */
-  display: flex; /* Включает flex-режим */
-  flex-direction: column; /* Располагает элементы вертикально */
-  gap: 50px; /* Расстояние между дочерними элементами, включая картинку и форму */
-
+  width: 100%; 
+  display: flex; 
+  flex-direction: column; 
+  gap: 50px; 
 }
 .contact-form {
   position: relative;
   width: 100%;
-  margin: 0;
- 
 }
 .section-title {
   color: rgb(37, 17, 94);
-  margin-top: 18px; /* Добавляет пространство сверху для опускания формы */
-  font-size: 20px;
-
-  
-
-
+  margin-top: 18px; 
+margin-left: 5px;
 }
 .section-title h4{
-  margin-top: 12px; /* Добавляет пространство сверху для опускания формы */
+  margin-top: 12px; 
   font-size: 15px;
-
+margin-left: 30px;
   width: 100%;
   font-weight: 800;
-  white-space: nowrap; /* Запрещает перенос текста на новую строку */
+  white-space: nowrap; 
 }
 }
