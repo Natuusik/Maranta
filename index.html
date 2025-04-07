@@ -164,21 +164,30 @@
   <script src="script.js"></script>
 <script>
   let navbar = document.querySelector('.header .navbar');
-  let menu = document.querySelector('#menu');
+let menu = document.querySelector('#menu');
+let menuLinks = document.querySelectorAll('.header .navbar a');
 
-  menu.onclick = () => {
-    navbar.classList.toggle('active');
-  }
-    let changeIcon = function(icon)  {
-      icon.classList.toggle('fa-times');
-    }
+menu.onclick = () => {
+  navbar.classList.toggle('active');
+};
+
+menuLinks.forEach(link => {
+  link.onclick = () => {
+    navbar.classList.remove('active'); // Закрываем меню
+  };
+});
+
+let changeIcon = function(icon) {
+  icon.classList.toggle('fa-times');
+};
+
 </script>
 </body>
 <footer>
   <div class="footer-content">
     <p>&copy; 2025 Maranta. Все права защищены.</p>
     <ul class="socials">
-      <li><a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+      <li><a href="https://www.facebook.com/maranta.massaz/" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
       <li><a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a></li>
     </ul>
   </div>
