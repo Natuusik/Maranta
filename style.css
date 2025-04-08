@@ -186,16 +186,19 @@ line-height: 1.5;
   display: flex; 
   justify-content: center; 
   align-items: center; 
+  margin-top: -70px;
+ margin-bottom: -180px;
   height: 100vh; 
 }
 
 .video-container video {
   width: 50%;
   height: auto;
-  margin-top: -200px;
+
   border: 5px solid #ceaaf7;
   border-radius: 15px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  margin-bottom:100px;
 }
 
 .styled-text::before {
@@ -204,6 +207,83 @@ line-height: 1.5;
   font-size: 30px; 
   
 }
+/*Теропия*/
+therapy-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  margin-top: 45px;
+    background: url(foto1.webp) center/cover no-repeat;
+    margin-top:-500px; /* Отступ снизу */
+  
+}
+
+.therapy-container::before {
+
+
+  opacity: 0.5;
+  z-index: -1;
+}
+.therapy-title {
+  font-size: 35px; /* Размер текста */
+  color: rgb(68, 9, 84);;
+   font-weight: bold; /* Жирный текст */
+
+  text-align: center; /* Выравнивание по центру */
+  padding-top: 20px; /* Сохранит гармоничное расположение */
+
+
+}
+
+
+.therapy-container {
+  font-family: 'Arial', sans-serif;
+  color: rgb(37, 17, 94);
+  background: rgb(231, 225, 225 0.8); /* Белый фон с прозрачностью */
+  padding: 20px;
+  margin: 50px auto;
+  width: 90%;
+  border-radius: 15px; /* Скругленные углы */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Тень для эффекта объема */
+  background: url(foto1.webp) center/cover no-repeat;
+  height: 100vh;
+}
+
+.therapy-container h1 {
+  text-align: center;
+  font-size: 36px;
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+
+.therapy-container h2 {
+  text-align: center;
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  font-style: italic;
+
+}
+
+.therapy-container p {
+  line-height: 1.8;
+  font-size: 19px;
+  text-align: justify; /* Растягивает текст по ширине */
+  margin-bottom: 15px;
+  color: rgb(50, 50, 150); /* Нежный оттенок текста */
+  background: linear-gradient(to right, rgba(230, 230, 250, 0.8), rgba(250, 250, 255, 0.8)); /* Градиентный фон для текста */
+  padding: 10px; /* Отступы внутри абзаца */
+  border-radius: 5px; /* Скругленные углы */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Легкая тень вокруг текста */
+  transition: transform 0.3s, background 0.3s; /* Плавный эффект при наведении */
+  font-style: italic;
+}
+
+.therapy-container p:hover {
+  transform: scale(1.10); /* Легкое увеличение при наведении */
+  background: linear-gradient(to right, rgba(220, 220, 240, 1), rgba(240, 240, 255, 1)); /* Яркий эффект градиента при наведении */
+}
+
 /*Инфо*/
 #inform {
   font-size: 35px; 
@@ -212,7 +292,7 @@ line-height: 1.5;
   font-weight: 900;
   margin-right: 50px;
   text-decoration: underline; 
-  margin-top: -200px;
+  margin-top: -10px;
   font-size: 35px;
   line-height: 1.7;
   color: rgb(37, 17, 94);
@@ -618,7 +698,7 @@ margin: 0 50px;
   }
   .video-container video {
     width: 60%;
-    margin-top: -300px;
+    margin-top: 20px;
   }
   .glavnaja-text2 p{
     font-size: 22px; 
@@ -629,14 +709,33 @@ margin: 0 50px;
   .video-container-info video {
     width: 50%;
     height: auto;
-    margin-top: -350px;
+  
     border: 5px solid #ceaaf7;
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+
   }
+  /*Теропия*/
+
+.therapy-title {
+  font-size: 30px; /* Размер текста */
+}
+
+.therapy-container h1 {
+  font-size: 30px;
+}
+.therapy-container h2 {
+  font-size: 27px;
+}
+
+.therapy-container p {
+  line-height: 1.5;
+  font-size: 19px;
+}
+
   /*Инфо*/
 #inform {
-  margin-top: -280px;
+  margin-top: 80px;
 
 }
 .glavnaja-text2 p{
@@ -646,7 +745,7 @@ margin: 0 50px;
 }
 .video-container-info video {
   width: 60%;
-  margin-top: -350px;
+  margin-top: -250px;
 }
  /*<!--КОНТАКТЫ-->*/
 
@@ -761,7 +860,7 @@ margin: 0 30px;
   }
   .video-container video {
     width: 70%;
-    margin-top: -350px;
+    margin-top: 10px;
   
   }
   .styled-text::before {
@@ -769,8 +868,17 @@ margin: 0 30px;
     font-size: 25px; /* Размер точки */
     
   }
+   /*Теропия*/
+
+
+.therapy-container p {
+  line-height: 1.2;
+  font-size: 17px;
+}
+/*Инфо*/
+
   #inform {
-    margin-top: -350px;
+    margin-top: 50px;
   
   }
   .glavnaja-text2 p{
@@ -781,8 +889,8 @@ margin: 0 30px;
 
   
   .video-container-info video {
-    width: 70%;
-    margin-top: -400px;
+    width: 80%;
+    margin-top: -200px;
   }
    /*<!--КОНТАКТЫ-->*/
 
@@ -920,7 +1028,8 @@ margin-left:80px;
     }
     .video-container video {
       width: 80%;
-      margin-top: -400px;
+      margin-top: -70px;
+      margin-bottom: -20px;
     
     }
     .styled-text::before {
@@ -928,9 +1037,44 @@ margin-left:80px;
       font-size: 20px; /* Размер точки */
       
     }
+    /*Теропия*/
+
+.therapy-title {
+  font-size: 27px; /* Размер текста */
+}
+
+.therapy-container h1 {
+  font-size: 22px;
+}
+.therapy-container h2 {
+  font-size: 20px;
+}
+
+.therapy-container p {
+  line-height: 1.2;
+  font-size: 17px;
+}
+/*Инфо*/
+
+#inform {
+  margin-top: 50px;
+
+}
+.glavnaja-text2 p{
+  font-size: 20px; 
+  line-height: 1.5; 
+  text-align:justify;
+}
+
+
+.video-container-info video {
+  width: 80%;
+  margin-top: -320px;
+}
        /*<!--КОНТАКТЫ-->*/
 #kontakty{
-  margin-top: -400px;
+  margin-top: -300px;
+  margin-left:  50px;
 }
  .glavnaja-kontakty h5{
   font-size: 20px;
@@ -1069,7 +1213,8 @@ margin-left: 30px;
     }
     .video-container video {
       width: 90%;
-      margin-top: -400px;
+      margin-top: -200px;
+
     
     }
     .styled-text::before {
@@ -1077,9 +1222,24 @@ margin-left: 30px;
       font-size: 20px; /* Размер точки */
       
     }
+     /*Теропия*/
+
+.therapy-title {
+  font-size: 25px; /* Размер текста */
+  margin-top: -270px;
+}
+
+.therapy-container h2 {
+  font-size: 18px;
+}
+
+.therapy-container p {
+  line-height: 1.2;
+  font-size:14px;
+}
     /*INFO*/
     #inform {
-      margin-top: -400px;
+      margin-top: -20px;
       margin-left: 50px;
     
     }
@@ -1091,8 +1251,8 @@ margin-left: 30px;
   
     
     .video-container-info video {
-      width: 70%;
-      margin-top: -450px;
+      width: 80%;
+      margin-top: -250px;
     }
         /*<!--КОНТАКТЫ-->*/
         #kontakty{
@@ -1119,7 +1279,7 @@ margin-left: -20px;
 
 .glavnaja-text4 img{
   width: 100%;
-  margin: 0;
+  margin-left: -10px;
 }
 .container1 {
   margin-top: 50px;
