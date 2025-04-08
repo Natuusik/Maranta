@@ -8,6 +8,10 @@ let sendEmail = (e) => {
     .then(() => {
       contactMessage.textContent = "В ближайшее время наш менеджер свяжется с Вами";
       contactMessage.style.display = "block"; // Отобразить сообщение
+
+      setTimeout(() => {
+        contactform.reset(); // Очистить поля через небольшую задержку после успешной отправки
+      }, 1000);
     })
     .catch((error) => {
       console.error("Ошибка при отправке письма:", error);
@@ -15,4 +19,3 @@ let sendEmail = (e) => {
 }
 
 contactform.addEventListener("submit", sendEmail);
-

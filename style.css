@@ -432,18 +432,20 @@ therapy-container {
     display: flex;
     align-items: flex-start;
     justify-content: space-between; 
+  
 }
 .contact-form {
   position: relative;
   width: 70%;
   max-width: 350px; 
   margin-right: 300px;
+  
 }
 .section-title {
   color: rgb(37, 17, 94);
   margin-top: 60px; 
-  font-weight: 600;
   font-size: 25px;
+  font-weight: 900;
 }
 .name {
   width: 70%;
@@ -529,7 +531,7 @@ button:active {
 }
 .contact-messaged {
   margin: 1rem 0;
-  font-size: 1rem;
+  font-size: 1.2rem;
   color: #fff;
   text-align: center;
   white-space: nowrap;
