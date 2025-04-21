@@ -42,6 +42,7 @@ html {
  
 }
 
+
 section {
   padding: 1rem 10%;
 }
@@ -98,7 +99,13 @@ section {
   text-decoration: underline;
   text-decoration-color: #9c1db9; /* Цвет подчеркнутого текста */
 }
-
+.logo img{
+  height: 60px;
+ 
+    border-radius: 50%;
+  
+  
+}
   
   .calendar {
  
