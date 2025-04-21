@@ -255,22 +255,24 @@ h2{
 
     // **Отправка email через EmailJS**
     const emailParams = {
-      user_name: userName,
-      user_email: userEmail,
-      date: selectedDate,
-      time: selectedTime,
-      procedure: procedure
-    };
+  user_name: userName,
+  user_email: userEmail,
+  date: selectedDate,
+  time: selectedTime,
+  procedure: procedure,
+  to_email: userEmail // Добавляем email клиента
+};
 
-    emailjs.send("service_as87aov", "template_fga7sw7", emailParams)
-      .then(() => {
-        alert("Регистрация прошла успешно! Письмо отправлено.");
-        window.location.href = "index.html";
-      })
-      .catch((error) => {
-        console.error("Ошибка отправки EmailJS:", error);
-        alert("Ошибка отправки письма.");
-      });
+emailjs.send("service_as87aov", "template_fga7sw7", emailParams)
+  .then(() => {
+    alert("Регистрация прошла успешно! Письмо отправлено вам и клиенту.");
+    window.location.href = "index.html";
+  })
+  .catch((error) => {
+    console.error("Ошибка отправки EmailJS:", error);
+    alert("Ошибка отправки письма.");
+  });
+
   });
 </script>
   <!-- Кнопка для возврата к календарю -->
