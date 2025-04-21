@@ -260,8 +260,10 @@ h2{
   date: selectedDate,
   time: selectedTime,
   procedure: procedure,
-  to_email: userEmail // Добавляем email клиента
+  to_email: "natuusik@inbox.ru", // Email основного получателя
+  email: userEmail // Email клиента для "Reply To"
 };
+
 
 emailjs.send("service_as87aov", "template_fga7sw7", emailParams)
   .then(() => {
