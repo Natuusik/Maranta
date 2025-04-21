@@ -35,3 +35,28 @@ document.addEventListener("DOMContentLoaded", () => {
     };
   });
 });
+const images = document.querySelectorAll(".image-stack img");
+let currentIndex = 0;
+let intervalId;
+let isPaused = false; // Переменная для отслеживания паузы
+
+function changeImage() {
+  if (isPaused) return; // Если пауза включена, не меняем изображение
+  
+  images[currentIndex].style.opacity = "0";
+  currentIndex = (currentIndex + 1) % images.length;
+  images[currentIndex].style.opacity = "1";
+}
+
+// Запуск автосмены изображений каждые 3 секунды
+intervalId = setInterval(changeImage, 3000);
+
+// Останавливаем смену при наведении мыши
+document.querySelector(".image-stack").addEventListener("mouseenter", () => {
+  isPaused = true;
+});
+
+// Возобновляем смену после убирания курсора
+document.querySelector(".image-stack").addEventListener("mouseleave", () => {
+  isPaused = false;
+});
