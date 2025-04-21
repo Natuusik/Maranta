@@ -1,0 +1,368 @@
+:root{
+  --black: rgb(37, 17, 94);
+  --white:rgb(231, 225, 225);
+  --hover:#cd28f7;
+  --border: .1rem solid rgba(0,0,0,.1);
+ --box-shadow:0 .5rem 1rem rgba(0,0,0,.5) ;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif; /* Основной текст */
+  font-weight: 400;
+  font-style: normal;
+  text-decoration: none;
+
+}
+
+
+  
+body {
+  background-image: url(4.png);
+  background-repeat: no-repeat;
+  background-size: cover; /* Заполняет весь экран */
+  background-position: center; /* Центрирует изображение */
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f4f4f4;
+  min-height: 100vh;
+}
+
+
+
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth; /* Плавный скролл */
+  overflow-x: hidden;
+ 
+}
+
+section {
+  padding: 1rem 10%;
+}
+
+.header {
+  background: var(--white);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: var(--box-shadow); /* Добавление тени */
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  height: 70px;
+}
+
+.header .navbar a {
+  font-size: 2rem;
+  margin-left: 2rem;
+  color: var(--black);
+  transition: 0.5s;
+  text-transform: capitalize;
+}
+
+.header .navbar a:hover {
+  color: var(--hover);
+}
+
+#menu {
+  font-size: 3.5rem; /* Увеличение размера иконки */
+  cursor: pointer;
+  display: none;
+}
+
+/* Стили логотипа */
+.logo {
+  font-size: 27px;
+  font-weight: bold;
+  background: linear-gradient(to right, #ce2af3, #7bfe86);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 2px 2px 5px rgba(218, 27, 231, 0.3);
+}
+.navbar a {
+  margin-right:100px;
+  font-size: 70px;
+  font-weight: bold;
+  background: linear-gradient(to right, #8a0fa6, #0bcc1b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  
+  text-decoration: underline;
+  text-decoration-color: #9c1db9; /* Цвет подчеркнутого текста */
+}
+
+  
+  .calendar {
+ 
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    margin-top: 200px;
+    padding: 20px;
+    background-image: url(2.jpg);
+  }
+  
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+ 
+
+  
+    background-size: cover;
+position: relative;
+    background-color: rgba(255, 255, 255, 0.5); /* Белый фон с прозрачностью */
+}
+
+header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('1.jpg') no-repeat center/cover;
+    opacity: 3; /* Сделает изображение прозрачным */
+    z-index: -1;
+}
+  #monthName {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  button {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    color: #007bff;
+  }
+  
+  .days-of-week {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    text-align: center;
+    font-weight: bold;
+    margin-top: 10px;
+  }
+  
+  
+  .days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+    margin-top: 10px;
+  }
+  
+  .day {
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .day.available {
+    background-color: #28a745;
+    color: white;
+  }
+  
+  .day.unavailable {
+    background-color: #dc3545;
+    color: white;
+    
+  }
+  
+  .day:hover {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  /* Стили для контейнера, куда будет загружаться форма */
+  #formContainer {
+    margin-top: 20px;
+    width: 100%;
+    max-width: 400px;
+    
+  }
+  .day {
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .day.available {
+    background-color: #28a745; /* зеленый, например */
+    color: white;
+  }
+  
+  .day.unavailable {
+    background-color: red;  /* красный для недоступных дат */
+    color: white;
+  }
+  
+  /*НАЧАЛО ШАПКИ*/
+@media (max-width:1200px){
+  section{
+    padding: 3rem 5%;
+  }
+/* Форма обратной связи */
+.contact-form {
+  position: relative;
+  width: 70%;
+  max-width: 350px; 
+  margin-right: 190px;
+}
+.section-title {
+  color: rgb(37, 17, 94);
+  margin-top: 60px; 
+  font-size: 22px;
+}
+}
+@media (max-width:991px){
+  section{
+    padding: 3rem 2rem;
+  }
+  html{
+    font-size: 55%;
+  }
+  /* Стили для текста Psihilogy */
+.logo {
+  font-size: 22px;
+  font-weight: bold;
+  background: linear-gradient(to right, #ce2af3, #7bfe86);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  
+ 
+    color: #333;
+    text-shadow: 2px 2px 5px rgba(218, 27, 231, 0.3);
+}
+
+}
+@media (max-width:768px){
+  section{
+    padding: 3rem 5%;
+
+  }
+  .header .navbar{
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    padding: 0 2rem;
+    background-color: var(--white);
+    border-top:var(--border) ;
+    box-shadow: var(--box-shadow);
+    clip-path: polygon(0 1%, 100% 0, 100% 0, 0 1%);
+transition: 0.5s;
+  }
+  .header .navbar a{
+    display: block;
+    margin: 2rem 0;
+  }
+  #menu{
+display: block;
+  
+}
+.header .navbar.active{
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
+/* Стили логотипа */
+.logo {
+  font-size: 22px;
+  font-weight: bold;
+  background: linear-gradient(to right, #ce2af3, #7bfe86);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 2px 2px 5px rgba(218, 27, 231, 0.3);
+}
+.navbar a{
+
+ margin-right: 70px;
+ font-size: 70px;
+ 
+ text-decoration: underline;
+ font-weight: bold;
+ background: linear-gradient(to right, #9c1db9, #5cf569);
+ -webkit-background-clip: text;
+ -webkit-text-fill-color: transparent;
+
+
+  text-decoration: underline;
+
+
+}
+  
+}
+/*заканчивается боковое меню*/
+@media (max-width:430px){
+  section{
+    padding: 3rem 5%;
+
+  }
+  .header .navbar{
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    padding: 0 2rem;
+    background-color: var(--white);
+    border-top:var(--border) ;
+    box-shadow: var(--box-shadow);
+    clip-path: polygon(0 1%, 100% 0, 100% 0, 0 1%);
+transition: 0.5s;
+  }
+  .header .navbar a{
+    display: block;
+    margin: 3rem 0;
+  }
+  #menu{
+display: block;
+  
+}
+.header .navbar.active{
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
+/* Стили логотипа */
+.logo {
+  font-size: 22px;
+  font-weight: bold;
+  background: linear-gradient(to right, #ce2af3, #7bfe86);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 2px 2px 5px rgba(218, 27, 231, 0.3);
+}
+.navbar a{
+
+ margin-right: 70px;
+ font-size: 70px;
+ 
+ text-decoration: underline;
+ font-weight: bold;
+ background: linear-gradient(to right, #9c1db9, #5cf569);
+ -webkit-background-clip: text;
+ -webkit-text-fill-color: transparent;
+
+
+  text-decoration: underline;
+
+
+}
+  
+}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Календарь для клиентов</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  
+  <section class="header">
+    <a href="#"class="logo">
+      <img src="logo.png" alt="logo"> Psihology
+    </a>
+    <nav class="navbar">
+      <a href="https://natuusik.github.io/Maranta/"> Maranta </a>
+      
+    </nav>
+ <div id="menu"><i class="fas fa-bars" onclick="changeIcon(this)"></i></div>
+</section>
+
+  <div class="calendar">
+    <header>
+      <button id="prevMonth">&#10094;</button>
+      <h1 id="monthName">Месяц Год</h1>
+      <button id="nextMonth">&#10095;</button>
+    </header>
+ 
+    <div class="days-of-week">
+      <div>Пн</div>
+      <div>Вт</div>
+      <div>Ср</div>
+      <div>Чт</div>
+      <div>Пт</div>
+      <div>Сб</div>
+      <div>Вс</div>
+      
+    </div>
+        <!-- Контейнер для загрузки формы регистрации -->
+  <div id="formContainer">
+  
+    <div id="calendarDays" class="days">
+      <!-- Здесь через JavaScript будут добавляться дни -->
+     
+
+    </div>
+  </div>
+
+ 
+  <script src="script.js"></script>
+</body>
+</html>
