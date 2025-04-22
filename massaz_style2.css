@@ -105,7 +105,7 @@ picture {
 
 .imgAntimassaz{
   display: block;
-  max-width: 98%;
+  max-width: 100%;
   height: auto;
   object-fit: contain;
   margin-top: 70px;
@@ -115,7 +115,7 @@ picture {
 }
 .imgAromamassaz{
   display: block;
-  max-width: 98%;
+  max-width: 100%;
   height: auto;
   object-fit: contain;
   margin-top: 70px;
@@ -125,7 +125,7 @@ picture {
 }
 .imgBeremenih{
   display: block;
-  max-width: 98%;
+  max-width: 100%;
   height: auto;
   object-fit: contain;
   margin-top: 70px;
@@ -135,7 +135,7 @@ picture {
 }
 .imgMassaz-ruk{
   display: block;
-  max-width: 98%;
+  max-width: 100%;
   height: auto;
   object-fit: contain;
   margin-top: 70px;
@@ -149,7 +149,7 @@ picture {
 .massaz-klassish {
 
   display: block;
-  max-width: 98%;
+  max-width: 100%;
   height: auto;
   object-fit: contain;
   margin-top: 70px;
@@ -160,7 +160,7 @@ picture {
 
 .imgMassaz-medovii{
   display: block;
-  max-width: 98%;
+  max-width: 100%;
   height: auto;
   object-fit: contain;
   margin-top: 70px;
@@ -281,7 +281,169 @@ display: block;
   .header .navbar.active{
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
   }
+  .imgAntimassaz{
+    display: block;
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+    margin-top: 70px;
+    text-align: center;
+    position: relative;
   
+  }
+  .imgAromamassaz{
+    display: block;
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+    margin-top: 50px;
+    text-align: center;
+    position: relative;
+  
+  }
+  .imgBeremenih{
+    display: block;
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+    margin-top: 50px;
+    text-align: center;
+    position: relative;
+  
+  }
+  .imgMassaz-ruk{
+    display: block;
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+    margin-top: 50px;
+    text-align: center;
+    position: relative;
+  
+  }
+  .massaz-klassish {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  margin-top: -90px;
+    animation: slideIn 1s ease-in-out;
+    overflow: hidden; /* Чтобы видео не выходило за границы */
+  }
+  
+  
+  
+  .imgMassaz-medovii{
+    display: block;
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+    margin-top: -90px;
+    text-align: center;
+    position: relative;
+  
+  }
+  
+}
+@media (max-width:620px){
+  .image2{
+    margin-top: 30px;
+  }
+
+.imgAromamassaz{
+  display: block;
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+  margin-top: 20px;
+  text-align: center;
+  position: relative;
+
+}
+.imgAntimassaz{
+  display: block;
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+  margin-top: 20px;
+  text-align: center;
+  position: relative;
+
+}
+.imgBeremenih{
+  display: block;
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+  margin-top: 20px;
+  text-align: center;
+  position: relative;
+
+}
+
+.imgMassaz-ruk{
+  display: block;
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+  margin-top: 20px;
+  text-align: center;
+  position: relative;
+
+}
+.massaz-klassish {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+margin-top: -160px;
+  animation: slideIn 1s ease-in-out;
+  overflow: hidden; /* Чтобы видео не выходило за границы */
+}
+
+
+
+.imgMassaz-medovii{
+  display: block;
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+  margin-top: -150px;
+  text-align: center;
+  position: relative;
+
+}
+
+}
+@media (max-width:490px){
+.massaz-klassish {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: -200px;
+  animation: slideIn 1s ease-in-out;
+  overflow: hidden; /* Чтобы видео не выходило за границы */
+  }
+  
+  
+  
+  .imgMassaz-medovii{
+  display: block;
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+  margin-top: -200px;
+  text-align: center;
+  position: relative;
+  
+  }
 }
 /*заканчивается боковое меню*/
 @media (max-width:430px){
@@ -330,68 +492,75 @@ display: block;
 
 
 }
-.imgAntimassaz{
-  display: block;
-  max-width: 100%;
-  height: auto;
-  object-fit: contain;
-  margin-top: 70px;
-  text-align: center;
-  position: relative;
+.image2{
+  margin-top: 30px;
+}
+
+.imgAromamassaz{
+display: block;
+max-width: 100%;
+height: auto;
+object-fit: contain;
+margin-top: 20px;
+text-align: center;
+position: relative;
 
 }
-.imgAromamassaz{
-  display: block;
-  max-width: 100%;
-  height: auto;
-  object-fit: contain;
-  margin-top: -50px;
-  text-align: center;
-  position: relative;
+.imgAntimassaz{
+display: block;
+max-width: 100%;
+height: auto;
+object-fit: contain;
+margin-top: 20px;
+text-align: center;
+position: relative;
 
 }
 .imgBeremenih{
-  display: block;
-  max-width: 100%;
-  height: auto;
-  object-fit: contain;
-  margin-top: 50px;
-  text-align: center;
-  position: relative;
+display: block;
+max-width: 100%;
+height: auto;
+object-fit: contain;
+margin-top: 20px;
+text-align: center;
+position: relative;
 
 }
+
 .imgMassaz-ruk{
-  display: block;
-  max-width: 100%;
-  height: auto;
-  object-fit: contain;
-  margin-top: 50px;
-  text-align: center;
-  position: relative;
+display: block;
+max-width: 100%;
+height: auto;
+object-fit: contain;
+margin-top: 20px;
+text-align: center;
+position: relative;
 
 }
 .massaz-klassish {
-  width: 100vw;
-  height: 100vh;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-margin-top: -200px;
-  animation: slideIn 1s ease-in-out;
-  overflow: hidden; /* Чтобы видео не выходило за границы */
+width: 100vw;
+height: 100vh;
+position: relative;
+display: flex;
+justify-content: center;
+align-items: center;
+margin-top: -220px;
+animation: slideIn 1s ease-in-out;
+overflow: hidden; /* Чтобы видео не выходило за границы */
 }
 
 
 
 .imgMassaz-medovii{
-  display: block;
-  max-width: 100%;
-  height: auto;
-  object-fit: contain;
-  margin-top: -200px;
-  text-align: center;
-  position: relative;
+display: block;
+max-width: 100%;
+height: auto;
+object-fit: contain;
+margin-top: -220px;
+text-align: center;
+position: relative;
 
 }
+
+
 }
