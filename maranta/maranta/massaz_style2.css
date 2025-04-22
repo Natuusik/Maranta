@@ -40,7 +40,7 @@ html {
 }
 
 section {
-  padding: 1rem 10%;
+  padding: 1rem 5%;
 }
 
 .header {
@@ -59,7 +59,7 @@ section {
 
 .header .navbar a {
   font-size: 1.6rem;
-  margin-left: 0.9rem;
+  margin-left: 0.5rem;
   color: var(--black);
   transition: 0.5s;
  
@@ -90,7 +90,7 @@ section {
 
 .image2 {
   display: block;
-  max-width: 100%;
+  max-width: 98%;
   height: auto;
   object-fit: contain;
   margin-top: 90px;
@@ -98,10 +98,14 @@ section {
   position: relative;
   top: 10px;
 }
+picture {
+  display: flex;
+  justify-content: center;
+}
 
 .imgAntimassaz{
   display: block;
-  max-width: 100%;
+  max-width: 98%;
   height: auto;
   object-fit: contain;
   margin-top: 70px;
@@ -111,7 +115,7 @@ section {
 }
 .imgAromamassaz{
   display: block;
-  max-width: 100%;
+  max-width: 98%;
   height: auto;
   object-fit: contain;
   margin-top: 70px;
@@ -121,7 +125,7 @@ section {
 }
 .imgBeremenih{
   display: block;
-  max-width: 100%;
+  max-width: 98%;
   height: auto;
   object-fit: contain;
   margin-top: 70px;
@@ -131,42 +135,38 @@ section {
 }
 .imgMassaz-ruk{
   display: block;
-  max-width: 100%;
+  max-width: 98%;
   height: auto;
   object-fit: contain;
   margin-top: 70px;
   text-align: center;
   position: relative;
 
+
 }
+
+
 .massaz-klassish {
-  width: 100vw;
-  height: 100vh;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 
-  animation: slideIn 1s ease-in-out;
-  overflow: hidden; /* Чтобы видео не выходило за границы */
-}
-
-.video-massaz-klassish {
   display: block;
-
- width: 100%;
-  object-fit: cover;
+  max-width: 98%;
   height: auto;
+  object-fit: contain;
+  margin-top: 70px;
+  text-align: center;
+  position: relative;
+  
 }
 
 .imgMassaz-medovii{
   display: block;
-  max-width: 100%;
+  max-width: 98%;
   height: auto;
   object-fit: contain;
   margin-top: 70px;
   text-align: center;
   position: relative;
+ 
 
 }
 /*FOOter*/
@@ -201,6 +201,37 @@ footer {
   font-size: 14px;
 }
   /*НАЧАЛО ШАПКИ*/
+  @media (max-width:1350px){
+
+  section{
+    padding: 3rem 5%;
+
+  }
+  .header .navbar{
+    position: absolute;
+    top: 80%;
+    left: 0;
+    width: 100%;
+    padding: 0 2rem;
+    background-color: var(--white);
+    border-top:var(--border) ;
+    box-shadow: var(--box-shadow);
+    clip-path: polygon(0 1%, 100% 0, 100% 0, 0 1%);
+transition: 0.5s;
+  }
+  .header .navbar a{
+    display: block;
+    margin: 2rem 0;
+  }
+  #menu{
+display: block;
+  
+}
+.header .navbar.active{
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+}
 @media (max-width:1200px){
   section{
     padding: 3rem 5%;
@@ -229,7 +260,7 @@ footer {
     }
     .header .navbar{
       position: absolute;
-      top: 100%;
+      top: 80%;
       left: 0;
       width: 100%;
       padding: 0 2rem;
@@ -260,7 +291,7 @@ footer {
   }
   .header .navbar{
     position: absolute;
-    top: 100%;
+    top: 80%;
     left: 0;
     width: 100%;
     padding: 0 2rem;
@@ -272,8 +303,9 @@ transition: 0.5s;
   }
   .header .navbar a{
     display: block;
-    margin: 3rem 0;
+    margin: 2rem 0;
   }
+
   #menu{
 display: block;
   

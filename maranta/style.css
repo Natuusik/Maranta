@@ -83,15 +83,6 @@ section {
   display: none;
 }
 
-/* Стили логотипа */
-.logo {
-  font-size: 27px;
-  font-weight: bold;
-  background: linear-gradient(to right, #ce2af3, #7bfe86);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  text-shadow: 2px 2px 5px rgba(218, 27, 231, 0.3);
-}
 .logo img{
   height: 60px;
  
@@ -1686,7 +1677,7 @@ margin-bottom: 50px;
 color: rgb(37, 17, 94);
 margin-top: -40px;
 font-size: 25px;
-margin-left:100px;
+margin-left:60px;
 text-shadow: 
  -1px -1px 0px black,  
  1px -1px 0px black,   
