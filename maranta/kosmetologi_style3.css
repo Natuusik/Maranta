@@ -1,0 +1,500 @@
+:root{
+  --black: rgb(37, 17, 94);
+  --white:rgb(231, 225, 225);
+  --hover:#cd28f7;
+  --border: .1rem solid rgba(0,0,0,.1);
+ --box-shadow:0 .5rem 1rem rgba(0,0,0,.5) ;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif; /* Основной текст */
+  font-weight: 400;
+  font-style: normal;
+  text-decoration: none;
+
+}
+
+  
+body {
+  background: url('1.jpg') no-repeat center center fixed;
+  background-size: cover;
+  background-color:rgb(231, 225, 225, 0.6); /* Белый цвет с прозрачностью 50% */
+background-blend-mode: lighten; /* Смешивание для прозрачности */
+}  
+html, body {
+  margin: 0;
+  padding: 0;
+
+
+ 
+  scroll-behavior: smooth; /* Плавный скролл */
+  overflow-x: hidden;
+ 
+}
+
+section {
+  padding: 1rem 3%;
+}
+
+.header {
+  background: var(--white);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: var(--box-shadow); /* Добавление тени */
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  height: 70px;
+  
+}
+
+.header .navbar a {
+  font-size: 1rem;
+  margin-left: 0.7rem;
+  color: var(--black);
+  transition: 0.5s;
+
+}
+
+.header .navbar a:hover {
+  color: var(--hover);
+  text-decoration: underline;
+}
+
+
+#menu {
+  font-size: 2rem; /* Увеличение размера иконки */
+  cursor: pointer;
+  display: none;
+}
+
+.logo img{
+  height: 60px;
+ 
+    border-radius: 50%;
+  
+  
+}
+/* Стили для изображения */
+
+
+
+
+
+
+/*  ГЛАВНАЯ*/
+
+ h1{
+  margin-top: -100px;
+  font-size: 50px;
+  color:  rgba(113, 35, 186, 0.5);
+  font-weight: 700;
+  text-shadow: 5px 2px 5px rgba(131, 16, 139, 0.7);
+
+display: flex;
+justify-content: center;
+
+}
+h2{
+font-family: 'Cinzel', serif;
+font-size: 15px;
+color: rgb(71, 68, 68);
+font-weight: 600;
+text-shadow: 5px 2px 5px rgba(218, 27, 231, 0.3);
+
+display: flex;
+justify-content: center;
+margin-left: 50px;
+
+}
+h3{
+font-family: 'Cinzel', serif;
+font-size: 20px;
+color: rgb(22, 21, 21);
+font-weight: 600;
+
+display: flex;
+justify-content: center;
+margin-left: 40px;
+ white-space: nowrap;
+}
+.special-offer { /* блок7*/
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+  margin-left: 50px;
+}
+.special-offer h2 {
+   margin-left: 50px;
+
+}
+
+.header-image {
+  width: 100%;
+  height: 250px;
+
+}
+
+.links-container {
+  display: flex;
+  justify-content: center;
+  padding: 40px 20px;
+  gap: 100px;
+
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+    
+}
+
+.link-item {
+  width: 500px;
+
+  display: flex;
+  align-items: center;  
+background: linear-gradient(45deg, rgba(138, 43, 226, 0.5), rgba(255, 182, 193, 0.5), rgba(255, 255, 102, 0.3), rgba(144, 238, 144, 0.3), rgba(138, 43, 226, 0.5));
+
+
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+  color: #333;
+  transition: background 0.3s;
+
+}
+
+.link-item:hover {
+  background: #e7c9e1;
+ 
+}
+
+.link-item img {
+  width:150px;
+  height:70px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-right: 10px;
+}
+
+.link-text {
+  font-size: 19px;
+  font-weight: 600;
+
+ 
+}
+
+/**/
+.imgahabadze{
+  width: 100%;
+  height: 100%;
+  margin-top: 50px;
+}
+.imgAntimassaz,
+.imgultrazvuk,
+.imgmanual,
+.imgpiling{
+  width: 100%;
+  height: 100%;
+  margin-top: 50px;
+}
+
+
+.imgkombinir {
+  width: 100%;
+  height: 100%;
+  margin-top: 50px;
+}
+
+
+/*FOOter*/
+footer {
+  background-color: var(--white);
+  color: #b014be;
+  text-align: center;
+  padding: 20px 0;
+  width: 100%;
+}
+
+.footer-content ul.socials {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  margin: 10px 0;
+}
+
+.footer-content ul.socials li {
+  margin: 0 10px;
+}
+
+.footer-content ul.socials a {
+  color: #b014be;
+  font-size: 18px;
+  text-decoration: none;
+}
+
+.footer-bottom {
+  margin-top: 15px;
+  font-size: 14px;
+}
+h2, h3, .link-text {
+  font-size: clamp(14px, 3vw, 20px); /* от 14px до 20px в зависимости от ширины окна */
+  white-space: normal;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  text-align: center;
+  
+}
+
+  /*НАЧАЛО ШАПКИ*/
+  @media (max-width:1350px){
+
+
+
+
+section {
+  padding: 1rem 5%;
+}
+
+
+.header .navbar a {
+  display: block ;
+  margin: 1.5rem 0;
+  padding: 0.4rem 0.1rem; /* Уменьшаем внутренний отступ */
+ 
+  background-color: rgb(233, 240, 230);
+  border-radius: 10px 10px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: bold;
+  text-align: center;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+
+.header .navbar a:hover {
+  background-color: var(--primary-color);
+  color: var(--hover);
+  transform: scale(1.05);
+
+}
+
+.header .navbar {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  padding: 0 2rem;
+  background-color: var(--white);
+  border-top: var(--border);
+  box-shadow: var(--box-shadow);
+  clip-path: polygon(0 1%, 100% 0, 100% 0, 0 1%);
+  transition: 0.5s;
+  max-height: 300px; /* Задаем максимальную высоту */
+  overflow-y: auto; /* Позволяем прокручивание */
+}
+
+
+#menu{
+display: block;
+
+}
+.header .navbar.active{
+clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+
+#menu {
+  display: block;
+  cursor: pointer;
+  margin-right: 40px;
+}
+
+.header .navbar.active {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
+  }
+@media (max-width:1200px){
+
+    section {
+      padding: 1rem 5%;
+    
+    
+  }
+  h2,h3{
+    font-size: 15px;
+  }
+.link-item {
+  width: 390px;
+height:100%;
+  display: flex;
+  align-items: center;  
+background: linear-gradient(45deg, rgba(138, 43, 226, 0.5), rgba(255, 182, 193, 0.5), rgba(255, 255, 102, 0.3), rgba(144, 238, 144, 0.3), rgba(138, 43, 226, 0.5));
+
+
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+  color: #333;
+  transition: background 0.3s;
+
+}
+
+
+
+.link-item img {
+  width:100px;
+  height:50px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-right: 10px;
+}
+
+.link-text {
+  font-size: 18px;
+  font-weight: 600;
+
+ 
+}
+
+}
+/*заканчивается боковое меню*/
+@media (max-width:900px){
+  section{
+    padding: 1rem 10%;
+  }
+
+.imgahabadze,
+.imgkombinir,
+.imgmanual,
+.imgpiling,
+.imgultrazvuk {
+  width: 100%;
+  height: auto;
+  max-height: 100vh;
+  object-fit: contain; /* Гарантирует, что изображение полностью видно */
+}
+
+    h2 {
+    text-align: center; /* Центрируем заголовки */
+    margin: 0; /* Убираем отступы */
+   font-size: 15px;
+  }
+h2, h3, .link-text {
+  font-size: clamp(14px, 3vw, 20px); /* от 14px до 20px в зависимости от ширины окна */
+  white-space: normal;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  text-align: center;
+  
+}
+ h1{
+  margin-top: -160px;
+  margin-bottom: 20px;
+ display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 30px;
+  color:  rgba(113, 35, 186, 0.5);
+  font-weight: 700;
+  text-shadow: 5px 2px 5px rgba(131, 16, 139, 0.7);
+
+
+
+}
+
+  .link-item {
+    max-width: 350px;
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse; /* Картинка справа */
+    align-items: center;
+    padding: 10px;
+    margin: 0 auto;
+    background: linear-gradient(45deg, rgba(138, 43, 226, 0.5), rgba(255, 182, 193, 0.5), rgba(255, 255, 102, 0.3), rgba(144, 238, 144, 0.3), rgba(138, 43, 226, 0.5));
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+    color: #333;
+    transition: background 0.3s;
+    
+  }
+
+  .link-item img {
+    width: 90px;
+    height: 70px;
+    object-fit: cover;
+    border-radius: 6px;
+    margin: 0; /* Отступ между текстом и картинкой */
+    margin-right: 0;
+    
+  }
+
+  .link-text {
+    flex: 1;
+    text-align: left;
+
+    word-wrap: break-word;
+  }
+
+  .links-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+ .link-item, .link-text {
+
+    margin: 0 auto;
+  }
+
+.special-offer {
+
+  margin: 0 auto;
+}
+
+
+
+.special-offer h3,
+.special-offer h2 {
+    text-align: center;
+
+  margin: 0 auto;
+}
+
+  h1{
+    font-size: 22px;
+  }
+  
+  h2 {
+    text-align: center; /* Центрируем заголовки */
+    margin-left: 0; /* Убираем отступы */
+   font-size: 16px;
+  }
+h3 {
+    text-align: center; /* Центрируем заголовки */
+    margin-left: 0; /* Убираем отступы */
+  font-size: 18px;
+  }
+  .picture {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+    margin-top: 70px;
+    text-align: center;
+    position: relative;
+  }
+  
+}
