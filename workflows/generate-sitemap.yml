@@ -1,0 +1,21 @@
+name: Generate sitemap
+
+on:
+  push:
+    branches:
+      - main   # или твоя ветка, если не main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Generate sitemap
+        uses: cicirello/generate-sitemap@v1
+        with:
+          base-url-path: https://natuusik.github.io/Maranta/
