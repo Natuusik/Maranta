@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Запись</title>
+
+  <style>
+    body {
+  font-family: Arial, sans-serif;
+  background-image: url('4.png'); /* твоя картинка */
+  background-size: cover;        /* растягивает красиво */
+  background-position: center;   /* центрирует */
+  background-repeat: no-repeat;  /* не повторяет */
+  background-attachment: fixed;  /* эффект параллакса */
+  display: flex;
+  justify-content: center;
+  padding-top: 40px;
+}
+
+/* Шапка */
+.header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 15px 25px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  gap: 15px;
+}
+
+/* Логотип */
+.logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+/* Текст Maranta */
+.navbar a {
+  font-size: 32px;
+  font-weight: bold;
+  background: linear-gradient(to right, #8a0fa6, #0bcc1b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-decoration: none;
+}
+/* Свечение логотипа */
+.logo img {
+  height: 55px;
+  width: 55px;
+  border-radius: 50%;
+  margin-right: 12px;
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.7),
+              0 0 22px rgba(255, 0, 255, 0.5),
+              0 0 35px rgba(115, 221, 156, 0.558);
+  transition: 0.3s;
+}
+
+.logo img:hover {
+  box-shadow: 0 0 18px rgba(255, 255, 255, 0.9),
+              0 0 30px rgba(255, 0, 255, 0.7),
+              0 0 45px rgba(117, 237, 163, 0.6);
+  transform: scale(1.05);
+}
+
+
+/* Мобильная адаптация */
+@media (max-width: 480px) {
+  .header {
+    padding: 10px 15px;
+  }
+
+  .logo img {
+    height: 45px;
+    width: 45px;
+  }
+
+  .navbar a {
+    font-size: 24px;
+  }
+
+
+  
+}
+    .calendar-container {
+      background: rgb(251, 247, 250);
+      padding: 20px;
+      border-radius: 12px;
+      width: 360px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+
+    .calendar-header {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 10px;
+    }
+
+    .calendar-header button {
+      background: #ddd;
+      border: none;
+      padding: 6px 12px;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    .weekdays, .calendar-days {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      gap: 6px;
+    }
+
+    .weekdays div {
+      font-weight: bold;
+    }
+
+    .day {
+      padding: 10px;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    .available {
+      background: #e8ffe8;
+    }
+
+    .available:hover {
+      background: #caffca;
+    }
+
+    .unavailable {
+      background: #ffe5e5;
+      color: #888;
+      cursor: not-allowed;
+    }
+
+    .selected {
+      background: #4caf50 !important;
+      color: white;
+    }
+
+    .small-lock {
+      font-size: 10px;
+      opacity: 0.7;
+    }
+
+    #timeButtons button {
+      margin: 5px;
+      padding: 8px 12px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      cursor: pointer;
+    }
+
+    /* Процедуры */
+    .procedure-box {
+      margin-top: 25px;
+      text-align: left;
+    }
+
+    #procedureSelect {
+      width: 100%;
+      padding: 10px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      margin-top: 5px;
+    }
+
+    /* Кнопка WhatsApp */
+    .whatsapp-btn {
+      background: #25D366;
+      color: white;
+      border: none;
+      padding: 12px 18px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 16px;
+      margin-top: 20px;
+      width: 100%;
+      opacity: 1;
+      transition: 0.3s;
+    }
+
+    .whatsapp-btn.disabled {
+      background: #bcbcbc;
+      cursor: not-allowed;
+      opacity: 0.6;
+    }
+  </style>
+</head>
+<body>
+  <section class="header">
+  <a href="https://natuusik.github.io/Maranta/" class="logo">
+    <img src="logo1.jpg" alt="logo">
+  </a>
+
+  <nav class="navbar">
+    <a href="https://natuusik.github.io/Maranta/">Maranta</a>
+  </nav>
+</section>
+
+
+<div class="calendar-container">
+  <h2 id="monthName"></h2>
+
+  <div class="calendar-header">
+    <button id="prevMonth">‹</button>
+    <button id="nextMonth">›</button>
+  </div>
+
+  <div class="weekdays">
+    <div>Пн</div><div>Вт</div><div>Ср</div><div>Чт</div><div>Пт</div><div>Сб</div><div>Вс</div>
+  </div>
+
+  <div id="calendarDays" class="calendar-days"></div>
+
+  <div id="selectedInfo" class="selected-info" style="display:none;">
+    <p id="selectedDateText"></p>
+
+    <div id="timeContainer" style="display:none;">
+      <p>Выберите время:</p>
+      <div id="timeButtons"></div>
+    </div>
+  </div>
+
+  <!-- ПРОЦЕДУРЫ -->
+  <div class="procedure-box">
+    <label for="procedureSelect">Выберите процедуру:</label>
+    <select id="procedureSelect">
+      <option value="">Выберите процедуру</option>
+      <option>Психологическая консультация</option>
+      <option>Психологическая консультация + массаж</option>
+      <option>Антицеллюлитный массаж</option>
+      <option>Аромамассаж</option>
+      <option>Массаж для беременных женщин</option>
+      <option>Массаж рук</option>
+      <option>Классический массаж</option>
+      <option>Медовый массаж</option>
+      <option>Уход за лицом по типу кожи</option>
+      <option>Ультразвуковая чистка лица</option>
+      <option>Мануальная чистка лица</option>
+      <option>Комбинированная чистка лица</option>
+    </select>
+  </div>
+
+  <button id="goToFormBtn" class="whatsapp-btn disabled" disabled>Записаться в WhatsApp</button>
+</div>
+
+<script>
+/* ---------- НАСТРОЙКИ ---------- */
+
+const timeOptions = ["10:00","11:30","13:00","14:30","17:00","18:30","20:00"];
+
+let busyTimes = JSON.parse(localStorage.getItem("busyTimes") || "{}");
+let customUnavailableDays = JSON.parse(localStorage.getItem("customUnavailableDays") || "[]");
+
+["2026-03-15","2026-03-16"].forEach(d => {
+  if (!customUnavailableDays.includes(d)) customUnavailableDays.push(d);
+});
+
+saveState();
+
+const months = [
+  "Январь","Февраль","Март","Апрель","Май","Июнь",
+  "Июль","Август","Сентябрь","Октябрь","Ноябрь","Декабрь"
+];
+
+let currentMonth = new Date().getMonth();
+let currentYear = new Date().getFullYear();
+let selectedDate = null;
+let selectedTime = null;
+
+/* ---------- ВСПОМОГАТЕЛЬНЫЕ ---------- */
+
+function saveState() {
+  localStorage.setItem("busyTimes", JSON.stringify(busyTimes));
+  localStorage.setItem("customUnavailableDays", JSON.stringify(customUnavailableDays));
+}
+
+function formatDisplay(day, month, year) {
+  return `${String(day).padStart(2,"0")}.${String(month+1).padStart(2,"0")}.${year}`;
+}
+
+function formatKey(day, month, year) {
+  return `${year}-${String(month+1).padStart(2,"0")}-${String(day).padStart(2,"0")}`;
+}
+
+/* ---------- РЕНДЕР КАЛЕНДАРЯ ---------- */
+
+function renderCalendar(month, year) {
+  const firstDay = (new Date(year, month, 1).getDay() + 6) % 7;
+  const daysInMonth = new Date(year, month + 1, 0).getDate();
+
+  const calendarDays = document.getElementById("calendarDays");
+  const monthName = document.getElementById("monthName");
+
+  calendarDays.innerHTML = "";
+  monthName.textContent = `${months[month]} ${year}`;
+
+  for (let i = 0; i < firstDay; i++) {
+    calendarDays.appendChild(document.createElement("div"));
+  }
+
+  for (let day = 1; day <= daysInMonth; day++) {
+    const el = document.createElement("div");
+    el.classList.add("day");
+
+    const key = formatKey(day, month, year);
+
+    if (customUnavailableDays.includes(key)) {
+      el.classList.add("unavailable");
+      el.innerHTML = `${day} <span class="small-lock">🔒</span>`;
+    } else {
+      el.classList.add("available");
+      el.textContent = day;
+      el.onclick = () => selectDay(el, day, month, year);
+    }
+
+    calendarDays.appendChild(el);
+  }
+
+  updateButtonState();
+}
+
+/* ---------- ПОКАЗ ВРЕМЕНИ ---------- */
+
+function showAvailableTimes(dateKey) {
+  const container = document.getElementById("timeContainer");
+  const timeButtons = document.getElementById("timeButtons");
+
+  timeButtons.innerHTML = "";
+  container.style.display = "block";
+
+  const busy = busyTimes[dateKey] || [];
+
+  timeOptions.forEach(time => {
+    const btn = document.createElement("button");
+    btn.textContent = time;
+
+    if (busy.includes(time)) {
+      btn.style.background = "#ffdddd";
+      btn.style.color = "#888";
+      btn.disabled = true;
+    } else {
+      btn.style.background = "#e8ffe8";
+      btn.onclick = () => {
+        selectedTime = time;
+
+        document.querySelectorAll("#timeButtons button").forEach(b => {
+          b.style.background = "#e8ffe8";
+          b.style.color = "black";
+        });
+
+        btn.style.background = "#4caf50";
+        btn.style.color = "white";
+
+        updateButtonState();
+      };
+    }
+
+    timeButtons.appendChild(btn);
+  });
+}
+
+/* ---------- ВЫБОР ДАТЫ ---------- */
+
+function selectDay(el, day, month, year) {
+  document.querySelectorAll(".day").forEach(d => d.classList.remove("selected"));
+  el.classList.add("selected");
+
+  selectedDate = formatDisplay(day, month, year);
+  selectedTime = null; // ВАЖНО: сбрасываем время при смене даты
+
+  const dateKey = formatKey(day, month, year);
+
+  document.getElementById("selectedInfo").style.display = "block";
+  document.getElementById("selectedDateText").textContent =
+    `Вы выбрали дату: ${selectedDate}`;
+
+  showAvailableTimes(dateKey);
+  updateButtonState();
+}
+
+/* ---------- БЛОКИРОВКА ВРЕМЕНИ ---------- */
+
+function markTimeAsBusy(dateKey, time) {
+  if (!busyTimes[dateKey]) busyTimes[dateKey] = [];
+  if (!busyTimes[dateKey].includes(time)) busyTimes[dateKey].push(time);
+
+  if (busyTimes[dateKey].length === timeOptions.length) {
+    if (!customUnavailableDays.includes(dateKey)) customUnavailableDays.push(dateKey);
+  }
+
+  saveState();
+}
+
+/* ---------- АКТИВАЦИЯ КНОПКИ ---------- */
+
+function updateButtonState() {
+  const procedure = document.getElementById("procedureSelect").value;
+  const btn = document.getElementById("goToFormBtn");
+
+  if (procedure && selectedDate && selectedTime) {
+    btn.classList.remove("disabled");
+    btn.disabled = false;
+  } else {
+    btn.classList.add("disabled");
+    btn.disabled = true;
+  }
+}
+
+/* ---------- ОТПРАВКА В WHATSAPP ---------- */
+
+document.getElementById("goToFormBtn").onclick = () => {
+  const procedure = document.getElementById("procedureSelect").value;
+
+  const phone = "37255541468";
+  const message = `Здравствуйте! Хочу записаться на процедуру: ${procedure}, ${selectedDate} в ${selectedTime}.`;
+
+  const dateKey = selectedDate.split(".").reverse().join("-");
+
+  markTimeAsBusy(dateKey, selectedTime);
+  renderCalendar(currentMonth, currentYear);
+
+  const url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
+  window.location.href = url;
+};
+
+/* ---------- ПЕРЕКЛЮЧЕНИЕ МЕСЯЦЕВ ---------- */
+
+document.getElementById("nextMonth").onclick = () => {
+  currentMonth = (currentMonth + 1) % 12;
+  if (currentMonth === 0) currentYear++;
+  renderCalendar(currentMonth, currentYear);
+};
+
+document.getElementById("prevMonth").onclick = () => {
+  currentMonth = (currentMonth - 1 + 12) % 12;
+  if (currentMonth === 11) currentYear--;
+  renderCalendar(currentMonth, currentYear);
+};
+
+/* ---------- ВАЖНО: ОБРАБОТЧИК СМЕНЫ ПРОЦЕДУРЫ ---------- */
+
+document.getElementById("procedureSelect").addEventListener("change", updateButtonState);
+
+renderCalendar(currentMonth, currentYear);
+/* ---------- АДМИН-ПАНЕЛЬ С СЕКРЕТНЫМ КОДОМ ---------- */
+
+/* ============================================================
+   АДМИН-ПАНЕЛЬ С КРАСИВЫМ КАЛЕНДАРЁМ
+   ============================================================ */
+
+/* --- Настройки входа --- */
+const ADMIN_PASSWORD = "1234";
+const SECRET_CODE = "adminopen";
+let typedAdmin = "";
+
+/* --- Создаём модальное окно админки --- */
+const adminModal = document.createElement("div");
+adminModal.style.position = "fixed";
+adminModal.style.top = "0";
+adminModal.style.left = "0";
+adminModal.style.width = "100%";
+adminModal.style.height = "100%";
+adminModal.style.background = "rgba(0,0,0,0.6)";
+adminModal.style.display = "none";
+adminModal.style.justifyContent = "center";
+adminModal.style.alignItems = "center";
+adminModal.style.zIndex = "99999";
+
+adminModal.innerHTML = `
+  <div style="
+    background:white;
+    width:90%;
+    max-width:420px;
+    padding:20px;
+    border-radius:15px;
+    box-shadow:0 0 25px rgba(255,255,255,0.4);
+  ">
+    <h2 style="text-align:center; margin-bottom:15px;">Админ‑панель</h2>
+
+    <div id="adminCalendar"></div>
+
+    <p style="margin-top:15px;">Дата (ГГГГ-ММ-ДД):</p>
+    <input id="adminDate" type="text" placeholder="2026-03-15" style="width:100%;padding:8px;margin-bottom:10px;">
+
+    <p>Время (ЧЧ:ММ):</p>
+    <input id="adminTime" type="text" placeholder="13:00" style="width:100%;padding:8px;margin-bottom:15px;">
+
+    <button id="adminBlockDay" style="padding:10px; width:100%; margin-bottom:10px;">🔒 Заблокировать день</button>
+    <button id="adminUnblockDay" style="padding:10px; width:100%; margin-bottom:10px;">🔓 Разблокировать день</button>
+
+    <button id="adminBlockTime" style="padding:10px; width:100%; margin-bottom:10px;">⛔ Заблокировать время</button>
+    <button id="adminUnblockTime" style="padding:10px; width:100%; margin-bottom:10px;">✅ Разблокировать время</button>
+
+    <button id="adminClose" style="padding:10px; width:100%; background:#ccc;">Закрыть</button>
+  </div>
+`;
+
+document.body.appendChild(adminModal);
+
+/* ============================================================
+   СЕКРЕТНЫЙ ВХОД
+   ============================================================ */
+
+document.addEventListener("keydown", (e) => {
+  typedAdmin += e.key.toLowerCase();
+  if (typedAdmin.length > 20) typedAdmin = typedAdmin.slice(-20);
+
+  if (typedAdmin.includes(SECRET_CODE)) {
+    const pass = prompt("Введите пароль администратора:");
+    if (pass === ADMIN_PASSWORD) {
+      adminModal.style.display = "flex";
+      renderAdminCalendar();
+    } else {
+      alert("Неверный пароль");
+    }
+    typedAdmin = "";
+  }
+});
+
+/* ============================================================
+   РЕНДЕР КАЛЕНДАРЯ ДЛЯ АДМИНА
+   ============================================================ */
+
+function renderAdminCalendar() {
+  const container = document.getElementById("adminCalendar");
+  container.innerHTML = "";
+
+  const now = new Date();
+  const month = now.getMonth();
+  const year = now.getFullYear();
+
+  const daysInMonth = new Date(year, month + 1, 0).getDate();
+
+  let html = `<h3 style="text-align:center;">${months[month]} ${year}</h3>`;
+  html += `<div style="display:grid;grid-template-columns:repeat(7,1fr);gap:5px;">`;
+
+  for (let d = 1; d <= daysInMonth; d++) {
+    const key = formatKey(d, month, year);
+
+    let style = `
+      padding:10px;
+      border-radius:8px;
+      text-align:center;
+      cursor:pointer;
+    `;
+
+    if (customUnavailableDays.includes(key)) {
+      style += "background:#ffdddd;";
+    } else {
+      style += "background:#e8ffe8;";
+    }
+
+    html += `<div style="${style}" onclick="adminSelectDate('${key}')">${d}</div>`;
+  }
+
+  html += "</div>";
+  container.innerHTML = html;
+}
+
+/* ============================================================
+   ВЫБОР ДАТЫ В АДМИНКЕ
+   ============================================================ */
+
+function adminSelectDate(dateKey) {
+  document.getElementById("adminDate").value = dateKey;
+}
+
+/* ============================================================
+   КНОПКИ АДМИНКИ
+   ============================================================ */
+
+document.getElementById("adminClose").onclick = () => {
+  adminModal.style.display = "none";
+};
+
+document.getElementById("adminBlockDay").onclick = () => {
+  const date = adminDate.value.trim();
+  if (!date) return alert("Введите дату");
+
+  if (!customUnavailableDays.includes(date)) customUnavailableDays.push(date);
+
+  saveState();
+  renderCalendar(currentMonth, currentYear);
+  renderAdminCalendar();
+  alert("День заблокирован");
+};
+
+document.getElementById("adminUnblockDay").onclick = () => {
+  const date = adminDate.value.trim();
+  if (!date) return alert("Введите дату");
+
+  customUnavailableDays = customUnavailableDays.filter(d => d !== date);
+  delete busyTimes[date];
+
+  saveState();
+  renderCalendar(currentMonth, currentYear);
+  renderAdminCalendar();
+  alert("День разблокирован");
+};
+
+document.getElementById("adminBlockTime").onclick = () => {
+  const date = adminDate.value.trim();
+  const time = adminTime.value.trim();
+  if (!date || !time) return alert("Введите дату и время");
+
+  if (!busyTimes[date]) busyTimes[date] = [];
+  if (!busyTimes[date].includes(time)) busyTimes[date].push(time);
+
+  saveState();
+  renderCalendar(currentMonth, currentYear);
+  alert("Время заблокировано");
+};
+
+document.getElementById("adminUnblockTime").onclick = () => {
+  const date = adminDate.value.trim();
+  const time = adminTime.value.trim();
+  if (!date || !time) return alert("Введите дату и время");
+
+  if (busyTimes[date]) {
+    busyTimes[date] = busyTimes[date].filter(t => t !== time);
+    if (busyTimes[date].length === 0) delete busyTimes[date];
+  }
+
+  saveState();
+  renderCalendar(currentMonth, currentYear);
+  alert("Время разблокировано");
+};
+
+</script>
+
+</body>
+</html>
