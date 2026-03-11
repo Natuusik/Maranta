@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Запись</title>
+
+  <style>
+    
+      body {
+  font-family: Arial, sans-serif;
+  background-image: url('4.png'); /* твоя картинка */
+  background-size: cover;        /* растягивает красиво */
+  background-position: center;   /* центрирует */
+  background-repeat: no-repeat;  /* не повторяет */
+  background-attachment: fixed;  /* эффект параллакса */
+  display: flex;
+  justify-content: center;
+  padding-top: 40px;
+}
+
+/* Шапка */
+.header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 15px 25px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  gap: 15px;
+}
+
+/* Логотип */
+.logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+/* Текст Maranta */
+.navbar a {
+  font-size: 32px;
+  font-weight: bold;
+  background: linear-gradient(to right, #8a0fa6, #0bcc1b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-decoration: none;
+}
+/* Свечение логотипа */
+.logo img {
+  height: 55px;
+  width: 55px;
+  border-radius: 50%;
+  margin-right: 12px;
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.7),
+              0 0 22px rgba(255, 0, 255, 0.5),
+              0 0 35px rgba(115, 221, 156, 0.558);
+  transition: 0.3s;
+    margin-left: 50px;
+}
+
+.logo img:hover {
+  box-shadow: 0 0 18px rgba(255, 255, 255, 0.9),
+              0 0 30px rgba(255, 0, 255, 0.7),
+              0 0 45px rgba(117, 237, 163, 0.6);
+  transform: scale(1.05);
+}
+/* Мобильная адаптация */
+@media (max-width: 600px) {
+
+  body {
+    display: block;       /* больше не сжимает календарь */
+    padding-top: 90px;    /* под уменьшенную шапку */
+  }
+
+  .header {
+    padding: 10px 15px;
+    min-height: 60px;
+  }
+
+  .logo img {
+    height: 40px;
+    width: 40px;
+  }
+
+  .navbar a {
+    font-size: 22px;
+  }
+
+  /* Календарь на весь экран */
+  #calendarContainer,
+  #clientCalendar,
+  .calendar {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0;
+    padding: 10px 10px;
+  }
+
+  /* Кнопки времени — крупнее */
+  #timeButtons button {
+    width: 100%;
+    font-size: 18px;
+    padding: 12px;
+    margin-bottom: 8px;
+    
+  }
+    body {
+    padding-top: 80px; /* меньше, чем на ПК */
+  margin-left: 50px;
+  }
+}
+
+
+
+
+
+    .calendar-container {
+      background: rgba(255, 255, 255, 0.8);
+      backdrop-filter: blur(8px);
+      padding: 20px;
+      border-radius: 12px;
+      width: 360px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+      text-align: center;
+    }
+
+    .calendar-header {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 10px;
+    }
+
+    .calendar-header button {
+      background: #ddd;
+      border: none;
+      padding: 6px 12px;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    .weekdays, .calendar-days {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      gap: 6px;
+    }
+
+    .weekdays div {
+      font-weight: bold;
+    }
+
+    .day {
+      padding: 10px;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    .available {
+      background: #e8ffe8;
+    }
+
+    .available:hover {
+      background: #caffca;
+    }
+
+    .unavailable {
+      background: #ffe5e5;
+      color: #888;
+      cursor: not-allowed;
+    }
+
+    .selected {
+      background: #4caf50 !important;
+      color: white;
+    }
+
+    #timeButtons button {
+      margin: 5px;
+      padding: 8px 12px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      cursor: pointer;
+    }
+
+    .procedure-box {
+      margin-top: 25px;
+      text-align: left;
+    }
+
+    #procedureSelect {
+      width: 100%;
+      padding: 10px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      margin-top: 5px;
+    }
+
+    .whatsapp-btn {
+      background: #25D366;
+      color: white;
+      border: none;
+      padding: 12px 18px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 16px;
+      margin-top: 20px;
+      width: 100%;
+      opacity: 1;
+      transition: 0.3s;
+    }
+
+    .whatsapp-btn.disabled {
+      background: #bcbcbc;
+      cursor: not-allowed;
+      opacity: 0.6;
+    }
+  </style>
+</head>
+<body>
+  <section class="header">
+  <a href="https://natuusik.github.io/Maranta/" class="logo">
+    <img src="logo1.jpg" alt="logo">
+  </a>
+
+  <nav class="navbar">
+    <a href="https://natuusik.github.io/Maranta/">Maranta</a>
+  </nav>
+</section>
+<div class="calendar-container">
+  <h2 id="monthName"></h2>
+
+  <div class="calendar-header">
+    <button id="prevMonth">‹</button>
+    <button id="nextMonth">›</button>
+  </div>
+
+  <div class="weekdays">
+    <div>Пн</div><div>Вт</div><div>Ср</div><div>Чт</div><div>Пт</div><div>Сб</div><div>Вс</div>
+  </div>
+
+  <div id="calendarDays" class="calendar-days"></div>
+
+  <div id="selectedInfo" style="display:none;">
+    <p id="selectedDateText"></p>
+
+    <div id="timeContainer" style="display:none;">
+      <p>Выберите время:</p>
+      <div id="timeButtons"></div>
+    </div>
+  </div>
+
+  <div class="procedure-box">
+    <label for="procedureSelect">Выберите процедуру:</label>
+    <select id="procedureSelect">
+     <option value="">Выберите процедуру</option>
+      <option>Психологическая консультация</option>
+      <option>Психологическая консультация + массаж</option>
+      <option>Антицеллюлитный массаж</option>
+      <option>Аромамассаж</option>
+      <option>Массаж для беременных женщин</option>
+      <option>Массаж рук</option>
+      <option>Классический массаж</option>
+      <option>Медовый массаж</option>
+      <option>Уход за лицом по типу кожи</option>
+      <option>Ультразвуковая чистка лица</option>
+      <option>Мануальная чистка лица</option>
+      <option>Комбинированная чистка лица</option>
+    </select>
+  </div>
+
+  <button id="goToFormBtn" class="whatsapp-btn disabled" disabled>Записаться в WhatsApp</button>
+</div>
+
+
+</script>
+<script src="script.js?v=2"></script>
+
+
+</body>
+</html>
